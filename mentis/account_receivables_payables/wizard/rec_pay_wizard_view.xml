@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="receivable_payable_wizard_view" model="ir.ui.view">
+            <field name="name">Receivable Payable Card</field>
+            <field name="model">receivable.payable.wizard</field>
+            <field name="arch" type="xml">
+               <form string="Receivable Payable Card - view" version="7.0">
+               		<group colspan="4">
+               			<group>
+               				<field name="account"/>
+               				<field name="account_code"/>
+               				<field name="reconcile" attrs="{'invisible':['|',('filter','=','filter_date'),('filter','=','filter_period')]}"/>
+               			</group>
+               			<group>
+               				<field name="date_type_filter"/>
+                            <field name="filter" on_change="onchange_filter(filter, fiscalyear_id)"/>
+                            <field name="sort" invisible="1"/>
+                            <field name="print_overdue" on_change="onchange_print_overdue(print_overdue)"/>
+                        </group>
+                   </group>
+               			<group string="Dates" attrs="{'invisible':[('filter','!=','filter_date')], 'required':[('filter', '=', 'filter_date')]}">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+               			<group string="Periods" attrs="{'invisible':[('filter','!=','filter_period')], 'required':[('filter', '=', 'filter_period')]}">
+	                        <field name="fiscalyear_id" on_change="onchange_fiscalyear(fiscalyear_id)" />
+	                        <field name="period_from"/>
+	                        <field name="period_to"/>
+                        </group>
+                    
+                    <footer>
+                    	<button name="execute" string="Natisni" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Prekliči" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Pay Rec"
+            res_model="receivable.payable.wizard"
+            src_model="res.partner"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_receivable_payable"/>    
+		<!--
+     	<menuitem action="action_sale_orders_journal" id="menu_sale_orders_journal" parent="base.menu_sales" sequence="10"/>
+		-->
+    </data>
+</openerp>

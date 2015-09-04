@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <!-- location -->
+    <record model="ir.ui.view" id="view_location_ext_form">
+      <field name="name">view.location.ext.form</field>
+      <field name="model">stock.location</field>
+      <field name="inherit_id" ref="stock.view_location_form"/>
+      <field name="arch" type="xml">
+        <field name="posz" position="after">
+          <field name="capacity"/>
+          <field name="uom_id"/>
+        </field>
+      </field>
+    </record>
+<!--
+    <record model="ir.ui.view" id="view_warehouse_address">
+      <field name="name">move_tree_warehouse_address.view</field>
+      <field name="model">stock.warehouse</field>
+      <field name="inherit_id" ref="stock.view_warehouse"/>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <field name="partner_address_id" position="replace">
+          <field name="partner_address_id" />
+        </field>
+      </field>
+    </record>
+-->
+  </data>
+</openerp>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Creating form view-->
+       	<record id="view_drivers_order_line_tree" model="ir.ui.view">
+            <field name="name">drivers.order.line.tree</field>
+            <field name="model">drivers.order.line</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Drivers Order Line" editable="top">
+					    <field name="sale_order"/>
+					    <field name="date_order"/>
+						<field name="product_id"/>
+						<field name="driver_1" sum="Total Driver"/>
+						<field name="driver_2" sum="Total Driver"/>
+						<field name="driver_3" sum="Total Driver"/>
+						<field name="driver_4" sum="Total Driver"/>
+						<field name="driver_5" sum="Total Driver"/>
+						<field name="driver_6" sum="Total Driver"/>
+						<field name="driver_7" sum="Total Driver"/>
+						<field name="driver_8" sum="Total Driver"/>
+						<field name="driver_9" sum="Total Driver"/>
+						<field name="driver_10" sum="Total Driver"/>
+						<field name="driver_11" sum="Total Driver"/>
+						<field name="driver_12" sum="Total Driver"/>
+						<field name="driver_13" sum="Total Driver"/>
+						<field name="driver_14" sum="Total Driver"/>
+						<field name="driver_15" sum="Total Driver"/>
+                        <field name="order_total" sum="Total Order"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_drivers_order_filter" model="ir.ui.view">
+			<field name="name">drivers.order.line.select</field>
+			<field name="model">drivers.order.line</field>
+			<field name="arch" type="xml">
+				<search string="Search Drivers Order Lines">
+					<field name="product_id"/>
+					<field name="sale_order"/>
+					<group expand="0" string="Group By..." >
+                        <filter string="Order Date" icon="terp-go-month" domain="[]" context="{'group_by':'date_order'}"/>
+                        <filter string="Order" icon="terp-go-month" domain="[]" context="{'group_by':'sale_order'}"/>
+                        <filter string="Product" icon="terp-personal" domain="[]" context="{'group_by':'product_id'}"/>
+                        <filter icon="terp-go-today" string="Today" domain="[('date_order','&lt;=',time.strftime('%%Y-%%m-%%d 23:59:59')),('date_order','&gt;=',time.strftime('%%Y-%%m-%%d 00:00:00'))]" help="Orders generated Today"/>
+                    </group>
+				</search>
+			</field>
+        </record>
+
+        <record id="view_drivers_order_report_graph" model="ir.ui.view">
+         <field name="name">drivers.order.line.report.graph</field>
+         <field name="model">drivers.order.line</field>
+         <field name="arch" type="xml">
+             <graph string="Drivers Orders Analysis" type="pivot" stacked="True">
+                 <field name="date_order" type="row"/>
+                 <field name="sale_order" type="row"/>
+                 <field name="product_id" type="row"/>
+
+                 <field name="driver_1" type="measure"/>
+                 <field name="driver_2" type="measure"/>
+                 <field name="driver_3" type="measure"/>
+                 <field name="driver_4" type="measure"/>
+                 <field name="driver_5" type="measure"/>
+                 <field name="driver_6" type="measure"/>
+                 <field name="driver_7" type="measure"/>
+                 <field name="driver_8" type="measure"/>
+                 <field name="driver_9" type="measure"/>
+                 <field name="driver_10" type="measure"/>
+                 <field name="driver_11" type="measure"/>
+                 <field name="driver_12" type="measure"/>
+                 <field name="driver_13" type="measure"/>
+                 <field name="driver_14" type="measure"/>
+                 <field name="driver_15" type="measure"/>
+
+                 <field name="order_total" type="measure"/>
+             </graph>
+         </field>
+        </record>
+
+        <!--record id="action_drivers_order_line" model="ir.actions.act_window">
+            <field name="name">Drivers Orders Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">drivers.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="view_drivers_order_filter"/>
+            <field name="context">{}</field>
+        </record-->
+
+
+        <record id="action_drivers_order_line_analysis" model="ir.actions.act_window">
+            <field name="name">Drivers Orders Lines Analysis</field>
+            <field name="res_model">drivers.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="search_view_id" ref="view_drivers_order_filter"/>
+            <field name="view_id" ref="view_drivers_order_report_graph"/>
+            <!--field name="context">{'search_default_Requesters':1, 'group_by_no_leaf':1,'group_by':[]}</field-->
+        </record>
+        
+         <record model="ir.ui.view" id="sale_order_drivers_order_line_view">
+            <field name="name">sale.order.drivers.order.line.view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Other Information']" position="before">
+                    <page string="Order Lines by Drivers">
+						<group colspan="2" col="1">
+                        <field name="drivers_order_ids" nolabel="1">
+							<tree version="7.0" editable="top">
+                                <field name="quantity_hand"/>
+								<field name="product_id"/>
+                                <!-- Pasar todos los campos a calcular en el metodo on_change -->
+								<field name="driver_1" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_2" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_3" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_4" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_5" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_6" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_7" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_8" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_9" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_10" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_11" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_12" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_13" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_14" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+								<field name="driver_15" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="order_total" sum="Total Order" string="Total"/>
+							</tree>
+						</field>
+					    </group>
+                    </page>
+                 </xpath>
+            </field>
+        </record>
+        
+        <!--menuitem action="action_drivers_order_line" id="menu_drivers_order" parent="base.menu_sales" sequence="5" groups="base.group_sale_salesman,base.group_sale_manager"/-->
+        <menuitem action="action_drivers_order_line_analysis" id="menu_drivers_order_line_analysis" parent="base.menu_sales" sequence="5" groups="base.group_sale_salesman,base.group_sale_manager"/>
+        
+        
+		
+		<!--record id="view_salesagentorder_tree" model="ir.ui.view">
+            <field name="name">salesagent.order.tree</field>
+            <field name="model">salesagent.order.line</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Agent Order Line" editable="top">
+					    <field name="sale_order"/>
+					    <field name="date_order"/>
+						<field name="salesagent_id"/>
+						<field name="product_id"/>
+						<field name="quantity"/>
+                </tree>
+            </field>
+        </record-->
+        
+        <!--record id="view_salesagent_order_filter" model="ir.ui.view">
+			<field name="name">salesagent.order.line.select</field>
+			<field name="model">salesagent.order.line</field>
+			<field name="arch" type="xml">
+				<search string="Search Salesagent Order Lines">
+					<field name="salesagent_id"/>
+					<field name="product_id"/>
+					<field name="sale_order"/>
+					<group expand="0" string="Group By..." >
+                        <filter string="Salesagent" icon="terp-personal" domain="[]" context="{'group_by':'salesagent_id'}"/>
+                        <filter string="Order Date" icon="terp-go-month" domain="[]" context="{'group_by':'date_order'}"/>
+                        <filter string="Product" icon="terp-personal" domain="[]" context="{'group_by':'product_id'}"/>
+                        <filter icon="terp-go-today" string="Today" domain="[('date_order','&lt;=',time.strftime('%%Y-%%m-%%d 23:59:59')),('date_order','&gt;=',time.strftime('%%Y-%%m-%%d 00:00:00'))]" help="Orders generated Today"/>
+                    </group>
+				</search>
+			</field>
+        </record-->
+        
+        <!--record id="action_agentsorders_line" model="ir.actions.act_window">
+            <field name="name">Salesagent Orders Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">salesagent.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="view_salesagent_order_filter"/>
+            <field name="context">{}</field>
+        </record-->
+        
+        <!--menuitem action="action_agentsorders_line" id="menu_salesagent_order" parent="base.menu_sales" sequence="5" groups="base.group_sale_salesman,base.group_sale_manager"/-->
+        
+        <!--record model="ir.ui.view" id="sale_order_agentline_view">
+            <field name="name">sale.order.agentline.view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Other Information']" position="before">
+                    <page string="Order Line by Sales Agent">
+                        <field name="salesagent_line_ids" editable="top" nolabel="1" />
+							<tree version="7.0" editable="top">
+								<field name="salesagent_id"/>
+								<field name="product_id"/>
+								<field name="quantity"/>
+							</tree>
+                    </page>
+                 </xpath>
+            </field>
+        </record-->
+
+
+    </data>
+</openerp>

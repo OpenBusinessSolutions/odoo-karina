@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_picking_in_landing_costs_form">
+            <field name="name">stock.picking.in.landing.costs.form</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="arch" type="xml">
+                <page string="Additional Info" position="after">
+                    <page string="Landing Costs">
+	                    <field name="landing_costs_line_ids" colspan="4" nolabel="1"  widget="one2many_list"/>           
+    	            </page>
+                </page>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_move_picking_landing_costs_form">
+            <field name="name">stock.move.landing.cost.form.view</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="purchase.stock_move_purchase"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='Stock Moves']/sheet" position="inside">
+                    <group string="Landing Costs">
+                        <field name="landing_costs_line_ids" colspan="4" nolabel="1"  widget="one2many_list" class="oe_inline"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>        
+    </data>
+</openerp>

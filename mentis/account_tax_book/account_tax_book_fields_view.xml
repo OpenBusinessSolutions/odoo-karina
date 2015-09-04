@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- ____________Account Tax Book - Fields______________ -->
+        <record id="view_account_tax_book_fields_tree" model="ir.ui.view">
+            <field name="name">account.tax.book.fields.tree</field>
+            <field name="model">account.tax.book.fields</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tax book fields">
+                	<field name="name"/>
+                	<field name="position"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_account_tax_book_fields_form" model="ir.ui.view">
+            <field name="name">account.tax.book.fields.form</field>
+            <field name="model">account.tax.book.fields</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Tax book fields">
+                	<field name="name"/>
+                    <field name="position"/>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_account_tax_book_fields" model="ir.actions.act_window">
+            <field name="name">Tax Book Fields</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.tax.book.fields</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_account_tax_book_fields" id="menu_account_tax_book_fields" 
+                parent="account.next_id_27" sequence="50"/>
+                
+        <!-- __________________________Tax ___________________________ -->
+        <record id="view_tax_code_tree_tax_book_fields" model="ir.ui.view">
+            <field name="name">account.tax.code.tree.tax.book.fields</field>
+            <field name="model">account.tax.code</field>
+	        <field name="inherit_id" ref="account.view_tax_code_tree"/>
+            <field name="arch" type="xml">
+				<field name="code" position="after">
+					<field name="tax_book_issued_colums_id" />
+					<field name="tax_book_received_colums_id" />
+				</field>
+            </field>
+        </record>
+        
+        <record id="view_tax_code_form_tax_book_fields" model="ir.ui.view">
+            <field name="name">account.tax.code.form.tax.book.fields</field>
+            <field name="model">account.tax.code</field>
+	        <field name="inherit_id" ref="account.view_tax_code_form"/>
+            <field name="arch" type="xml">
+				<field name="parent_id" position="after">
+					<field name="tax_book_issued_colums_id" widget="many2many_tags"/>
+					<field name="tax_book_received_colums_id" widget="many2many_tags"/>
+					<!--field name="tax_book_colums_id" widget="many2many_tags" placeholder="Tags..."/-->
+				</field>
+            </field>
+        </record>
+    </data>
+</openerp>

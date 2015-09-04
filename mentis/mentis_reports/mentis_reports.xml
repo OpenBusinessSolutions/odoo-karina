@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<report
+			auto="False" 
+			id="sale.report_sale_order" 
+			model="sale.order" 
+			name="sale.order.mentis" 
+			rml="mentis_reports/report/sale_order.rml" 
+			string="Quotation / Order"
+		/>
+		<report
+			auto="False" 
+			id="sale.report_sale_order_2" 
+			model="sale.order" 
+			name="sale.order.mentis2" 
+			rml="mentis_reports/report/sale_order_2.rml" 
+			string="Predračun"
+		/>
+		<report 
+			auto="False"
+			id="account.account_overdue" 
+			model="res.partner" 
+			name="account.overdue.mentis" 
+			rml="mentis_reports/report/account_print_overdue.rml"
+			string="Overdue Payments"
+		/>
+		<report
+			id="report_sale_work_order" 
+			model="sale.order" 
+			name="sale.work.order" 
+			rml="mentis_reports/report/work_order.rml" 
+			string="Work Order"
+		/>
+		<report
+		    auto="False"
+		    id="account.account_invoices"
+		    model="account.invoice"
+		    name="account.invoice.mentis"
+		    rml="mentis_reports/report/account_print_invoice.rml"
+		    string="Invoices"
+		    attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+		    attachment_use="True"
+		    usage="default"
+        />
+		<report 
+			auto="False" 
+			id="purchase.report_purchase_quotation" 
+			model="purchase.order" 
+            name="purchase.quotation" 
+			rml="mentis_reports/report/purchase_request_quotation.rml"
+            string="Request for Quotation"
+		/>
+		<report
+			auto="False" 
+			id="purchase.report_purchase_order" 	
+			model="purchase.order"
+            name="purchase.order" 
+			rml="mentis_reports/report/purchase_order.rml"
+            usage="default" 
+			string="Purchase Order"
+		/>
+		
+		<report 
+			id="stock.report_picking_list" 
+			model="stock.picking" 
+			name="stock.picking.list.mentis" 
+			string="Picking Slip" 
+			rml="mentis_reports/report/stock_picking.rml"
+		/>
+        <report 
+        	id="stock.report_picking_list_in" 
+        	model="stock.picking.in" 
+        	name="stock.picking.list.mentis" 
+        	string="Receipt Slip" 
+        	rml="mentis_reports/report/stock_picking.rml"
+        />
+        
+        <report 
+        	id="stock.report_picking_list_out" 
+        	model="stock.picking.out" 
+        	name="stock.picking.list.mentis" 
+        	string="Delivery Slip" 
+        	rml="mentis_reports/report/stock_picking.rml"
+        />
+		<report 
+        	id="stock.report_picking_list_out_mentis2" 
+        	model="stock.picking.out" 
+        	name="stock.picking.list.mentis2" 
+        	string="Dobavnica Kovine" 
+        	rml="mentis_reports/report/stock_picking_2.rml"
+        />
+		
+	</data>
+</openerp>

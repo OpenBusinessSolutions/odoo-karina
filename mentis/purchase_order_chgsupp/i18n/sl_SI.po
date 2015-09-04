@@ -1,0 +1,64 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* purchase_order_chgsupp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-19 06:47+0000\n"
+"PO-Revision-Date: 2012-10-19 06:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_order_chgsupp
+#: code:addons/purchase_order_chgsupp/purchase_order_chgsupp.py:38
+#, python-format
+msgid "Please select supplier!"
+msgstr "Prosim izberite dobavitelja!"
+
+#. module: purchase_order_chgsupp
+#: view:purchase.order.chgsupp:0
+msgid "Change Supplier"
+msgstr "Zamenjava dobavitelja"
+
+#. module: purchase_order_chgsupp
+#: view:purchase.order.chgsupp:0
+msgid "Are you sure you want to change supplier?"
+msgstr "Ali ste prepričani, da želite zamenjati dobavitelja?"
+
+#. module: purchase_order_chgsupp
+#: field:purchase.order.chgsupp,supplier_id:0
+msgid "Supplier"
+msgstr "Dobavitelj"
+
+#. module: purchase_order_chgsupp
+#: code:addons/purchase_order_chgsupp/purchase_order_chgsupp.py:37
+#, python-format
+msgid "Warning"
+msgstr "Opozorilo"
+
+#. module: purchase_order_chgsupp
+#: view:purchase.order.chgsupp:0
+msgid "Change purchase orders supplier"
+msgstr "Zamenjava dobavitelja na nabavnem nalogu"
+
+#. module: purchase_order_chgsupp
+#: view:purchase.order.chgsupp:0
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: purchase_order_chgsupp
+#: model:ir.actions.act_window,name:purchase_order_chgsupp.action_purchase_order_chgsupp
+msgid "Change Purchase orders supplier"
+msgstr "Zamenjava dobavitelja na nabavnem nalogu"
+
+#. module: purchase_order_chgsupp
+#: model:ir.model,name:purchase_order_chgsupp.model_purchase_order_chgsupp
+msgid "Change Purchase Order Lines Supplier"
+msgstr "Zamenjava dobavitelja na postavkah nabavnega naloga"
+

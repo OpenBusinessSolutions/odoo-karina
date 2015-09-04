@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Mentis-OpenErp</title> 
+        <!--css and js for OpenERP and jqGrid  -->
+        <link rel="stylesheet" type="text/css" media="screen" href="lib/jqGrid/css/ui-lightness/jquery-ui-1.10.2.custom.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="lib/jqGrid/css/ui.jqgrid.css" />
+        <script type="text/javascript" src="/web/webclient/js"></script> 
+        <script src="lib/jqGrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+        <script src="lib/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+        
+        <!--css and js for m_web_api -->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/core.css" />
+        <script type="text/javascript" src="js/core.js"></script> 
+      
+    </head> 
+    <body>
+    <div>
+    	<div id="login" class="Open">
+    		<table id="tlogin">
+    			<tr><td>Podjetje</td><td><select id="s1"> </select></td></tr>
+    			<tr><td>Uporabnik</td><td><input id="u" class="t1" value="admin" type="text" /></td></tr>
+    			<tr><td>Geslo</td><td><input id="p" class="t1" value="Zima1313" type="password" /></td></tr>
+    			<tr><td><button id="blogin">Prijava</button></td></tr>
+    		</table>  		
+     	</div>
+     	<div id="select1" class="Closed"">
+     	 
+    	 <div class="run1"> </div> 
+    	
+    	 <div class="run1"> </div>    	    	
+    	 <div class="run" id="deliverall">Nalaganje - Vse relacija</div> 
+    	 <div class="run1"> </div>    	    	
+    	 <div class="run" id="deliver">Nalaganje - Relacija 1</div> 
+    	 <div class="run1"> </div>   	 
+    	 <div class="run" id="deliver1">Nalaganje - Relacija 2</div> 
+    	 <div class="run1"> </div>    	
+    	 <div class="run" id="deliver2">Nalaganje - Relacija 3</div> 
+    	 <div class="run1"> </div>    	
+     	 <div class="run1"> </div> 
+    	</div>
+ 
+    	<div id="outGroup" class="Closed">
+    	 <div class="run1" id="Header11"> Relacija 1</div>     	
+    	 <div class="runTable">
+    	 <table class='runTable'>
+    	 	<tbody class="runTable">
+ 			<tr class="runTable"> 
+ 			<td id="kon" class="run" >  ___GOTOVO___ </td>	  			
+    	 	<td width="100%" id='run' class="run" >V DELU</td>  
+    	 	<td id="izhod" class="run" >  ___IZHOD___ </td>		 	 	 	
+    	 	</tbody>
+    	 	</tr>
+	 	 </table> 	
+	 	  </div>    	    	   	 
+    	 <div class="run1"> </div> 
+    	 <table id="grid2"><tr> <td> </td> </tr> </table> 
+        </div>
+ 
+    	<div id="outDn1" class="Closed"> 
+    		<div class="run1" id="Header12"></div>  
+    	 <div class="runTable">
+    	 <table class='runTable'>
+    	 	<tbody class="runTable">
+ 			<tr class="runTable">  
+ 			<td id="konDn1" class="run" >  ___GOTOVO___ </td>	 			
+    	 	<td width="100%" id='runDn1' class="run" >V DELU</td>  
+    	 	<td id="izhodDn1" class="run" >  ___IZHOD___ </td>		 	 	 	
+    	 	</tbody>
+    	 	</tr>
+	 	 </table> 	
+	 	  </div>    	    	   	 
+    	 <div class="run1"> </div>         	 
+    	 <table id="grid1"><tr> <td> </td> </tr> </table>   	
+    	</div>
+ 
+    	<div id="dialog-all" title="Naloži vse" class="Closed">
+    		<form>
+              <fieldset>
+                <label for="name1">Naloži</label>
+                <input value="" disabled=true type="number" name="name1" id="name1" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+             </form> 
+    	</div>	
+ 
+    	<div id="dialog-partial" title="Naloži delno" class="Closed">
+    		<form>
+              <fieldset>
+                <label for="name">Naloži</label>
+                <input type="number" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+             </form> 
+    	</div>	
+ 
+    	<div id="dialog-partner" title="Partner" class="Closed">
+    		<form>
+              <fieldset>               
+                <input size="75%" value="" disabled=true type="text" name="name2" id="name2" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+             </form> 
+    	</div>	
+    	<div id="dialog-testo" title="Testo" class="Closed">
+    		<form>
+              <fieldset>               
+                <label for="testo_izdelano">Testo-Izdelano&nbsp;</label>
+                <input type="number" name="name" id="testo_izdelano" class="text ui-widget-content ui-corner-all" />             
+               </fieldset>
+               <fieldset>                             
+                <label for="testo_odpis">Testo-Odpis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="number" name="name" id="testo_odpis" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+             </form> 
+    	</div>	
+    	<div id="dialog-polizdelki" title="Polizdelki" class="Closed">
+    		<form>
+              <fieldset>               
+                <label for="polizdelki_izdelano">Osnova-Izdelano&nbsp;</label>
+                <input type="number" name="name" id="polizdelki_izdelano" class="text ui-widget-content ui-corner-all" />             
+               </fieldset>
+               <fieldset>                             
+                <label for="polizdelki_odpis">Osnova-Odpis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="number" name="name" id="polizdelki_odpis" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+             </form> 
+    	</div>	
+    	<div id="dialog-izdelki" title="Izdelki" class="Closed">
+    		<form>
+              <fieldset>               
+                <label for="izdelki_izdelano">Izdelki-Izdelano&nbsp;&nbsp;</label>
+                <input type="number" name="name" id="izdelki_izdelano" class="text ui-widget-content ui-corner-all" />             
+               </fieldset>
+               <fieldset>                             
+                <label for="izdelki_odpis">Izdelki-Odpis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="number" name="name" id="izdelki_odpis" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+               <fieldset>                             
+                <label for="izdelki_sock">Izdelki-Hladilnica&nbsp;</label>
+                <input type="number" name="name" id="izdelki_stock" class="text ui-widget-content ui-corner-all" />
+               </fieldset>
+             </form> 
+    	</div>	
+    </div>
+		    
+    </body> 
+</html> 
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+<report
+   id="report_intrastat_rml"
+   string="Intrastat report"
+   name="report.intrastat.rml"
+   model="intrastat"
+   rml="intrastat/report/intrastat.rml"
+/>
+</data>
+</openerp>
+
+

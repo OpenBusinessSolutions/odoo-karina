@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="sale_order_confirmation_wizard_view" model="ir.ui.view">
+            <field name="name">Confirm Sale Orders</field>
+            <field name="model">sale.order.confirm.wizard</field>
+            <field name="arch" type="xml">
+               <form string="Confirm Quotations - view" version="7.0">
+               		<group>
+                    	<separator string="Confirm Quotations" colspan="4" />
+                    	<field name="date_label" readonly="1" />
+                    	<field name="date" groups="base.group_no_one"/>
+                    	<separator string="Status" colspan="4"/>
+                    	<field name="status" />
+                    	<field name="override" />
+                    </group>
+                    <footer>
+                    	<button name="execute" string="Confirm" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Confirm Quotations"
+            res_model="sale.order.confirm.wizard"
+            src_model="sale.order"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_confirm_sale_orders"/>    
+
+     	<menuitem action="action_confirm_sale_orders" id="menu_confirm_sale_orders" parent="base.menu_sales" sequence="4"/>
+
+		<!-- ...SALE ORDER LINE - FORM/TREE... -->
+		<!--
+		<record id="view_order_form_transport" model="ir.ui.view">
+		    <field name="name">sale.order.form.transport</field>
+		    <field name="model">sale.order</field>
+		    <field name="inherit_id" ref="sale.view_order_form"/>
+		    <field name="arch" type="xml">
+		        <data>
+		        	<xpath expr="//header/button[@name='action_button_confirm']" position="replace" />
+					<xpath expr="//header/button[@name='action_button_confirm']" position="replace">
+						<button name="action_button_confirm" states="prepared" string="Confirm Sale" class="oe_highlight" type="object" groups="base.group_user"/>
+					</xpath>
+		        </data>
+		    </field>
+		</record>
+		-->
+    </data>
+</openerp>

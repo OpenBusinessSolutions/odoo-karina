@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+	<openerp>
+		<data noupdate="True">
+
+			<!--
+			Tax Code Template Configuration
+			-->
+	
+			<record id="account_tax_code_1" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">1</field>
+				 <field name="parent_id" ref="" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">OpenERP INC.</field>
+			</record>
+			<record id="account_tax_code_2" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2</field>
+				 <field name="parent_id" ref="account_tax_code_1" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Bases de Impuestos</field>
+			</record>
+			<record id="account_tax_code_3" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.1</field>
+				 <field name="parent_id" ref="account_tax_code_2" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Base Imponible Compras</field>
+			</record>
+			<record id="account_tax_code_4" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.1.1</field>
+				 <field name="parent_id" ref="account_tax_code_3" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Compras Imponibles Tasa IE (18%)</field>
+			</record>
+			<record id="account_tax_code_5" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.1.2</field>
+				 <field name="parent_id" ref="account_tax_code_3" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Compras Imponibles Tasa E (8%)</field>
+			</record>
+			<record id="account_tax_code_6" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.1.3</field>
+				 <field name="parent_id" ref="account_tax_code_3" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Compras Imponibles Tasa X (Exentas)</field>
+			</record>
+			<record id="account_tax_code_7" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.2</field>
+				 <field name="parent_id" ref="account_tax_code_2" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Base de Ventas Imponibles</field>
+			</record>
+			<record id="account_tax_code_8" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.2.1</field>
+				 <field name="parent_id" ref="account_tax_code_7" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Ventas Imponibles Tasa IE (18%)</field>
+			</record>
+			<record id="account_tax_code_9" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.2.2</field>
+				 <field name="parent_id" ref="account_tax_code_7" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Ventas Imponibles Tasa E* (8%)</field>
+			</record>
+			<record id="account_tax_code_10" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.2.3</field>
+				 <field name="parent_id" ref="account_tax_code_7" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Ventas Imponibles Tasa X (Exentas)</field>
+			</record>
+			<record id="account_tax_code_11" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.3</field>
+				 <field name="parent_id" ref="account_tax_code_2" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Base Imponible Retenciones</field>
+			</record>
+			<record id="account_tax_code_12" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.3.1</field>
+				 <field name="parent_id" ref="account_tax_code_11" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Imponibles Base 18%</field>
+			</record>
+			<record id="account_tax_code_13" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.3.2</field>
+				 <field name="parent_id" ref="account_tax_code_11" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Imponibles Base 8%</field>
+			</record>
+			<record id="account_tax_code_14" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.3.3</field>
+				 <field name="parent_id" ref="account_tax_code_11" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Imponibles Base 2%</field>
+			</record>
+			<record id="account_tax_code_15" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">2.3.4</field>
+				 <field name="parent_id" ref="account_tax_code_11" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Imponibles Base 10%</field>
+			</record>
+			<record id="account_tax_code_16" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3</field>
+				 <field name="parent_id" ref="account_tax_code_1" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Saldo Impuesto a Pagar</field>
+			</record>
+			<record id="account_tax_code_17" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.1</field>
+				 <field name="parent_id" ref="account_tax_code_16" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Pagados</field>
+			</record>
+			<record id="account_tax_code_18" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.1.1</field>
+				 <field name="parent_id" ref="account_tax_code_17" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Pagados Tasa IE (18%)</field>
+			</record>
+			<record id="account_tax_code_19" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.1.2</field>
+				 <field name="parent_id" ref="account_tax_code_17" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Pagados Tasa IE (8%)</field>
+			</record>
+			<record id="account_tax_code_20" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.1.3</field>
+				 <field name="parent_id" ref="account_tax_code_17" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Pagados Tasa X (Exento)</field>
+			</record>
+			<record id="account_tax_code_21" model="account.tax.code.template">
+				 <field name="sign">-1.0</field>
+				 <field name="code">3.2</field>
+				 <field name="parent_id" ref="account_tax_code_16" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Cobrados</field>
+			</record>
+			<record id="account_tax_code_22" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.2.1</field>
+				 <field name="parent_id" ref="account_tax_code_21" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Cobrados Tasa IE (18%)</field>
+			</record>
+			<record id="account_tax_code_23" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.2.2</field>
+				 <field name="parent_id" ref="account_tax_code_21" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Cobrados Tasa E* (8%)</field>
+			</record>
+			<record id="account_tax_code_24" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.2.3</field>
+				 <field name="parent_id" ref="account_tax_code_21" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Impuestos Cobrados Tasa X (Exento)</field>
+			</record>
+			<record id="account_tax_code_25" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.3</field>
+				 <field name="parent_id" ref="account_tax_code_16" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Cobradas</field>
+			</record>
+			<record id="account_tax_code_26" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.3.1</field>
+				 <field name="parent_id" ref="account_tax_code_25" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Cobradas Tasa 18%</field>
+			</record>
+			<record id="account_tax_code_27" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.3.2</field>
+				 <field name="parent_id" ref="account_tax_code_25" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Cobradas Tasa 8%</field>
+			</record>
+			<record id="account_tax_code_28" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.3.3</field>
+				 <field name="parent_id" ref="account_tax_code_25" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Cobradas Tasa 10%</field>
+			</record>
+			<record id="account_tax_code_29" model="account.tax.code.template">
+				 <field name="sign">1.0</field>
+				 <field name="code">3.3.4</field>
+				 <field name="parent_id" ref="account_tax_code_25" />
+				 <field name="notprintable" eval="False" />
+				 <field name="name">Retenciones Cobradas Tasa 2%</field>
+			</record>
+		</data>
+	</openerp>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Creating views-->
+       <record model="ir.ui.view" id="mrp_bom_sack_quantity_form">
+            <field name="name">mrp.bom.sack.quantity.form.view</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+					<field string="Sacks Quantity" name="sacks_quantity" readonly="0"
+                        on_change="onchange_sacks_quantity(sacks_quantity, product_id, context)"/>
+                </xpath>
+            </field>
+        </record>
+        
+          <!--record model="ir.ui.view" id="mrp_bom_sack_quantity_tree">
+            <field name="name">mrp.bom.sack.quantity.tree.view</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_uom']" position="after">
+					<field string="Sack Quantity" name="sacks_quantity"/>
+                </xpath>
+            </field>
+        </record-->
+        
+    </data>
+</openerp>

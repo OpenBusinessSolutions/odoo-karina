@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_stock_fill_inventory_zero_inherit" model="ir.ui.view">
+            <field name="name">view_stock_fill_inventory_zero_inherit</field>
+            <field name="model">stock.fill.inventory</field>
+            <field name="inherit_id" ref="stock_product_zero.view_stock_fill_inventory_zero"/>
+            <field name="arch" type="xml">
+                <field name="location_id" position="after">
+                    <field name="category_id"/>
+                </field>
+                <field name="display_with_zero_qty" position="replace">
+                	<field name="display_with_zero"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

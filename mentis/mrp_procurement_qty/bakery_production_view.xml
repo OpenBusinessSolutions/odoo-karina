@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- ________________Bakery production__________________ -->
+        <record id="view_bakery_production_tree" model="ir.ui.view">
+            <field name="name">bakery.production.tree</field>
+            <field name="model">bakery.production</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Bakery production">
+                	<field name="date_start"/>
+                	<field name="date_end"/>
+                	<field name="sale_done"/>
+                	<field name="procurement_done"/>
+                	<field name="op_procurement_done"/>
+                	<field name="delivery_done"/>
+                	<field name="manufactury_done"/>
+                	<field name="stock_moved"/>
+                	<field name="running"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_bakery_production_form" model="ir.ui.view">
+            <field name="name">bakery.production.form</field>
+            <field name="model">bakery.production</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Bakery production">
+                    <group string="Status">
+                        <field name="running"/>
+                        <field name="stock_moved"/>
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                    </group>
+                    <group string="Processes">
+                    	<field name="sale_done"/>
+                        <field name="procurement_done"/>
+                        <field name="op_procurement_done"/>
+                		<field name="delivery_done"/>
+                		<field name="manufactury_done"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_bakery_production" model="ir.actions.act_window">
+            <field name="name">Bakery Production</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bakery.production</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_bakery_production" id="menu_bakery_production" 
+                parent="mrp.menu_mrp_manufacturing" sequence="40"/>  
+                
+                
+        <!-- ________________Bakery processes________________ -->
+        <record id="view_bakery_process_tree" model="ir.ui.view">
+            <field name="name">bakery.process.tree</field>
+            <field name="model">bakery.process</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Bakery processes">
+                	<field name="process"/>
+                	<field name="user_id"/>
+                	<field name="date_start"/>
+                	<field name="date_end"/>
+                	<field name="duration"/>
+                	<field name="misc"/>
+                	<field name="running"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_bakery_process_form" model="ir.ui.view">
+            <field name="name">bakery.process.form</field>
+            <field name="model">bakery.process</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Bakery process">
+                    <group string="Processes">
+                    	<field name="process"/>
+                		<field name="user_id"/>
+                		<field name="date_start"/>
+                		<field name="date_end"/>
+                		<field name="duration"/>
+                    </group>
+                    <group string="Details">
+                    	<field name="running" groups="base.group_erp_manager"/>
+                    	<field name="misc"/>
+                    	<field name="error"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="search_bakery_process" model="ir.ui.view">
+            <field name="name">bakery.process.search</field>
+            <field name="model">bakery.process</field>
+            <field eval="50" name="priority"/>
+            <field name="arch" type="xml">
+                <search string="Stock Moves">
+					<filter string="Confirm sale orders" name="sale" domain="[('process','=',10)]" />
+					<filter string="Procurement" name="procurement" domain="[('process','=',20)]" />
+					<filter string="Procurement with OP" name="procurement_OP" domain="[('process','=',30)]" />
+					<filter string="Deliver delivery orders" name="delivery" domain="[('process','=',40)]" />
+					<filter string="Produce manufacturing orders" name="mrp" domain="[('process','=',50)]" />
+					<filter string="Stock moved" name="move" domain="[('process','=',60)]" />
+                </search>
+            </field>
+        </record>
+        
+        <record id="action_bakery_process" model="ir.actions.act_window">
+            <field name="name">Bakery Process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bakery.process</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_bakery_process" id="menu_bakery_process" 
+                parent="mrp.menu_mrp_manufacturing" sequence="50"/>
+        
+    </data>
+</openerp>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report auto="False" id="report_pricelist_version" model="product.pricelist.version"
+        	    name="pricelist.version" rml="pricelist_version_report/report/report_pricelist_version.rml"
+        	    usage="default" string="Pricelist Version Report" />
+    </data>
+</openerp>

@@ -1,0 +1,6 @@
+"id","name","model_id/id","group_id/id","perm_read","perm_write","perm_create","perm_unlink"
+"access_sale_intrastat_code","Intrastat Code","model_intrastat_code","base.group_sale_salesman_all_leads","True","True","True","True"
+"access_purchase_instastat_code","Intrastat Code","model_intrastat_code","purchase.group_purchase_user","True","True","True","True"
+"access_sale_intrastat_trtype","Intrastat Transaction Type","model_intrastat_transaction_type","base.group_sale_salesman_all_leads","True","True","True","True"
+"access_purchase_instastat_trtype","Intrastat Transaction Type","model_intrastat_transaction_type","purchase.group_purchase_user","True","True","True","True"
+"access_all_instastat","Intrastat Transaction Type","model_intrastat","","True","True","True","True"

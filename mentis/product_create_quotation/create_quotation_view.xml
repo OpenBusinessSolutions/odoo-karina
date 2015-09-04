@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_product_create_quotation" model="ir.ui.view">
+            <field name="name">Create quotation from selected products </field>
+            <field name="model">product.create.quotation</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+               <form string="Create quotation from selected products" version="7.0">
+               		<group>
+                    	<separator string="Please select quantity per product" colspan="4"/>
+                    	<field name="partner_id" colspan="2"/>
+                    	<field name="product_qty" colspan="2"/>
+                    	<separator string="" colspan="4" />
+                    </group>
+                    <footer>
+                    	<button name="create_quotation" string="Create" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window name="Create quotation"
+            context="{'search_default_draft': 1, 'search_default_approved': False}"
+            res_model="product.create.quotation"
+            src_model="product.product"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_product_create_quotation"/>    
+                        
+    </data>
+</openerp>

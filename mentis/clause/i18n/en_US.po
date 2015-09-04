@@ -1,0 +1,107 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* clause
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-20 09:02+0000\n"
+"PO-Revision-Date: 2013-06-20 09:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clause
+#: help:clause,text:0
+msgid "Text printed on documents."
+msgstr ""
+
+#. module: clause
+#: model:ir.model,name:clause.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: clause
+#: field:clause,name:0
+msgid "Name"
+msgstr ""
+
+#. module: clause
+#: view:clause:0
+#: model:ir.model,name:clause.model_clause
+msgid "Clause"
+msgstr ""
+
+#. module: clause
+#: view:account.invoice:0
+#: view:sale.order:0
+msgid "Clause Lines"
+msgstr ""
+
+#. module: clause
+#: help:account.fiscal.position,default_clause:0
+msgid "Clause to be written on output documents when there is no other clause set on partner."
+msgstr ""
+
+#. module: clause
+#: help:clause,name:0
+msgid "Short Clause Description"
+msgstr ""
+
+#. module: clause
+#: field:clause,text:0
+msgid "Text on report"
+msgstr ""
+
+#. module: clause
+#: model:ir.model,name:clause.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: clause
+#: model:ir.model,name:clause.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: clause
+#: model:ir.model,name:clause.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: clause
+#: field:account.fiscal.position,default_clause:0
+#: field:res.partner,default_clause:0
+msgid "Default Clause"
+msgstr ""
+
+#. module: clause
+#: view:account.invoice:0
+#: field:account.invoice,clause_ids:0
+#: view:clause:0
+#: model:ir.actions.act_window,name:clause.action_clause_form
+#: model:ir.ui.menu,name:clause.menu_action_account_clause_form
+#: model:ir.ui.menu,name:clause.menu_action_sale_clause_form
+#: view:sale.order:0
+#: field:sale.order,clause_ids:0
+msgid "Clauses"
+msgstr ""
+
+#. module: clause
+#: view:sale.order:0
+msgid "Order Lines"
+msgstr ""
+
+#. module: clause
+#: help:res.partner,default_clause:0
+msgid "Clause to be written on output documents for this partner."
+msgstr ""
+
+#. module: clause
+#: view:account.invoice:0
+msgid "Invoice Lines"
+msgstr ""
+

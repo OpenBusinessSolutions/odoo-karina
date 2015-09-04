@@ -1,0 +1,84 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* stock_product_moves
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-14 13:41+0000\n"
+"PO-Revision-Date: 2013-10-14 13:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_product_moves
+#: view:stock.product.moves:0
+msgid "Product Stock Moves"
+msgstr "Materialna kartica izdelka"
+
+#. module: stock_product_moves
+#: view:stock.product.moves:0
+#: field:stock.product.moves,product_id:0
+msgid "Product"
+msgstr "Izdelek"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,qty_received:0
+msgid "Quantity Received"
+msgstr "Prejeta količina"
+
+#. module: stock_product_moves
+#: view:stock.product.moves:0
+msgid "Group By..."
+msgstr "Združi po..."
+
+#. module: stock_product_moves
+#: field:stock.product.moves,amount:0
+msgid "Amount"
+msgstr "Vrednost"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,price_unit:0
+msgid "Unit Price"
+msgstr "Cena enote"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,invoice_id:0
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,qty_stock:0
+msgid "Quantity On Stock"
+msgstr "Količina na zalogi"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,partner_id:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,picking_id:0
+msgid "Picking"
+msgstr "Prejemnica/izdajnica"
+
+#. module: stock_product_moves
+#: field:stock.product.moves,qty_delivered:0
+msgid "Quantity Delivered"
+msgstr "Dobavljena količina"
+
+#. module: stock_product_moves
+#: model:ir.actions.act_window,name:stock_product_moves.act_product_stock_moves_open
+#: model:ir.model,name:stock_product_moves.model_stock_product_moves
+#: view:stock.product.moves:0
+msgid "Product Stock Moves"
+msgstr "Materialna kartica izdelka"

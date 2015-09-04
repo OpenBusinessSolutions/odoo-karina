@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="action_picking_update" model="ir.actions.act_window">
+            <field name="name">Update Values</field>
+            <field name="res_model">stock.picking.update</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="stock_picking_update_form" model="ir.ui.view">
+            <field name="name">stock.picking.update.form</field>
+            <field name="model">stock.picking.update</field>
+            <field name="arch" type="xml">
+                <form string="Update Values" version="7.0">
+                    <separator string="Transfer Products" name="product_separator"/>
+                    <group>
+                    	<field name="picking_id" attrs="{'invisible': 1}"/>
+                    	<field name="date_delivered"/>
+                    </group>
+                    <field name="move_ids" context="{'picking_id': picking_id}"/>
+                    <footer>
+                        <button name="do_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <record id="stock_picking_update_line_list" model="ir.ui.view">
+            <field name="name">stock.picking.update.line.list</field>
+            <field name="model">stock.picking.update.line</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Product Returns">
+                    <field name="product_id" readonly="1"/>
+                    <field name="quantity" readonly="1"/>
+                    <field name="quantity_new"/>
+                    <field name="price_unit" readonly="1"/>
+                    <field name="price_unit_new"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

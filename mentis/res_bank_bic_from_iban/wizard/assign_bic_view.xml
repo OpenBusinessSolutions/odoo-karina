@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_assign_bic_from_iban" model="ir.ui.view">
+            <field name="name">Assign BIC from customer IBAN</field>
+            <field name="model">bank.assign.bic.from.iban</field>
+            <field name="arch" type="xml">
+               <form string="Assign BIC from customer IBAN" version="7.0">
+                    <group>
+                    	<separator string="For all customers that have Slovenian IBAN number defined, BIC number will be assigned." colspan="4" />
+                    	<field name="overwrite" />
+                    </group>
+                    <footer>
+                    	<button name="assign" string="Assign" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window name="Assign BIC from customer IBAN"
+            res_model="bank.assign.bic.from.iban"
+            src_model="res.partner.bank"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_assign_bic_from_iban"/>    
+                        
+    </data>
+</openerp>

@@ -1,0 +1,106 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* clause
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-20 09:02+0000\n"
+"PO-Revision-Date: 2013-06-20 09:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clause
+#: help:clause,text:0
+msgid "Text printed on documents."
+msgstr "Opis prikazan na dokumentih."
+
+#. module: clause
+#: model:ir.model,name:clause.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: clause
+#: field:clause,name:0
+msgid "Name"
+msgstr "Ime"
+
+#. module: clause
+#: view:clause:0
+#: model:ir.model,name:clause.model_clause
+msgid "Clause"
+msgstr "Klavzula"
+
+#. module: clause
+#: view:account.invoice:0
+#: view:sale.order:0
+msgid "Clause Lines"
+msgstr "Klavzule"
+
+#. module: clause
+#: help:account.fiscal.position,default_clause:0
+msgid "Clause to be written on output documents when there is no other clause set on partner."
+msgstr "Privzeta klavzula za dokument, kadar ni določene druge."
+
+#. module: clause
+#: help:clause,name:0
+msgid "Short Clause Description"
+msgstr "Kratek opis"
+
+#. module: clause
+#: field:clause,text:0
+msgid "Text on report"
+msgstr "Tekst na dokumentu."
+
+#. module: clause
+#: model:ir.model,name:clause.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr "Davčno območje"
+
+#. module: clause
+#: model:ir.model,name:clause.model_account_invoice
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: clause
+#: model:ir.model,name:clause.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: clause
+#: field:account.fiscal.position,default_clause:0
+#: field:res.partner,default_clause:0
+msgid "Default Clause"
+msgstr "Prizveta klavzula"
+
+#. module: clause
+#: view:account.invoice:0
+#: field:account.invoice,clause_ids:0
+#: view:clause:0
+#: model:ir.actions.act_window,name:clause.action_clause_form
+#: model:ir.ui.menu,name:clause.menu_action_account_clause_form
+#: model:ir.ui.menu,name:clause.menu_action_sale_clause_form
+#: view:sale.order:0
+#: field:sale.order,clause_ids:0
+msgid "Clauses"
+msgstr "Klavzule"
+
+#. module: clause
+#: view:sale.order:0
+msgid "Order Lines"
+msgstr "Postavke naročila"
+
+#. module: clause
+#: help:res.partner,default_clause:0
+msgid "Clause to be written on output documents for this partner."
+msgstr "Prizveta klavzula za portnerja, kadar ni določene druge."
+
+#. module: clause
+#: view:account.invoice:0
+msgid "Invoice Lines"
+msgstr "Postavke računa"

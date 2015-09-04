@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <!-- ======================================================	-->
+        <!--  					RES.PARTNER FORM					-->
+        <!-- ======================================================	-->
+        <record id="view_res_partner_salesagent_commission" model="ir.ui.view">
+            <field name="name">res.partner.form.salesagent_commission</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="customer" position="after">
+                    <field name="salesagent" groups="salesagent_commissions.group_salesagent_user"/>
+                </field>
+                <field name="user_id" position="after">
+                    <field name="salesagent_for_customer_id" domain="[('salesagent', '=', True)]" 
+                        attrs="{'invisible':[('customer', '=', False)]}"
+                        groups="salesagent_commissions.group_salesagent_user"/>
+                </field>
+                <page string="Internal Notes" position="after">
+                    <page string="Salesagent Details" attrs="{'invisible': [('salesagent','=', False)]}" groups="salesagent_commissions.group_salesagent_user">
+                        <separator string="Commissions" colspan="4" />
+                        <field name="commission" colspan="4" nolabel="1"/>
+                        <separator string="Customers" colspan="4"/>
+                        <field name="customer_for_salesagent_ids" colspan="4" nolabel="1"/>
+                    </page>
+                    <page string="Commissions for product" attrs="{'invisible': [('salesagent','=', False)]}" groups="salesagent_commissions.group_salesagent_user">
+                        <button string="Rapid Product Filling" name="fill_products" type="object" icon="gtk-ok"  colspan="4"/>
+                        <field name="product_provvigioni_ids" colspan="4" nolabel="1">
+                            <tree string="Details" editable="top">
+                                <field name="name"/>
+                                <field name="commission"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <!-- ======================================================	-->
+        <!--  					RES.PARTNER FILTER					-->
+        <!-- ======================================================	-->
+        <record id="view_res_partner_filter_salesagent_commission" model="ir.ui.view">
+            <field name="name">res.partner.filter.salesagent_commission</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <filter string="Suppliers" position="after">
+                    <filter name="salesagent" string="Salesagent"
+                        icon="terp-personal" domain="[('salesagent','=',True)]"
+                        groups="salesagent_commissions.group_salesagent_user"
+                        help="Salesagent Partners" />
+                </filter>
+                <field name="user_id" position="replace">
+                    <field name="user_id" invisible="1"/>
+                    <field name="salesagent_for_customer_id" groups="salesagent_commissions.group_salesagent_user"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- ======================================================	-->
+        <!--  				SALESAGENT 		ACTION					-->
+        <!-- ======================================================	-->
+        <record id="action_partner_form_salesagent" model="ir.actions.act_window">
+            <field name="name">Salesagent</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="context">{"search_default_salesagent":1, "default_supplier":0, "default_customer":0, "default_salesagent":1}</field>
+            <field name="search_view_id" ref="view_res_partner_filter_salesagent_commission"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- ======================================================	-->
+        <!--  			SALESAGENT 			MENU					-->
+        <!-- ======================================================	-->
+        <menuitem action="action_partner_form_salesagent" id="menu_partner_salesagent" parent="menu_commissions_address_book" name="Salesagents" />
+
+    </data>
+</openerp>

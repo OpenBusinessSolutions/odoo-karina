@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record id="assets_form_view" model="ir.ui.view">
+            <field name="name">asset.asset.form.inherit</field>
+            <field name="model">asset.asset</field>
+            <field name="inherit_id" ref="asset.assets_form_view"/>
+            <field name="groups_id" eval="[(4, ref('asset.group_mro_user'))]"/>
+            <field name="arch" type="xml">
+                <page string="Info" position="after" version="7.0">
+                    <page string="Meters">
+                        <field name="meter_ids">
+                            <tree string="Meters">
+                                <field name="name"/>
+                                <button icon="STOCK_JUSTIFY_FILL" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
+                                <field name="date"/>
+                                <field name="value"/>
+                                <field name="total_value"/>
+                                <field name="utilization"/>
+                                <field name="meter_uom"/>
+                                <field name="state" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+                <xpath expr="//div[@name='buttons']" position="inside">
+                   <button class="oe_inline oe_stat_button" name="action_view_rules" type="object" 
+                       icon="fa-refresh" string="Scheduling Rules">
+                   </button>
+                </xpath>
+            </field>
+        </record>
+
+ 	</data>
+</openerp>

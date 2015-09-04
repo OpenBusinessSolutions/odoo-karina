@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_order_extensions_form_inherit" model="ir.ui.view">
+            <field name="name">sale.order.extensions.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_stock.view_order_form_inherit"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//form/header/button[@name='action_button_confirm']" position="replace"/>
+                    <xpath expr="//form/header/button[@name='action_button_confirm']" position="replace"/>
+                	<button name="cancel" position="before">
+                        <button name="action_button_confirm_surplus" states="prepared" string="Confirm Sale" type="object" class="oe_highlight" groups="base.group_user" invisible="context.get('shop_production', False)"/>
+                	</button>
+                    <button name="action_quotation_send" position="before">
+                        <button name="prepare" states="draft" string="Prepare" type="workflow" class="oe_highlight"/>
+                        <button name="action_draft" states="prepared" string="Set to Draft" type="object"/>
+                    </button>
+                    <field name="shop_id" position="replace">
+                        <field name="shop_id" on_change="onchange_shop_id(shop_id)" domain="[('shop_production','=',context.get('shop_production', False))]" groups="stock.group_locations"/>
+                    </field>                    
+                    <field name="state" position="replace">
+                        <field name="state" widget="statusbar" statusbar_visible="draft,prepared,sent,invoiced,done" statusbar_colors='{"invoice_except":"red","waiting_date":"blue"}'/>
+                    </field>
+                    <field name="date_order" position="replace">
+                        <field name="date_order" on_change="date_order_change(order_line, date_order, pricelist_id, partner_id, fiscal_position)"/>
+                    </field>
+                    <xpath expr="//form/sheet/notebook/page[@string='Order Lines']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='price_subtotal']" position="before">
+                        <field name="product_qty_returned" invisible="not context.get('shop_production', True)"/>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page[@string='Order Lines']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='name']" position="attributes">
+                        <attribute name="invisible">context.get('shop_production', False)</attribute>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page[@string='Order Lines']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='product_uom']" position="attributes">
+                        <attribute name="invisible">context.get('shop_production', False)</attribute>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page[@string='Order Lines']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='product_uos']" position="attributes">
+                        <attribute name="invisible">context.get('shop_production', False)</attribute>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page[@string='Order Lines']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='tax_id']" position="attributes">
+                        <attribute name="invisible">context.get('shop_production', False)</attribute>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page[@string='Order Lines']/field[@name='order_line']/tree[@string='Sales Order Lines']/field[@name='discount']" position="attributes">
+                        <attribute name="invisible">context.get('shop_production', False)</attribute>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+        
+        <record id="view_sales_order_extensions_filter" model="ir.ui.view">
+            <field name="name">sale.order.extensions.list.select</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <data>
+                    <filter name="draft" position="replace">
+                        <filter icon="terp-document-new" string="Quotations" name="draft" domain="[('state','in',('draft','prepared','sent'))]" help="Sales Order that haven't yet been confirmed"/>
+                    </filter>
+                    <filter name="draft" position="after">
+                        <filter icon="terp-check" string="Prepared" name="prepared" domain="[('state','=','prepared')]"/>
+                    </filter>
+               </data>
+            </field>
+        </record>
+
+        <delete model="ir.actions.act_window" id="sale.action_orders"/>
+
+        <record id="action_production_orders" model="ir.actions.act_window">
+            <field name="name">Sales Orders - Production</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field name="search_view_id" ref="sale.view_sales_order_filter"/>
+            <field name="context">{'shop_production': True}</field>
+            <field name="domain">[('state','not in',('draft','prepared','sent','cancel')),('shop_id.shop_production','=',True)]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a quotation that can be converted into a sales
+                order.
+              </p><p>
+                OpenERP will help you efficiently handle the complete sales flow:
+                quotation, sales order, delivery, invoicing and payment.
+              </p>
+            </field>
+        </record>
+
+        <record id="action_surplus_orders" model="ir.actions.act_window">
+            <field name="name">Sales Orders - Surplus</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field name="search_view_id" ref="sale.view_sales_order_filter"/>
+            <field name="context">{'shop_production': False}</field>
+            <field name="domain">[('state','not in',('draft','prepared','sent','cancel')),('shop_id.shop_production','=',False)]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a quotation that can be converted into a sales
+                order.
+              </p><p>
+                OpenERP will help you efficiently handle the complete sales flow:
+                quotation, sales order, delivery, invoicing and payment.
+              </p>
+            </field>
+        </record>
+
+        <delete model="ir.actions.act_window" id="sale.action_quotations"/>
+
+        <record id="action_production_quotations" model="ir.actions.act_window">
+            <field name="name">Quotations - Production</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="sale.view_quotation_tree"/>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field name="context">{'shop_production': True}</field>
+            <field name="domain">[('state','in',('draft','prepared','sent','cancel')),('shop_id.shop_production','=',True)]</field>
+            <field name="search_view_id" ref="sale.view_sales_order_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a quotation, the first step of a new sale.
+              </p><p>
+                OpenERP will help you handle efficiently the complete sale flow:
+                from the quotation to the sales order, the
+                delivery, the invoicing and the payment collection.
+              </p><p>
+                The social feature helps you organize discussions on each sales
+                order, and allow your customers to keep track of the evolution
+                of the sales order.
+              </p>
+            </field>
+        </record>
+
+        <record id="action_surplus_quotations" model="ir.actions.act_window">
+            <field name="name">Quotations - Surplus</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="sale.view_quotation_tree"/>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field name="context">{'shop_production': False}</field>
+            <field name="domain">[('state','in',('draft','prepared','sent','cancel')),('shop_id.shop_production','=',False)]</field>
+            <field name="search_view_id" ref="sale.view_sales_order_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a quotation, the first step of a new sale.
+              </p><p>
+                OpenERP will help you handle efficiently the complete sale flow:
+                from the quotation to the sales order, the
+                delivery, the invoicing and the payment collection.
+              </p><p>
+                The social feature helps you organize discussions on each sales
+                order, and allow your customers to keep track of the evolution
+                of the sales order.
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_sale_production_quotations" action="action_production_quotations" parent="base.menu_sales" sequence="3"/>
+        <menuitem id="menu_sale_surplus_quotations" action="action_surplus_quotations" parent="base.menu_sales" sequence="3"/>
+        <menuitem id="menu_sale_production_orders" action="action_production_orders" parent="base.menu_sales" sequence="5"/>
+        <menuitem id="menu_sale_surplus_orders" action="action_surplus_orders" parent="base.menu_sales" sequence="5"/>
+        
+    </data>
+</openerp>

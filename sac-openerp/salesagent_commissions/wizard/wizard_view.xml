@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+			
+		<!-- ====================================================== -->
+		<!-- 				CALCOLO PERCENTUALE WIZARD				-->
+		<!-- ====================================================== -->
+		<record id="wzd_percentage_calcolate_view" model="ir.ui.view">
+			<field name="name">wzd.percentage_calcolate.wizard</field>
+			<field name="model">wzd.percentage_calcolate</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Calculate percentage">
+					<separator string="Product Price" colspan="2"/>
+					<separator string="Fix Salesagent Commission" colspan="2"/>
+					<field name="product_price" colspan="2" nolabel="1"/>
+					<field name="fix_commission" colspan="2" nolabel="1"/>
+					<separator string="Percentage Commission" colspan="4"/>
+					<field name="percentage" colspan="4" nolabel="1"/>
+					<separator string="" colspan="4"/>
+					<button string="Close" special="cancel" icon="gtk-cancel" />
+					<button string="Calculate" name="percentage_calcolate" type="object" icon="gtk-ok" />
+				</form>
+			</field>
+		</record>
+
+		<!-- ====================================================== -->
+		<!-- 				CALCOLO PERCENTUALE RICHIAMO			-->
+		<!-- ====================================================== -->
+		<!-- PRODUCT -->
+		<act_window name="Calculate percentage"
+			res_model="wzd.percentage_calcolate"
+			src_model="product.product"
+			view_mode="form"
+			target="new"
+			view_id="wzd_percentage_calcolate_view"
+			id="act_wzd_percentage_calcolate_product"/>
+		<!-- PARTNER -->
+		<act_window name="Calculate percentage"
+			res_model="wzd.percentage_calcolate"
+			src_model="res.partner"
+			view_mode="form"
+			target="new"
+			view_id="wzd_percentage_calcolate_view"
+			id="act_wzd_percentage_calcolate_sale"/>
+		<!-- FATTURE -->
+		<act_window name="Calculate percentage"
+			res_model="wzd.percentage_calcolate"
+			src_model="account.invoice"
+			view_mode="form"
+			target="new"
+			view_id="wzd_percentage_calcolate_view"
+			id="act_wzd_percentage_calcolate_sale"/>
+		<!-- MENU -->
+		<menuitem parent="menu_commissions_tools" id="menu_wzd_percentage_calcolate" name="Calculate percentage on fix price" action="act_wzd_percentage_calcolate_product" sequence="1" />
+
+		<!-- ====================================================== -->
+		<!-- 		PAGAMENTO PROVVIGIONI DAI DETTAGLI WIZARD		-->
+		<!-- ====================================================== -->
+		<record id="wzd_commissions_payment_view" model="ir.ui.view">
+			<field name="name">wzd.commissions_payment.wizard</field>
+			<field name="model">wzd.commissions_payment</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Commissions Payment">
+					<separator string="Payment date" colspan="4"/>
+					<field name="payment_date" colspan="4" nolabel="1" required="1"/>
+					<separator string="Notes" colspan="4"/>
+					<field name="payment_commission_note" colspan="4" nolabel="1"/>
+					<button string="Close" special="cancel" icon="gtk-cancel" />
+					<button string="Pay" name="pagamento_provvigioni" type="object" icon="gtk-ok" />
+				</form>
+			</field>
+		</record>
+
+		<!-- ====================================================== -->
+		<!-- 		PAGAMENTO PROVVIGIONI DAI DETTAGLI RICHIAMO		-->
+		<!-- ====================================================== -->
+		<!-- FATTURE -->
+		<act_window name="Commissions Payment"
+			res_model="wzd.commissions_payment"
+			src_model="account.invoice.line"
+			view_mode="form"
+			target="new"
+			key2="client_action_multi"
+			view_id="wzd_commissions_payment_view"
+			id="act_wzd_commissions_payment_view"/>
+
+		<!-- ====================================================== -->
+		<!-- 		PAGAMENTO PROVVIGIONI DALLE FATTURE WIZARD		-->
+		<!-- ====================================================== -->
+		<record id="wzrd_invoice_commissions_payment_view" model="ir.ui.view">
+			<field name="name">wzd.invoice_commissions_payment.wizard</field>
+			<field name="model">wzd.invoice_commissions_payment</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Commissions Payment">
+					<separator string="Payment date" colspan="4"/>
+					<field name="payment_date" colspan="4" nolabel="1" required="1"/>
+					<separator string="Notes" colspan="4"/>
+					<field name="payment_commission_note" colspan="4" nolabel="1"/>
+					<button string="Close" special="cancel" icon="gtk-cancel" />
+					<button string="Pay" name="pagamento_provvigioni" type="object" icon="gtk-ok" />
+				</form>
+			</field>
+		</record>
+
+		<!-- ====================================================== -->
+		<!-- 		PAGAMENTO PROVVIGIONI DALLE FATTURE RICHIAMO	-->
+		<!-- ====================================================== -->
+		<act_window name="Invoice Commissions Payment"
+			res_model="wzd.invoice_commissions_payment"
+			src_model="account.invoice"
+			view_mode="form"
+			target="new"
+			key2="client_action_multi"
+			view_id="wzrd_invoice_commissions_payment_view"
+			id="act_wzrd_invoice_commissions_payment_view"/>
+			
+		<!-- ====================================================== -->
+		<!-- 		ANNULLA PAGAMENTO DAI DETTAGLI WIZARD			-->
+		<!-- ====================================================== -->
+		<record id="wzd_payment_cancellation_view" model="ir.ui.view">
+			<field name="name">wzd.payment_cancellation.wizard</field>
+			<field name="model">wzd.payment_cancellation</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Commission Payment Cancellation">
+					<field name="note_cancellation" colspan="4"/>
+					<separator string="" colspan="4" />
+					<button string="Close" special="cancel" icon="gtk-cancel" />
+					<button string="Cancellation" name="annulla_pagamento" type="object" icon="gtk-ok" />
+				</form>
+			</field>
+		</record>
+
+		<!-- ====================================================== -->
+		<!-- 		ANNULLA PAGAMENTO DAI DETTAGLI RICHIAMO			-->
+		<!-- ====================================================== -->
+		<act_window name="Commission Payment Cancellation"
+			res_model="wzd.payment_cancellation"
+			src_model="account.invoice.line"
+			view_mode="form"
+			target="new"
+			key2="client_action_multi"
+			view_id="wzd_payment_cancellation_view"
+			id="act_wzd_payment_cancellation_view"/>
+
+		<!-- ====================================================== -->
+		<!-- 		ANNULLA PAGAMENTO DAI FATTURE WIZARD			-->
+		<!-- ====================================================== -->
+		<record id="wzd_invoice_payment_cancellation_view" model="ir.ui.view">
+			<field name="name">wzd.invoice_payment_cancellation.wizard</field>
+			<field name="model">wzd.invoice_payment_cancellation</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Commission Payment Cancellation">
+					<field name="note_cancellation" colspan="4"/>
+					<separator string="" colspan="4" />
+					<button string="Close" special="cancel" icon="gtk-cancel" />
+					<button string="Cancellation" name="annulla_pagamento" type="object" icon="gtk-ok" />
+				</form>
+			</field>
+		</record>
+
+		<!-- ====================================================== -->
+		<!-- 		ANNULLA PAGAMENTO DAI FATTURE RICHIAMO			-->
+		<!-- ====================================================== -->
+		<act_window name="Invoice Commission Payment Cancellation"
+			res_model="wzd.invoice_payment_cancellation"
+			src_model="account.invoice"
+			view_mode="form"
+			target="new"
+			key2="client_action_multi"
+			view_id="wzd_invoice_payment_cancellation_view"
+			id="act_invoice_wzd_payment_cancellation_view"/>
+
+	</data>
+</openerp>

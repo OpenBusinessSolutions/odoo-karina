@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_move_line_tax_chart_tree" model="ir.ui.view">
+            <field name="name">account.move.line.tax.chart.tree</field>
+            <field name="model">account.move.line</field>
+            <field name="arch" type="xml">
+                <tree string="Journal Items" version="7.0">
+                    <field name="journal_id"/>
+                    <field name="period_id"/>
+                    <field name="tax_period_id"/>
+                    <field name="date"/>
+                    <field name="move_id"/>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="account_id"/>
+                    <field name="tax_code_id"/>
+                    <field name="tax_amount" sum="Total Base/Tax"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+    	<record id="account.action_tax_code_line_open" model="ir.actions.act_window">
+            <field name="name">Journal Items</field>
+            <field name="res_model">account.move.line</field>
+            <field name="src_model">account.tax.code</field>
+            <field name="domain">[('tax_code_id','child_of',active_id),('state','!=','draft')]</field>
+            <field name="view_id" ref="view_move_line_tax_chart_tree"/>
+            <field name="search_view_id" ref="view_account_move_line_tax_filter"/>
+        </record>
+
+    	<record id="account.action_tax_code_items" model="ir.actions.act_window">
+            <field name="name">Journal Items</field>
+            <field name="res_model">account.move.line</field>
+            <field name="src_model">account.tax.code</field>
+            <field name="domain">[('tax_code_id','child_of',active_id),('state','!=','draft')]</field>
+            <field name="view_id" ref="view_move_line_tax_chart_tree"/>
+            <field name="search_view_id" ref="view_account_move_line_tax_filter"/>
+        </record>
+    </data>
+</openerp>

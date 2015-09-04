@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="procurement_tree_view_pekarna">
+            <field name="name">procurement.order.tree.pekarna</field>
+            <field name="model">procurement.order</field>
+            <field name="inherit_id" ref="procurement.procurement_tree_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="procure_method" position="after">
+                    <field name="supply_method" />
+                </field>
+                <field name="message" position="replace">
+                    <field name="short_message" />
+                </field>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_procurement_filter_pekarna">
+            <field name="name">procurement.order.select.pekarna</field>
+            <field name="model">procurement.order</field>
+            <field name="inherit_id" ref="procurement.view_procurement_filter"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='Status']" position="after">
+                    <filter string="Error Message" domain="[]" context="{'group_by':'short_message'}"/>
+                </xpath>
+                <xpath expr="//filter[@string='Status']" position="after">
+                    <filter string="Supply Method" domain="[]" context="{'group_by':'supply_method'}"/>
+                </xpath>
+            </field>
+        </record>
+
+		<!-- Odstranimo zagon nacrtovalca za neadministratorje
+		<menuitem id="menu_stock_proc_schedulers" groups="base.group_no_one"/> -->
+		<record model="ir.ui.menu" id="procurement.menu_stock_proc_schedulers">
+    		<field name="groups_id" eval="[(6, 0, [ref('base.group_no_one')])]" />
+		</record>
+    </data>
+</openerp>

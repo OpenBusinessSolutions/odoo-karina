@@ -1,0 +1,262 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* product_multiprices
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-18 10:52+0000\n"
+"PO-Revision-Date: 2013-03-18 10:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Category"
+msgstr "Category"
+
+#. module: product_multiprices
+#: view:multiprice.multiply.price:0
+msgid "Please select column and multiply factor"
+msgstr "Please select column and multiply factor"
+
+#. module: product_multiprices
+#: model:ir.actions.act_window,name:product_multiprices.action_multiprice_multiply_price
+msgid "Multiply selected price column"
+msgstr "Multiply selected price column"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Consumable products"
+msgstr "Consumable products"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Type"
+msgstr "Type"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Product"
+msgstr "Product"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price8:0
+msgid "Sale Price 8"
+msgstr "Sale Price 8"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price9:0
+msgid "Sale Price 9"
+msgstr "Sale Price 9"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price6:0
+msgid "Sale Price 6"
+msgstr "Sale Price 6"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price7:0
+msgid "Sale Price 7"
+msgstr "Sale Price 7"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Company"
+msgstr "Company"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price5:0
+msgid "Sale Price 5"
+msgstr "Sale Price 5"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price2:0
+msgid "Sale Price 2"
+msgstr "Sale Price 2"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price3:0
+msgid "Sale Price 3"
+msgstr "Sale Price 3"
+
+#. module: product_multiprices
+#: field:multiprice.copy.price,copy_from:0
+msgid "Copy from column: "
+msgstr "Copy from column: "
+
+#. module: product_multiprices
+#: model:ir.model,name:product_multiprices.model_multiprice_multiply_price
+msgid "Multiply selected sale price"
+msgstr "Multiply selected sale price"
+
+#. module: product_multiprices
+#: field:multiprice.multiply.price,by_value:0
+msgid "Multiply value"
+msgstr "Multiply value"
+
+#. module: product_multiprices
+#: view:multiprice.multiply.price:0
+msgid "Multiply"
+msgstr "Multiply"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Default Unit of Measure"
+msgstr "Default Unit of Measure"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price10:0
+msgid "Sale Price 10"
+msgstr "Sale Price 10"
+
+#. module: product_multiprices
+#: view:multiprice.copy.price:0
+msgid "Copy"
+msgstr "Copy"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+#: field:product.template,lst_price4:0
+msgid "Sale Price 4"
+msgstr "Sale Price 4"
+
+#. module: product_multiprices
+#: model:ir.actions.act_window,name:product_multiprices.action_product_product_prices
+#: model:ir.ui.menu,name:product_multiprices.menu_product_product_prices
+msgid "Products Pricelist"
+msgstr "Products Pricelist"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Can be Purchased"
+msgstr "Can be Purchased"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Context..."
+msgstr "Context..."
+
+#. module: product_multiprices
+#: model:ir.model,name:product_multiprices.model_product_template
+msgid "Product Template"
+msgstr "Product Template"
+
+#. module: product_multiprices
+#: model:ir.actions.act_window,name:product_multiprices.action_multiprice_copy_price
+#: view:multiprice.copy.price:0
+msgid "Copy values from one to another price column"
+msgstr "Copy values from one to another price column"
+
+#. module: product_multiprices
+#: field:multiprice.multiply.price,column:0
+msgid "Column to multiply: "
+msgstr "Column to multiply: "
+
+#. module: product_multiprices
+#: model:ir.model,name:product_multiprices.model_multiprice_copy_price
+msgid "Copy one sale price to another"
+msgstr "Copy one sale price to another"
+
+#. module: product_multiprices
+#: view:multiprice.copy.price:0
+msgid "Please select columns"
+msgstr "Please select columns"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Consumable"
+msgstr "Consumable"
+
+#. module: product_multiprices
+#: selection:multiprice.copy.price,copy_from:0
+#: selection:multiprice.copy.price,copy_to:0
+#: selection:multiprice.multiply.price,column:0
+msgid "Sale Price"
+msgstr "Sale Price"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Can be Sold"
+msgstr "Can be Sold"
+
+#. module: product_multiprices
+#: view:multiprice.copy.price:0
+#: view:multiprice.multiply.price:0
+msgid "or"
+msgstr "or"
+
+#. module: product_multiprices
+#: code:addons/product_multiprices/wizard/multiprice_copy_price.py:63
+#, python-format
+msgid "Please select two different price columns!"
+msgstr "Please select two different price columns!"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Group by..."
+msgstr "Group by..."
+
+#. module: product_multiprices
+#: field:multiprice.copy.price,copy_to:0
+msgid "Copy to column: "
+msgstr "Copy to column: "
+
+#. module: product_multiprices
+#: code:addons/product_multiprices/wizard/multiprice_copy_price.py:63
+#, python-format
+msgid "Warning"
+msgstr "Warning"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Services"
+msgstr "Services"
+
+#. module: product_multiprices
+#: view:multiprice.copy.price:0
+#: view:multiprice.multiply.price:0
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: product_multiprices
+#: view:product.template:0
+msgid "Products"
+msgstr "Products"
+
+#. module: product_multiprices
+#: view:multiprice.multiply.price:0
+msgid "Multiply values from selected price column"
+msgstr "Multiply values from selected price column"
+

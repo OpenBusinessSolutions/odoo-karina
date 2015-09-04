@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- .....COUNTRY..... -->
+        <record id="view_country_tree" model="ir.ui.view">
+            <field name="name">res.country.tree</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_tree"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="intrastat"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_country_form" model="ir.ui.view">
+            <field name="name">res.country.form</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="intrastat"/>
+                </field>
+            </field>
+        </record>
+        
+        <!-- ......PURCHASE ORDER..... -->
+        <record id="purchase_order_form_intrastat" model="ir.ui.view">
+            <field name="name">purchase.order.form.intrastat</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<field name="shipped" position="after">
+                    <field name="transaction_type_id"/>
+                </field>
+            </field>
+        </record>
+        
+        <!-- ......PURCHASE ORDER LINE..... -->
+<!--        <record id="purchase_order_line_form_intrastat" model="ir.ui.view">
+            <field name="name">purchase.order.line.form.intrastat</field>
+            <field name="model">purchase.order.line</field>
+            <field name="inherit_id" ref="purchase.purchase_order_line_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<field name="price_unit" position="after">
+                    <field name="country_origin_id"/>
+                </field>
+            </field>
+        </record>-->
+        
+        <!-- ...PURCHASE ORDER (LINE) - TREE/FORM... -->
+	    <record id="view_purchase_order_line_form_tree_intrastat" model="ir.ui.view">
+	        <field name="name">purchase.order.line.form.intrastat</field>
+	        <field name="model">purchase.order</field>
+	        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+	        <field name="arch" type="xml">
+	            <data>
+	            	<xpath expr="//notebook/page[@string='Purchase Order']/field[@name='order_line']/tree/field[@name='name']" position="after">
+	            		<field name="country_origin_id" colspan="4"/>
+	            	</xpath>
+	            </data>
+	        </field>
+	    </record>
+	    
+	    <!-- ...PURCHASE ORDER (LINE) - FORM... -->
+    <record id="view_purchase_order_line_form_intrastat" model="ir.ui.view">
+        <field name="name">purchase.order.line.form.intrastat</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_form"/>
+        <field name="arch" type="xml">
+            <data>
+            	<xpath expr="(//form/sheet/group/group)[2]/field[@name='date_planned']" position="after">
+            		<field name="country_origin_id" />
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='date_planned']" position="after">
+            		<separator string="" colspan="2"/>
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='country_origin_id']" position="after">
+            		<separator string="" colspan="2"/>
+            	</xpath>
+            </data>
+        </field>
+    </record>
+        
+        <!-- ......STOCK PICKING..... -->
+        <record id="view_picking_in_form_intrastat" model="ir.ui.view">
+            <field name="name">view.picking.in.form.intrastat</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<field name="backorder_id" position="after">
+                    <field name="transaction_type_id"/>
+                </field>
+            </field>
+        </record>
+        
+        <!-- ......STOCK MOVE.....  -->
+        <record id="view_move_form_intrastat" model="ir.ui.view">
+            <field name="name">view.move.form.intrastat</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<data>
+            		<xpath expr="//notebook/page[@string='General Information']/field[@name='move_lines']/form/group/field[@name='product_uom']" position="after">
+                    	<field name="country_origin_id" colspan="4"/>               
+                	</xpath>
+            	</data>
+            </field>
+        </record>
+
+        <!-- .....PRODUCT..... -->
+        <record id="product_normal_form_view" model="ir.ui.view">
+            <field name="name">product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="product_manager" position="after">
+                    <field name="intrastat_id"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- .....INTRASTAT CODE..... -->
+        <record id="view_intrastat_code_tree" model="ir.ui.view">
+            <field name="name">intrastat.code.tree</field>
+            <field name="model">intrastat.code</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Intrastat code">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_intrastat_code_form" model="ir.ui.view">
+            <field name="name">intrastat.code.form</field>
+            <field name="model">intrastat.code</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Intrastat Code">
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_intrastat_code_search" model="ir.ui.view">
+            <field name="name">intrastat.code.search</field>
+            <field name="model">intrastat.code</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Intrastat Code">
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="action_intrastat_code_tree" model="ir.actions.act_window">
+            <field name="name">Intrastat Code</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">intrastat.code</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_intrastat_code_search"/>
+        </record>
+
+        <menuitem action="action_intrastat_code_tree" id="menu_intrastat_code" 
+                parent="base.menu_config_address_book" sequence="2"/>
+
+
+		<!-- .....INTRASTAT REPORT..... -->
+        <record id="view_intrastat_tree" model="ir.ui.view">
+            <field name="name">intrastat.view</field>
+            <field name="model">intrastat</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Intrastat Data">
+                	<field name="intrastat_id"/>
+               		<field name="intrastat_name"/>
+               		<field name="country_supplier"/>
+               		<field name="country_supplier_code"/>
+               		<field name="transaction_type_code"/>
+                	<field name="country_origin_code"/>
+                    <field name="weight"/>
+                    <field name="value"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_intrastat_search" model="ir.ui.view">
+            <field name="name">intrastat.search</field>
+            <field name="model">intrastat</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Intrastat Data">
+                    <group>
+                    	<filter string="This Month" icon="terp-go-month" domain="[('month','=', time.strftime('%%m'))]"/>
+                        <separator orientation="vertical"/>
+                        <field name="year"/>
+                        <field name="month"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_intrastat_tree_all" model="ir.actions.act_window">
+            <field name="name">Intrastat</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">intrastat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{"search_default_year":time.strftime('%Y')}</field>
+            
+            <field name="search_view_id" ref="view_intrastat_search"/>
+        </record>
+
+        <menuitem action="action_intrastat_tree_all" id="menu_report_intrastat_all" 
+                parent="stock.next_id_61" sequence="6"/>
+        
+        <!-- ......STOCK MOVE COUNTRY ORIGIN.....  -->
+        <record id="view_move_form_country_origin" model="ir.ui.view">
+            <field name="name">view.move.form.country.origin</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<group name="destination_grp" position="after">
+                    <group name="country_grp" string="Country of Origin">
+                		<field name="country_origin_id" string="Country"/>
+                	</group>
+                </group>
+            </field>
+        </record>
+        
+        <!-- .....STOCK MOVE INTRASTAT Country Origin..... -->
+        <record id="view_move_tree_intrastat" model="ir.ui.view">
+            <field name="name">stock.move.tree.intrastat</field>
+            <field name="model">stock.move</field>
+            <field name="priority" eval="6"/>
+            <field name="arch" type="xml">
+                <tree string="Moves">
+                    <field name="date" widget="date"/>
+                    <field name="date_expected" widget="date"/>
+                    <field name="origin"/>
+                    <field name="partner_id" string="Supplier"/>
+                    <field name="product_id"/>
+                    <field name="product_qty"/>
+                    <field name="country_origin_id"/>
+                    <field name="state"/>
+                    <field name="picking_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_move_search_intrastat" model="ir.ui.view">
+            <field name="name">stock.move.search.intrastat</field>
+            <field name="model">stock.move</field>
+            <field eval="50" name="priority"/>
+            <field name="arch" type="xml">
+                <search string="Stock Moves">
+                	<!--<field name="date" groups="base.group_no_one"/>-->
+                    <filter icon="terp-camera_test" string="No Origin" name="no_origin" domain="[('country_origin_id','not like','')]" help="Country of origin is not defined"/>                    
+                    <separator/>
+                    <filter icon="terp-go-today" string="Today" domain="[('date','&lt;=',time.strftime('%%Y-%%m-%%d 23:59:59')),('date','&gt;=',time.strftime('%%Y-%%m-%%d 00:00:00'))]" help="Today"/>
+					<filter icon="terp-go-year" string="This Year" name="year" domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]" help="This Year"/>
+					<filter icon="terp-go-month" string="This Month" name="month" domain="[('date','&lt;=', time.strftime('%%Y-%%m-31')),('date','&gt;=',time.strftime('%%Y-%%m-01'))]" help="This Month"/>
+					<separator/>
+					<filter string="No Intrastat" name="no_intrastat" domain="[('product_id.intrastat_id','not like','')]" help="Intrastat is not defined"/>
+					<filter string="No Intrastat name" name="no_intrastat_name" domain="[('product_id.intrastat_id.description','not like','')]" help="Intrastat is not defined"/>
+					<filter string="Weight is 0" name="weight_is_null" domain="[('product_id.weight_net','=',0)]" help="Weight is not defined"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="action_intrastat_country_origin" model="ir.actions.act_window">
+            <field name="name">Intrastat Country Origin</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.move</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('state','=','done'), ('picking_id.type', '=', 'in'), ('partner_id.country_id.id','!=',201)]</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_no_origin':1,'search_default_year':1}</field>
+            <field name="view_id" ref="view_move_tree_intrastat"/>
+            <field name="search_view_id" ref="view_move_search_intrastat"/>
+        </record>
+
+        <menuitem action="action_intrastat_country_origin" id="menu_intrastat_country_origin" 
+                parent="base.menu_config_address_book" sequence="2"/>
+                
+    </data>
+</openerp>

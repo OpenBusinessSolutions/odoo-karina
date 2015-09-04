@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_picking_in_update_form">
+            <field name="name">stock.picking.in.update.form</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='draft_force_assign']" position="before">
+                    <button name="action_picking_update" states="draft,assigned,done" string="Update Values" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_picking_out_update_form">
+            <field name="name">stock.picking.out.update.form</field>
+            <field name="model">stock.picking.out</field>
+            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='draft_force_assign']" position="before">
+                    <button name="action_picking_update" states="draft,assigned,done" string="Update Values" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,177 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sale_order_extensions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-21 16:41+0000\n"
+"PO-Revision-Date: 2014-01-21 16:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_extensions
+#: field:sale.shop,shop_production:0
+msgid "Production Shop"
+msgstr "Prodaja iz proizvodnje"
+
+#. module: sale_order_extensions
+#: code:addons/sale_order_extensions/sale_order.py:141
+#, python-format
+msgid "Type \"service\" not set on next return products:"
+msgstr "Izdelki za vračilo, ki niso vrste \"storitev\":"
+
+#. module: sale_order_extensions
+#: model:ir.model,name:sale_order_extensions.model_product_product
+msgid "Product"
+msgstr "Izdelek"
+
+#. module: sale_order_extensions
+#: model:ir.model,name:sale_order_extensions.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "Confirm Sale"
+msgstr "Potrdi prodajo"
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "Prepare"
+msgstr "Pripravi"
+
+#. module: sale_order_extensions
+#: selection:sale.order,state:0
+msgid "Prepared for Confirm"
+msgstr "Pripravljeno"
+
+#. module: sale_order_extensions
+#: code:addons/sale_order_extensions/sale_order.py:133
+#, python-format
+msgid "Tax not set for next products:"
+msgstr "Davek ni določen za izdelke:"
+
+#. module: sale_order_extensions
+#: model:ir.actions.act_window,name:sale_order_extensions.action_surplus_quotations
+#: model:ir.ui.menu,name:sale_order_extensions.menu_sale_surplus_quotations
+msgid "Quotations - Surplus"
+msgstr "Ponudbe - Viški"
+
+#. module: sale_order_extensions
+#: model:ir.actions.act_window,name:sale_order_extensions.action_production_quotations
+#: model:ir.ui.menu,name:sale_order_extensions.menu_sale_production_quotations
+msgid "Quotations - Production"
+msgstr "Ponudbe - Proizvodnja"
+
+#. module: sale_order_extensions
+#: model:ir.actions.act_window,name:sale_order_extensions.action_surplus_orders
+#: model:ir.ui.menu,name:sale_order_extensions.menu_sale_surplus_orders
+msgid "Sales Orders - Surplus"
+msgstr "Prodajni nalogi - Viški"
+
+#. module: sale_order_extensions
+#: model:ir.actions.act_window,name:sale_order_extensions.action_production_orders
+#: model:ir.ui.menu,name:sale_order_extensions.menu_sale_production_orders
+msgid "Sales Orders - Production"
+msgstr "Prodajni nalogi - Proizvodnja"
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "Sales Order that haven't yet been confirmed"
+msgstr "Nepotrjeni prodajni nalogi"
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "Prepared"
+msgstr "Pripravljeno"
+
+#. module: sale_order_extensions
+#: code:addons/sale_order_extensions/sale_order.py:120
+#: code:addons/sale_order_extensions/sale_order.py:128
+#: code:addons/sale_order_extensions/sale_order.py:136
+#: code:addons/sale_order_extensions/sale_order.py:144
+#, python-format
+msgid "Error!"
+msgstr "Napaka!"
+
+#. module: sale_order_extensions
+#: model:ir.actions.act_window,help:sale_order_extensions.action_production_quotations
+#: model:ir.actions.act_window,help:sale_order_extensions.action_surplus_quotations
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a quotation, the first step of a new sale.\n"
+"              </p><p>\n"
+"                OpenERP will help you handle efficiently the complete sale flow:\n"
+"                from the quotation to the sales order, the\n"
+"                delivery, the invoicing and the payment collection.\n"
+"              </p><p>\n"
+"                The social feature helps you organize discussions on each sales\n"
+"                order, and allow your customers to keep track of the evolution\n"
+"                of the sales order.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Kliknite za izdelavo nove ponudbe.\n"
+"              </p><p>\n"
+"                OpenERP vam bo pomagal pri celotnem postopku prodaje:\n"
+"                od ponudbe do prodajnega naloga, dostave ter izdaje računa in plačil.\n"
+"              </p><p>\n"
+"            "
+
+#. module: sale_order_extensions
+#: model:ir.model,name:sale_order_extensions.model_sale_shop
+msgid "Sales Shop"
+msgstr "Trgovina"
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "Set to Draft"
+msgstr "Vrni v pripravo"
+
+#. module: sale_order_extensions
+#: code:addons/sale_order_extensions/sale_order.py:117
+#, python-format
+msgid "Price not set for next products:"
+msgstr "Cena ni določena za izdelke:"
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "context.get('shop_production', False)"
+msgstr ""
+
+#. module: sale_order_extensions
+#: view:sale.order:0
+msgid "Quotations"
+msgstr "Ponudbe"
+
+#. module: sale_order_extensions
+#: code:addons/sale_order_extensions/sale_order.py:125
+#, python-format
+msgid "Quantity not set for next products:"
+msgstr "Količina ni določena za izdelke:"
+
+#. module: sale_order_extensions
+#: model:ir.model,name:sale_order_extensions.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Postavka prodajnega naloga"
+
+#. module: sale_order_extensions
+#: view:product.product:0
+#: field:res.partner,sale_prices:0
+msgid "Sale Prices"
+msgstr "Uporaba akcijskih cen"
+
+#. module: sale_order_extensions
+#: field:product.product,sale_price:0
+msgid "Sale Price"
+msgstr "Akcijska cena"
+
+#. module: sale_order_extensions
+#: field:product.product,sale_enabled:0
+msgid "Sale Enabled"
+msgstr "Akcija omogočena"

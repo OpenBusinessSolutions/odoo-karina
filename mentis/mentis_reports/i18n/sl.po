@@ -1,0 +1,568 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mentis_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-24 09:38+0000\n"
+"PO-Revision-Date: 2013-01-24 09:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Opis del in porabljen material:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Description"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Datum zaključka:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "VAT:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Podpis:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Podpis stranke:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Izvajalec:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Datum naloga:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Delovni nalog"
+msgstr ""
+
+#. module: mentis_reports
+#: model:ir.actions.report.xml,name:mentis_reports.report_sale_work_order
+msgid "Work Order"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Porabljen čas: ____ur, ____minut"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Quantity"
+msgstr ""
+
+#. module: account
+#: report:account.invoice:0
+msgid "Place, date:"
+msgstr "Kraj, datum:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Delivery date:"
+msgstr "Datum dobave:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Due date:"
+msgstr "Datum valute:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Order number:"
+msgstr "Naročilnica:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Reference:"
+msgstr "Referenca:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "VAT:"
+msgstr "ID DDV:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Disc. (%)"
+msgstr "Pop. (%)"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Taxes (%)"
+msgstr "Davki (%)"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Price (€)"
+msgstr "Vrednost (€)"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Invoice issued by:"
+msgstr "Račun izdal:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Manager:"
+msgstr "Direktor:"
+
+
+
+
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Confirmation date:"
+msgstr "Datum potrditve:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Customer reference:"
+msgstr "Referenca kupca:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Description"
+msgstr "Opis"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Disc. (%)"
+msgstr "Pop. (%)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "email:"
+msgstr "email:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Incoterm:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Invoice address :"
+msgstr "Naslov za račun:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Net Total:"
+msgstr "Skupaj neto:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Order N°"
+msgstr "Naročilo št."
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Order reference:"
+msgstr "Referenca:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Payment terms:"
+msgstr "Plačilni pogoji:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Place, date:"
+msgstr "Kraj, datum:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Price"
+msgstr "Cena"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Quotation N°"
+msgstr "Ponudba št."
+
+#. module: mentis_reports
+#: report:sale.order.mentis2:0
+msgid "Quotation N°"
+msgstr "Predračun št."
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Salesperson:"
+msgstr "Prodajalec"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Shipping address :"
+msgstr "Naslov za odpremo"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Taxes :"
+msgstr "Davki:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "tel.:"
+msgstr "tel.:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Total :"
+msgstr "Skupaj:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Unit Price"
+msgstr "Cena enote"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "VAT"
+msgstr "ID DDV"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "VAT:"
+msgstr "ID DDV:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Disc. (€)"
+msgstr "Pop. (€)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Taxes (%)"
+msgstr "Davki (%)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Price (€)"
+msgstr "Vrednost (€)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Disc. Total:"
+msgstr "Skupaj popust:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+#: report:sale.order.mentis2:0
+msgid "Net:"
+msgstr "Skupaj brez DDV:"
+
+
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Already paid:"
+msgstr "Že plačano:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Amount"
+msgstr "Znesek"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Base"
+msgstr "Osnova"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Cancelled Invoice"
+msgstr "Preklicani račun"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Customer Code"
+msgstr "Šifra stranke"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Delivery date:"
+msgstr "Datum dobave:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Description"
+msgstr "Opis"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Disc. (%)"
+msgstr "Pop. (%)"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Draft Invoice"
+msgstr "Osnutek računa"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Due date:"
+msgstr "Datum valute:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Fax :"
+msgstr "Faks:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Fiscal Position Remark :"
+msgstr "Opomba za davčno območje:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Invoice Date"
+msgstr "Datum DUR"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Invoice issued by:"
+msgstr "Račun izdal:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Manager:"
+msgstr "Direktor:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Net Total:"
+msgstr "Skupaj neto:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Order number:"
+msgstr "Naročilnica:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Place, date:"
+msgstr "Kraj, datum:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Price (€)"
+msgstr "Vrednost (€)"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "PRO-FORMA"
+msgstr "Predračun"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Reference:"
+msgstr "Referenca:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Refund"
+msgstr "Dobropis"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Supplier Invoice"
+msgstr "Račun dobavitelja"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Supplier Refund"
+msgstr "Dobropis"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Tax"
+msgstr "Davek"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Taxes (%)"
+msgstr "Davki (%)"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Taxes:"
+msgstr "Davki:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Total:"
+msgstr "Skupaj:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Unit Price"
+msgstr "Cena enote"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "VAT:"
+msgstr "ID DDV:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Disc. Total:"
+msgstr "Skupaj popust:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Net:"
+msgstr "Skupaj brez DDV:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Disc. (€)"
+msgstr "Pop. (€)"
+
+
+
+
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Customer Address:"
+msgstr "Kontaktni naslov:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Delivery Order:"
+msgstr "Dobavnica:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Description"
+msgstr "Opis"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Issued by:"
+msgstr "Izdal:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Order:"
+msgstr "Naročilo:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Order quantity"
+msgstr "Naročena količina"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Place, date:"
+msgstr "Kraj, datum:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Quantity"
+msgstr "Dobavljena količina"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Received by:"
+msgstr "Prevzel:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Scheduled Date:"
+msgstr "Načrtovani datum:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Weight:"
+msgstr "Teža"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Supplier Address:"
+msgstr "Naslov dobavitelja:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Warehouse Address:"
+msgstr "Naslov skladišča:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Incoming Shipment:"
+msgstr "Prihajajoče pošiljke:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Internal Shipment:"
+msgstr "Interna pošiljka:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Customer reference:"
+msgstr "Referenca kupca:"

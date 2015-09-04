@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <!--
+==============================================
+Deloitte tax codes
+==============================================
+-->
+    <record model="ir.ui.view" id="chricar_account_tax_code_deloitte_form">
+      <field name="name">chricar.account_tax_code_deloitte.form</field>
+      <field name="model">chricar.account_tax_code_deloitte</field>
+      <field name="priority">1</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Account Moves Import Deny">
+          <field name="name" />
+          <field name="code" />
+          <field name="percent" />
+          <field name="account_id" />
+          <notebook colspan="4">
+            <page string="invisible" invisible="1"/>
+          </notebook>
+        </form>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="chricar_account_tax_code_deloitte_list">
+      <field name="name">chricar.tax_code_deloitte.list</field>
+      <field name="model">chricar.account_tax_code_deloitte</field>
+      <field name="priority">1</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Account Moves Import Deny" editable="top">
+          <field name="code" />
+          <field name="name" />
+          <field name="percent" />
+          <field name="account_id" />
+        </tree>
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="chricar_account_tax_code_deloitte_act1">
+      <field name="name">Account Tax Code Deloitte</field>
+      <field name="res_model">chricar.account_tax_code_deloitte</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="chricar_account_tax_code_deloitte_list"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_tax_code_deloitte_act1_view2">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="chricar_account_tax_code_deloitte_list"/>
+      <field name="act_window_id" ref="chricar_account_tax_code_deloitte_act1"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_tax_code_deloitte_act1_view1">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="chricar_account_tax_code_deloitte_form"/>
+      <field name="act_window_id" ref="chricar_account_tax_code_deloitte_act1"/>
+    </record>
+    <menuitem
+      id="menu_chricar_account_deloitte"
+      name="Deloitte"
+      parent="account.menu_finance_entries"
+      sequence="150"/>
+    <menuitem
+      action="chricar_account_tax_code_deloitte_act1"
+      id="menu_chricar_account_tax_code_deloitte_list"
+      parent="menu_chricar_account_deloitte"
+      sequence="150"/>
+    <!--
+==============================================
+Account Moves symbol import deny
+==============================================
+-->
+    <record model="ir.ui.view" id="chricar_account_import_deny_form">
+      <field name="name">chricar.account_import_deny.form</field>
+      <field name="model">chricar.account_move_import_deny</field>
+      <field name="priority">1</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Account Moves Import Deny">
+          <field name="name" />
+          <field name="code" />
+          <field name="date_start" />
+          <field name="date_stop" />
+          <notebook colspan="4">
+            <page string="invisible" invisible="1"/>
+          </notebook>
+        </form>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="chricar_account_import_deny_list">
+      <field name="name">chricar.account_import_deny.list</field>
+      <field name="model">chricar.account_move_import_deny</field>
+      <field name="priority">1</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Account Moves Import Deny">
+          <field name="code" />
+          <field name="name" />
+          <field name="date_start" />
+          <field name="date_stop" />
+        </tree>
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="chricar_account_import_deny_act1">
+      <field name="name">Account Moves Deloitte Import Deny</field>
+      <field name="res_model">chricar.account_move_import_deny</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="chricar_account_import_deny_list"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_import_deny_act1_view2">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="chricar_account_import_deny_list"/>
+      <field name="act_window_id" ref="chricar_account_import_deny_act1"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_import_deny_act1_view1">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="chricar_account_import_deny_form"/>
+      <field name="act_window_id" ref="chricar_account_import_deny_act1"/>
+    </record>
+    <menuitem
+      action="chricar_account_import_deny_act1"
+      id="menu_chricar_account_import_deny_list"
+      parent="menu_chricar_account_deloitte"
+      sequence="150"/>
+    <!--
+==============================================
+Deloitte Opening Balance + Accounts
+==============================================
+-->
+    <record model="ir.ui.view" id="chricar_account_opening_deloitte_form">
+      <field name="name">chricar.account_opening_deloitte.form</field>
+      <field name="model">chricar.account_opening_deloitte</field>
+      <field name="priority">1</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Account Opening Balance">
+          <field name="amount" />
+          <field name="account" />
+          <field name="name" />
+          <field name="date" />
+          <notebook colspan="4">
+            <page string="invisible" invisible="1"/>
+          </notebook>
+        </form>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="chricar_account_opening_deloitte_list">
+      <field name="name">chricar.tax_code_deloitte.list</field>
+      <field name="model">chricar.account_opening_deloitte</field>
+      <field name="priority">1</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Account Opening Balance" editable="top">
+          <field name="amount"  sum="Sum Amount"/>
+          <field name="account" />
+          <field name="name" />
+          <field name="date" />
+        </tree>
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="chricar_account_opening_deloitte_act1">
+      <field name="name">Account Opening Balance</field>
+      <field name="res_model">chricar.account_opening_deloitte</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="chricar_account_opening_deloitte_list"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_opening_deloitte_act1_view2">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="chricar_account_opening_deloitte_list"/>
+      <field name="act_window_id" ref="chricar_account_opening_deloitte_act1"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_opening_deloitte_act1_view1">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="chricar_account_opening_deloitte_form"/>
+      <field name="act_window_id" ref="chricar_account_opening_deloitte_act1"/>
+    </record>
+    <menuitem
+      action="chricar_account_opening_deloitte_act1"
+      id="menu_chricar_account_opening_deloitte_list"
+      parent="menu_chricar_account_deloitte"
+      sequence="150"/>
+    <!--
+==============================================
+Account Moves Deloitte (account_move_line_deloitte > account_move_line_deloitte)
+generated 2009-10-17 12:10:57+02
+==============================================
+-->
+
+         <record id="chricar_account_move_line_deloitte_search" model="ir.ui.view">
+            <field name="name">chricar.account.move.line.deloitte.search</field>
+            <field name="model">chricar.account_move_line_deloitte</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search Order">
+                    <group col="10" colspan="4">
+                        <field name="fiscalyear_id"/>
+                        <field name="period_id"/>
+                        <field name="account"/>
+                        <field name="account_id"/>
+                        <field name="account_type_name"/>
+                        <field name="analytic_account"/>
+                        <field name="analytic_account_id"/>
+                        <field name="state"/>
+                        <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                    </group>
+                    <newline/>
+                    <group expand="0" string="Group By..." colspan="4" col="4" >
+                        <filter string="Fiscal Year" icon="terp-go-year" context="{'group_by':'fiscalyear_id'}"/>
+                        <filter string="Period" context="{'group_by': 'period_id'}" icon="terp-go-month"/>
+                        <filter string="Account" name="group_account" icon="terp-folder-green" context="{'group_by':'account_id'}"/>
+                        <filter string="Account Type" name="group_account_type_name" icon="terp-folder-green" context="{'group_by':'account_type_name'}"/>
+                        <filter string="Analytic Account" name="group_analytic_account_id" icon="terp-folder-green" context="{'group_by':'analytic_account_id'}"/>
+                    </group>
+                </search>
+
+            </field>
+        </record>
+
+    <record model="ir.ui.view" id="chricar_account_move_line_deloitte_form">
+      <field name="name">chricar.account_move_line_deloitte.form</field>
+      <field name="model">chricar.account_move_line_deloitte</field>
+      <field name="priority">1</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Account Moves Deloitte">
+          <field name="fiscalyear_id" />
+          <field name="period_id" />
+          <field name="account" />
+          <field name="account_id" />
+          <field name="account_type_name"/>
+          <field name="date" />
+          <field name="symbol" />
+          <field name="name" />
+          <field name="fnr"/>
+          <field name="analytic_account" />
+          <field name="analytic_account_id" />
+          <field name="counter_account" />
+          <field name="counter_account_id" />
+          <field name="amount" />
+          <field name="tax_code" />
+          <field name="description" />
+          <field name="lc"/>
+          <field name="bc"/>
+          <field name="fix"/>
+          <field name="ba"/>
+          <notebook colspan="4">
+            <page string="invisible" invisible="1"/>
+          </notebook>
+        </form>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="chricar_account_move_line_deloitte_list">
+      <field name="name">chricar.account_move_line_deloitte.list</field>
+      <field name="model">chricar.account_move_line_deloitte</field>
+      <field name="priority">1</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Account Moves Deloitte">
+          <field name="fiscalyear_id" />
+          <field name="period_id" />
+          <field name="account" />
+          <field name="account_id" />
+          <field name="account_type_name"/>
+          <field name="date" />
+          <field name="symbol" />
+          <field name="name" />
+          <field name="fnr"/>
+          <field name="analytic_account" />
+          <field name="analytic_account_id" />
+          <field name="counter_account" />
+          <field name="counter_account_id" />
+          <field name="amount"  sum="Sum Amount"/>
+          <field name="tax_code" />
+          <field name="description" />
+          <field name="state"/>
+          <field name="lc"/>
+          <field name="bc"/>
+          <field name="fix"/>
+          <field name="ba"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="chricar_account_move_line_deloitte_act1">
+      <field name="name">Account Moves Deloitte</field>
+      <field name="res_model">chricar.account_move_line_deloitte</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="chricar_account_move_line_deloitte_search"/>
+      <field name="view_id" ref="chricar_account_move_line_deloitte_list"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_move_line_deloitte_act1_view2">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="chricar_account_move_line_deloitte_list"/>
+      <field name="act_window_id" ref="chricar_account_move_line_deloitte_act1"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="chricar_account_move_line_deloitte_act1_view1">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="chricar_account_move_line_deloitte_form"/>
+      <field name="act_window_id" ref="chricar_account_move_line_deloitte_act1"/>
+    </record>
+    <menuitem
+      action="chricar_account_move_line_deloitte_act1"
+      id="menu_chricar_account_move_line_deloitte_list"
+      parent="menu_chricar_account_deloitte"
+      sequence="150"/>
+    <!--
+==============================================
+Modification of Parents (only for matching table prefixes)
+==============================================
+-->
+  </data>
+</openerp>

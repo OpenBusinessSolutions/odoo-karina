@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_account_config_settings_inherit" model="ir.ui.view">
+            <field name="name">account settings inherit</field>
+            <field name="model">account.config.settings</field>
+            <field name="inherit_id" ref="account.view_account_config_settings"/>
+            <field name="arch" type="xml">
+                <form string="Configure Accounting">
+                    <separator string="Check invoiced quantity"/>
+                    <group>
+                        <label for="id" string="Check invoiced quantity"/>
+                        <div>
+                            <field name="check_quantity_on_invoices" domain="[('usage','=','internal')]" class="oe_inline"/>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

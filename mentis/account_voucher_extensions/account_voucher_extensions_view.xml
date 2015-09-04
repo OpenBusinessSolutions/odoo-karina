@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_account_statement_from_invoice_lines_noreconcile" model="ir.ui.view">
+            <field name="name">account.statement.from.invoice.lines.form.noreconcile</field>
+            <field name="model">account.statement.from.invoice.lines</field>
+			<field name="inherit_id" ref="account_voucher.view_account_statement_from_invoice_lines"/>
+            <field name="arch" type="xml">
+				<field name="line_ids" position="replace">
+                    <field height="300" width="700" name="line_ids" domain="[('account_id.type','in',['receivable','payable']),('reconcile_id','=',False),('state', '=', 'valid')]"/>
+				</field>
+            </field>
+        </record>
+
+		<record id="view_bank_statement_form_voucher_auto_alloc" model="ir.ui.view">
+            <field name="name">account.bank.statement.voucher.tree.inherit.auto.alloc</field>
+            <field name="model">account.bank.statement</field>
+			<field name="inherit_id" ref="account_voucher.view_bank_statement_form_voucher"/>
+            <field name="arch" type="xml">
+				<xpath expr="//page[@name='statement_line_ids']/field[@name='line_ids']/tree/field[@name='voucher_id']" position="replace">
+                    <field name="voucher_id" string="" widget="many2onebutton" options="{'label':{'create':'Reconcile','edit':'Edit Reconciliation'}}" context="{'auto_alloc':auto_voucher_allocation, 'line_type': type, 'default_type': amount &lt; 0 and 'payment' or 'receipt', 'type': amount &lt; 0 and 'payment' or 'receipt', 'default_partner_id': partner_id, 'default_journal_id': parent.journal_id, 'default_amount': abs(amount), 'default_reference': ref, 'default_date': date, 'default_name': name, 'default_active': False}"/>
+                </xpath>
+                <xpath expr="//page[@name='statement_line_ids']/field[@name='line_ids']/tree/field[@name='amount']" position="after">
+                    <field name="auto_voucher_allocation"/>
+                </xpath>
+                <xpath expr="//page[@name='statement_line_ids']/field[@name='line_ids']" position="after">
+                	<group>
+	                	<group col="6">
+	                		<field name="sum_lines_debit" invisible="1"/>
+	                	</group>
+	                	<group string="Total">
+	                    	<field name="sum_lines_debit"/>
+	                    	<field name="sum_lines_credit"/>
+	                    </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

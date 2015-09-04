@@ -1,0 +1,186 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* account_interests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-11 08:07+0000\n"
+"PO-Revision-Date: 2013-06-11 08:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_interests
+#: view:account.interests:0
+msgid "Calculate"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "tel.:"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Supplier Invoice"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "email:"
+msgstr ""
+
+#. module: account_interests
+#: model:ir.actions.act_window,name:account_interests.action_calculate_interest
+msgid "Calculate interest"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "PRO-FORMA"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Cancelled Invoice"
+msgstr ""
+
+#. module: account_interests
+#: field:account.interests,interest_rate:0
+msgid "Interest rate"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Manager:"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+#: field:account.interests,date_to:0
+msgid "Date to"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Na osnovi druge alineje, 2.odstavka 13.člena pravilnika o izvajanju ZDDV-1 (Uradni list RS, št. 141/06), DDV ni obračunan."
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Delivery date:"
+msgstr ""
+
+#. module: account_interests
+#: code:addons/account_interests/wizard/account_interests.py:134
+#, python-format
+msgid "Warning!"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Total:"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Principal (€)"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Days"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Invoice issued by:"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Dravograd,"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Supplier Refund"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Draft Invoice"
+msgstr ""
+
+#. module: account_interests
+#: model:ir.model,name:account_interests.model_account_interests
+msgid "Calculate interests for selected partners"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Refund"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Price (€)"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Place, date:"
+msgstr ""
+
+#. module: account_interests
+#: model:ir.actions.report.xml,name:account_interests.account_interests
+msgid "Interests Report"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Stanko Zvonar"
+msgstr ""
+
+#. module: account_interests
+#: code:addons/account_interests/wizard/account_interests.py:134
+#, python-format
+msgid "Date to cannot be lower or equal to Date from."
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+#: field:account.interests,date_from:0
+msgid "Date from"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Invoice"
+msgstr ""
+
+#. module: account_interests
+#: view:account.interests:0
+msgid "Cancel"
+msgstr ""
+
+#. module: account_interests
+#: report:account.interests:0
+msgid "Due date:"
+msgstr ""
+
+#. module: account_interests
+#: view:account.interests:0
+msgid "or"
+msgstr ""
+
+#. module: account_interests
+#: view:account.interests:0
+msgid "Calculate interests"
+msgstr ""
+

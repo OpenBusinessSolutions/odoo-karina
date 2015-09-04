@@ -1,0 +1,12 @@
+#-*- coding: utf-8 -*-
+from openerp.osv import orm, fields
+
+
+class Product(orm.Model):
+
+    _inherit = 'product.product'
+    _columns = {
+        'rend_sac': fields.float('Rendement Sac', digits=(16,2), help='Rend Sac'),
+    }
+
+Product()

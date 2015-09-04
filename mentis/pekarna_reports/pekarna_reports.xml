@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<report
+		    auto="False"
+		    id="account.account_invoices"
+		    model="account.invoice"
+		    name="account.invoice.pekarna"
+		    rml="pekarna_reports/report/account_print_invoice.rml"
+		    string="Invoices"
+		    attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+		    attachment_use="True"
+		    usage="default"
+        />
+		
+		<report 
+        	id="stock.report_picking_list_out" 
+        	model="stock.picking.out" 
+        	name="stock.picking.list.pekarna.delivery" 
+        	string="Delivery Slip" 
+        	rml="pekarna_reports/report/stock_picking.rml"
+        />
+		<report 
+			auto="False" 
+			id="account.account_overdue_pekarna" 
+			model="res.partner" 
+			name="account.overdue.pekarna" 
+			rml="pekarna_reports/report/account_print_overdue.rml"
+			string="Zapadla plačila 2"
+		/>
+	</data>
+</openerp>

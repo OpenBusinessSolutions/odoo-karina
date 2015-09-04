@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- PROJECT TASK TREE -->
+		<record id="view_task_tree_work_planning" model="ir.ui.view">
+			<field name="name">project.task.tree.work.planning</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_tree2"/>
+			<field name="arch" type="xml">
+				<field name="progress" position="after">
+					<field name="in_progress"/>
+				</field>
+			</field>
+		</record>
+		
+		<!-- PROJECT TASK FORM -->
+		<record id="view_task_form_work_planning" model="ir.ui.view">
+			<field name="name">project.task.form.work.planning</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_form2"/>
+			<field name="arch" type="xml">
+				<data>
+					<xpath expr="//header/button[@name='do_cancel']" position="after">
+						<button name="action_from_work" string="Move from work" type="object" 
+								attrs="{'invisible':['|', ('in_progress','=',False), ('state', '!=', 'open')]}"/>
+					</xpath>
+					<xpath expr="//header/button[@name='do_cancel']" position="after">
+						<button name="%(action_project_input_summary)d" string="Move to work" type="action"
+								attrs="{'invisible':['|', ('in_progress','=',True), ('state', '!=', 'open')]}"/>
+					</xpath>
+					<xpath expr="(//group/group)[2]/field[@name='progress']" position="after">
+						<field name="in_progress"/>
+					</xpath>
+					<xpath expr="//notebook/page[@string='Description']/field[@name='work_ids']/tree/field[@name='name']" position="after">
+						<field name="work_type"/>
+					</xpath>
+				</data>
+			</field>
+		</record>
+		
+		<!-- PROJECT TASK TYPE TREE -->
+		<record id="task_type_tree_work_planning" model="ir.ui.view">
+			<field name="name">project.task.type.tree.work.planning</field>
+			<field name="model">project.task.type</field>
+			<field name="inherit_id" ref="project.task_type_tree"/>
+			<field name="arch" type="xml">
+				<field name="state" position="after">
+					<field name="stage_type"/>
+				</field>
+			</field>
+		</record>
+		
+		<!-- PROJECT TASK TYPE TREE -->
+		<record id="task_type_edit_work_planning" model="ir.ui.view">
+			<field name="name">project.task.type.form.work.planning</field>
+			<field name="model">project.task.type</field>
+			<field name="inherit_id" ref="project.task_type_edit"/>
+			<field name="arch" type="xml">
+				<field name="case_default" position="after">
+					<field name="stage_type"/>
+				</field>
+			</field>
+		</record>
+		
+		
+		
+	</data>
+</openerp>

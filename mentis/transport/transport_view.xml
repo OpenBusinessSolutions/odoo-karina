@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  	<data>
+
+	<!-- ...SALE ORDER - TREE... -->
+	<!--
+    <record id="view_order_tree_transport" model="ir.ui.view">
+        <field name="name">sale.order.tree.transport</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="transport_id"/>
+            </field>
+        </field>
+    </record>
+	-->
+	
+	<!-- ...SALE ORDER LINE - FORM/TREE... -->
+    <record id="view_order_form_transport" model="ir.ui.view">
+        <field name="name">sale.order.form.transport</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <data>
+            	<xpath expr="//notebook/page[@string='Order Lines']/field/form/group/group/field[@name='price_unit']" position="after">
+            		<field name="product_notes" colspan="2"/>
+            	</xpath>
+            	<xpath expr="//notebook/page[@string='Order Lines']/field/tree/field[@name='name']" position="after">
+            		<field name="product_notes" colspan="2"/>
+            	</xpath>
+            </data>
+        </field>
+    </record>
+    
+    
+    <!-- ...PURCHASE ORDER - TREE... -->
+    <record id="view_purchase_order_tree_transport" model="ir.ui.view">
+        <field name="name">purchase.order.tree.transport</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="customer_delivery"/>
+            </field>
+            <field name="partner_id" position="after">
+                <field name="customer"/>
+            </field>
+            <field name="partner_id" position="after">
+                <field name="product_description"/>
+            </field>
+            <field name="origin" position="after">
+                <field name="transport_id"/>
+            </field>
+            <field name="amount_untaxed" position="replace"/>
+        </field>
+    </record>
+    
+	<!-- ...PURCHASE ORDER - FORM... -->
+    <record id="view_purchase_form_transport" model="ir.ui.view">
+        <field name="name">purchase.order.form.transport</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="customer_delivery" readonly="1"/>
+            </field>
+            <field name="partner_id" position="after">
+                <field name="customer" readonly="1"/>
+            </field>
+            <field name="origin" position="after">
+                <field name="transport_id"/>
+            </field>
+        </field>
+    </record>
+	
+	<!-- ...PURCHASE ORDER (LINE) - TREE/FORM... -->
+    <record id="view_purchase_order_line_tree_transport" model="ir.ui.view">
+        <field name="name">purchase.order.line.tree.transport</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <data>
+            	<xpath expr="//notebook/page[@string='Purchase Order']/field[@name='order_line']/tree/field[@name='name']" position="after">
+            		<field name="customer_delivery_id" colspan="4"/>
+            	</xpath>
+            	<xpath expr="//notebook/page[@string='Purchase Order']/field[@name='order_line']/tree/field[@name='name']" position="after">
+            		<field name="customer_id" colspan="4"/>
+            	</xpath>
+            	<xpath expr="//notebook/page[@string='Purchase Order']/field[@name='order_line']/tree/field[@name='price_unit']" position="after">
+            		<field name="sale_price" colspan="4"/>
+            	</xpath>
+            </data>
+        </field>
+    </record>
+    
+    <!-- ...PURCHASE ORDER (LINE) - FORM... -->
+    <record id="view_purchase_order_line_form_transport" model="ir.ui.view">
+        <field name="name">purchase.order.line.form.transport</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_form"/>
+        <field name="arch" type="xml">
+            <data>
+            	<xpath expr="//form/sheet/group/group/field[@name='price_unit']" position="after">
+            		<field name="customer_id" />
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='customer_id']" position="after">
+            		<field name="customer_delivery_id" />
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='customer_delivery_id']" position="after">
+            		<field name="sale_price" />
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='sale_price']" position="after">
+            		<field name="extra_dimensions" />
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='price_unit']" position="after">
+            		<separator string="" colspan="2"/>
+            	</xpath>
+            	<xpath expr="//form/sheet/group/group/field[@name='customer_delivery_id']" position="after">
+            		<separator string="" colspan="2"/>
+            	</xpath>
+            </data>
+        </field>
+    </record>
+	
+    <!-- TRANSPORT TREE -->
+    <record id="view_transport_tree" model="ir.ui.view">
+      	<field name="name">transport.view.tree</field>
+      	<field name="model">transport</field>
+      	<field name="type">tree</field>
+      	<field name="arch" type="xml">
+        	<tree string="Manage Transports">
+          		<field name="name"/>
+          		<field name="transporter_id"/>
+          		<field name="price"/>
+          		<field name="description"/>
+        	</tree>
+      	</field>
+    </record>
+    
+    <!-- TRANSPORT FORM -->
+    <record id="view_transport_form" model="ir.ui.view">
+    	<field name="name">transport.view.form</field>
+        <field name="model">transport</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        	<form string="Manage Transports">
+            	<group>
+                	<field name="name"/>
+                	<field name="transporter_id"/>
+                	<field name="price"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    
+    <!-- TRANSPORT SEARCH -->
+    <record id="view_transport_search" model="ir.ui.view">
+    	<field name="name">transport.view.search</field>
+        <field name="model">transport</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+        	<search string="Manage Transports">
+            	<group>
+                	<field name="name"/>
+                    <field name="transporter_id"/>
+            	</group>
+        	</search>
+    	</field>
+    </record>
+    
+    <!-- TRANSPORT ACTION, MENU -->
+    <record id="action_transport" model="ir.actions.act_window">
+    	<field name="name">Manage Transports</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">transport</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_transport_search"/>
+    </record>
+	<menuitem id="sales_menu_transport_main" name="Transport" parent="base.menu_base_partner" sequence="1" />
+    
+    <menuitem id="sales_menu_transport" action="action_transport" parent="sales_menu_transport_main" />
+  	</data>
+  	
+</openerp>

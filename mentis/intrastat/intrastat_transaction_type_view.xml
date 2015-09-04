@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Intrastat transaction type -->
+        <record id="view_intrastat_transaction_type_tree" model="ir.ui.view">
+            <field name="name">intrastat.transaction.type.tree</field>
+            <field name="model">intrastat.transaction.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Intrastat transaction type">
+                	<field name="code"/>
+                	<field name="short_name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_intrastat_transaction_type_form" model="ir.ui.view">
+            <field name="name">intrastat.transaction.type.form</field>
+            <field name="model">intrastat.transaction.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Intrastat transaction type">
+                    <group>
+                        <field name="code"/>
+                        <field name="short_name"/>
+                        <field name="full_description"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_intrastat_transaction_type_tree" model="ir.actions.act_window">
+            <field name="name">Intrastat Transaction Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">intrastat.transaction.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_intrastat_transaction_type_tree" id="menu_intrastat_transaction_type" 
+                parent="base.menu_config_address_book" sequence="2"/>  
+        
+    </data>
+</openerp>

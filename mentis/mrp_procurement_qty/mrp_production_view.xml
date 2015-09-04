@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="mrp_production_form_view_pekarna">
+            <field name="name">mrp.production.form.pekarna</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<xpath expr="//page[@string='Extra Information']" position="after">
+	                <page string="Bakery">
+	                	<group>
+		                	<group name="basket_st" string="Basket">
+		                		<field name="produced" />
+		                		<field name="produced_phantom" />
+		                		<field name="produced_stock" />
+		                		<field name="scrap" />
+		                		<field name="scrap_phantom" />
+		                		<field name="status_izdelki" />
+		                		<field name="status_testo" />
+		                	</group>
+		                	<group name="stock_st" string="Stock">
+		                		<field name="product_on_bom_qty_available" />
+		                		<field name="product_with_bom_factor" />
+		                		<field name="product_with_bom_id" />
+		                		<field name="product_with_bom_relation" />
+		                	</group>
+	                	</group>
+	                </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

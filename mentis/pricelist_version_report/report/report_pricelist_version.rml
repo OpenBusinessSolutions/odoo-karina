@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<document filename="Pricelist Version Report.pdf">
+  <template pageSize="(612.0,792.0)" title="Pricelist Version Report" author="Mentis d.o.o." allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="35.0" y1="50.0" width="542" height="692"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="tableTitle">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="tableReportHeader">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="tableDetailHeader">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <blockBackground colorName="#cccccc" start="0,0" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#cccccc" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#cccccc" start="2,0" stop="2,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="tableDetail">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#c0c0c0" start="0,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#c0c0c0" start="0,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#c0c0c0" start="0,0" stop="0,-1"/>      
+      <lineStyle kind="LINEBEFORE" colorName="#c0c0c0" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#c0c0c0" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#c0c0c0" start="2,0" stop="2,-1"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="Header" fontName="Helvetica" fontSize="11.0" leading="14"/>
+    <paraStyle name="HeaderCenter" fontName="Helvetica" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="HeaderRight" fontName="Helvetica" fontSize="11.0" leading="14" alignment="RIGHT"/>
+    <paraStyle name="Standard" fontName="Helvetica" fontSize="10.0" leading="13"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para style="Standard">[[ repeatIn(objects,'version') ]]</para>
+    <para style="Standard">[[ setLang(user.lang) ]]</para>
+    <blockTable colWidths="271.0,271.0" style="tableTitle">
+      <tr>
+        <td>
+          <para style="Header">[[ user.company_id.name ]]</para>
+        </td>
+        <td>
+          <para style="HeaderRight">[[ formatLang(time.strftime("%Y-%m-%d"), date=True) ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="150.0,392.0" style="tableReportHeader">
+      <tr>
+        <td>
+          <para style="Header">Pricelist Version:</para>
+        </td>
+        <td>
+          <para style="Header">[[ version.name + ' ' + version.pricelist_id.name ]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="Header">Valid:</para>
+        </td>
+        <td>
+          <para style="Header">From [[ formatLang(version.date_start, date=True) ]] to [[ formatLang(version.date_end, date=True) ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="150.0,196.0,196.0" style="tableDetailHeader">
+      <tr>
+        <td>
+          <para style="Header">Name</para>
+        </td>
+        <td>
+          <para style="Header">Description</para>
+        </td>
+        <td>
+          <para style="Header">Price</para>
+        </td>
+      </tr>
+    </blockTable>
+    <section>
+      <para style="Standard">[[ repeatIn(version.items_id,'item') ]]</para>
+      <blockTable colWidths="150.0,196.0,196.0" style="tableDetail">
+        <tr>
+          <td>
+            <para style="Standard">[[ item.name ]]</para>
+          </td>
+          <td>
+            <para style="Standard">[[ get_description(item) ]]</para>
+          </td>
+          <td>
+            <para style="Standard">[[ get_price(item) ]]</para>
+          </td>
+        </tr>
+      </blockTable>
+    </section>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+  </story>
+</document>

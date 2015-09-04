@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="multiple_scheduler_wizard_view" model="ir.ui.view">
+            <field name="name">Run Schedulers multiple times</field>
+            <field name="model">procurement.order.run.wizard</field>
+            <field name="arch" type="xml">
+               <form string="Run Scheduler - view" version="7.0">
+               		<group>
+                    	<separator string="Run Scheduler multiple times" colspan="4" />
+                    	<field name="repeat_number" groups="base.group_no_one"/>
+                    	<separator string="Status" colspan="4"/>
+                    	<field name="status" />
+                    	<field name="override" />
+                    </group>
+                    <footer>
+                    	<button name="execute" string="Run Scheduler" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Run Scheduler x times"
+            res_model="procurement.order.run.wizard"
+            src_model="procurement.order"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_run_scheduler_multiple_times"/>    
+
+     	<menuitem action="action_run_scheduler_multiple_times" id="menu_run_scheduler_multiple_times" parent="procurement.menu_stock_sched" sequence="22"/>
+    </data>
+</openerp>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Field "date_done" moved from page "Additional Info" to header -->
+        <!-- Remove field on "Additional Info" page -->
+        <record id="view_picking_in_1_form" model="ir.ui.view">
+            <field name="name">stock.picking.in.1.form</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="arch" type="xml">
+            	<field name="date_done" position="replace"/>
+            </field>
+        </record>
+
+        <!-- Add field on header -->
+        <record id="view_picking_in_2_form" model="ir.ui.view">
+            <field name="name">stock.picking.in.2.form</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="view_picking_in_1_form"/>
+            <field name="arch" type="xml">
+                <field name="date" position="after">
+                    <field name="date_done" required="1"/>
+            	</field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

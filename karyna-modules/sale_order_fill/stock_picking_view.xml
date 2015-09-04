@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Inheriting from stock.move form view-->
+        <record model="ir.ui.view" id="stock_picking_form_inherit">
+            <field name="name">stock.picking.form.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Additional Info']" position="before">
+                    <page string="Drivers Orders">
+                        <field name="drivers_order_ids" nolabel="1">
+                            <tree version="7.0" editable="top">
+                                <field name="quantity_hand"/>
+                                <field name="product_id"/>
+                                <!-- Pasar todos los campos a calcular en el metodo on_change -->
+                                <field name="driver_1" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_2" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_3" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_4" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_5" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_6" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_7" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_8" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_9" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_10" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_11" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_12" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_13" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_14" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="driver_15" sum="Total Driver" on_change="onchange_total(context, driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12,
+                                driver_13, driver_14, driver_15)"/>
+                                <field name="order_total" sum="Total Order" string="Total"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_sale_shop_form_simple" model="ir.ui.view">
+            <field name="name">sale.shop.form.simple</field>
+            <field name="model">sale.shop</field>
+            <field name="inherit_id" ref="sale_stock.view_sale_shop_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="pricelist_id" position="after">
+                     <field name="shop_production"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

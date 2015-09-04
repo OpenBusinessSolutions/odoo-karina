@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_account_invoice_duplicates_tree" model="ir.ui.view">
+            <field name="name">account.invoice.duplicates.tree</field>
+            <field name="model">account.invoice.duplicate.line</field>
+            <field name="arch" type="xml">
+                <tree string="Duplicated Invoice Lines">
+                	<field name="invoice_id"/>
+                	<field name="partner_id"/>
+                	<field name="product_id"/>
+                	<field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_account_invoice_duplicates_search" model="ir.ui.view">
+            <field name="name">account.invoice.duplicates.search</field>
+            <field name="model">account.invoice.duplicate.line</field>
+            <field name="arch" type="xml">
+                <search string="Duplicated Invoice Lines">
+                	<field name="invoice_id"/>
+                	<field name="partner_id"/>
+                	<field name="product_id"/>
+                	<field name="state"/>
+                    <group expand="0" string="Group By...">
+                	    <filter string="Invoice" name="by_invoice" icon="terp-accessories-archiver" domain="[]"  context="{'group_by':'invoice_id'}"/>
+                	    <filter string="Partner" name="by_partner" icon="terp-accessories-archiver" domain="[]"  context="{'group_by':'partner_id'}"/>
+                	    <filter string="Product" name="by_product" icon="terp-accessories-archiver" domain="[]"  context="{'group_by':'product_id'}"/>
+                	    <filter string="State" name="by_state" icon="terp-accessories-archiver" domain="[]"  context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_account_invoice_duplicates" model="ir.actions.act_window">
+            <field name="name">Duplicated Invoice Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.invoice.duplicate.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_account_invoice_duplicates_search"/>
+            <field name="context">{}</field>
+            <field name="domain">[('state','!=','cancel')]</field>
+        </record>
+
+     	<menuitem action="action_account_invoice_duplicates" id="menu_account_invoice_duplicates" parent="account.menu_finance_periodical_processing" sequence="35"/>
+    </data>
+</openerp>

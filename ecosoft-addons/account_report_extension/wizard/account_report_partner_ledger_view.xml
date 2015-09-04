@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+     <data>
+         <record id="account_partner_ledger_view_ext" model="ir.ui.view">
+            <field name="name">Partner Ledger</field>
+            <field name="model">account.partner.ledger</field>
+            <field name="inherit_id" ref="account.account_partner_ledger_view" />
+            <field name="arch" type="xml">
+	            <data>
+			        <xpath expr="//field[@name='page_split']" position="after">
+			        	<newline/>
+                    	<field name="partner_ids" widget="many2many_tags" domain="[('is_company','=',True)]" context="{'search_default_attr':0}"/> 
+			        </xpath>
+	            </data>
+            </field>
+        </record>
+      </data>
+ </openerp>

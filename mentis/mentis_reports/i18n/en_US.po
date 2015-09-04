@@ -1,0 +1,616 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mentis_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-24 09:38+0000\n"
+"PO-Revision-Date: 2013-01-24 09:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Opis del in porabljen material:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Description"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Datum zaključka:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "VAT:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Podpis:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Podpis stranke:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Izvajalec:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Datum naloga:"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Delovni nalog"
+msgstr ""
+
+#. module: mentis_reports
+#: model:ir.actions.report.xml,name:mentis_reports.report_sale_work_order
+msgid "Work Order"
+msgstr ""
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Porabljen čas: ____ur, ____minut"
+msgstr "Time used: ____hour(s), ____minutes"
+
+#. module: mentis_reports
+#: report:sale.work.order:0
+msgid "Quantity"
+msgstr ""
+
+#. module: account
+#: report:account.invoice:0
+msgid "Place, date:"
+msgstr "Place, date:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Delivery date:"
+msgstr "Delivery date:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Due date:"
+msgstr "Due date:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Order number:"
+msgstr "Order number:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Reference:"
+msgstr "Reference:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "VAT:"
+msgstr "VAT:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Disc. (%)"
+msgstr "Disc. (%)"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Taxes (%)"
+msgstr "Taxes (%)"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Price (€)"
+msgstr "Price (€)"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Invoice issued by:"
+msgstr "Invoice issued by:"
+
+#. module: mentis_reports
+#: report:account.invoice:0
+msgid "Manager:"
+msgstr "Manager:"
+
+
+
+
+
+#. module: mentis_reports 
+#: report:sale.order.mentis:0
+msgid "Confirmation date:"
+msgstr "Confirmation date:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Customer reference:"
+msgstr "Customer reference:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Description"
+msgstr "Description"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Disc. (%)"
+msgstr "Disc. (%)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "email:"
+msgstr "email:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Incoterm:"
+msgstr "Incoterm:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Invoice address :"
+msgstr "Invoice address :"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Net Total:"
+msgstr "Net Total:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Order N°"
+msgstr "Order N°"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Order reference:"
+msgstr "Order reference:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Payment terms:"
+msgstr "Payment terms:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Place, date:"
+msgstr "Place, date:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Price"
+msgstr "Price"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Quantity"
+msgstr "Quantity"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Quotation N°"
+msgstr "Quotation N°"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Salesperson:"
+msgstr "Salesperson:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Shipping address :"
+msgstr "Shipping address :"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Taxes :"
+msgstr "Taxes :"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "tel.:"
+msgstr "tel.:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Total :"
+msgstr "Total :"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Unit Price"
+msgstr "Unit Price"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "VAT"
+msgstr "VAT"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "VAT:"
+msgstr "VAT:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Disc. (€)"
+msgstr "Disc. (€)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Taxes (%)"
+msgstr "Taxes (%)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Price (€)"
+msgstr "Price (€)"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Disc. Total:"
+msgstr "Disc. Total:"
+
+#. module: mentis_reports
+#: report:sale.order.mentis:0
+msgid "Net:"
+msgstr ""
+
+
+
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Already paid:"
+msgstr "Already paid:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Amount"
+msgstr "Amount"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Base"
+msgstr "Base"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Cancelled Invoice"
+msgstr "Cancelled Invoice"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Customer Code"
+msgstr "Customer Code"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Delivery date:"
+msgstr "Delivery date:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Description"
+msgstr "Description"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Disc. (%)"
+msgstr "Disc. (%)"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Draft Invoice"
+msgstr "Draft Invoice"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Due date:"
+msgstr "Due date:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Fax :"
+msgstr "Fax :"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Fiscal Position Remark :"
+msgstr "Fiscal Position Remark :"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Invoice"
+msgstr "Invoice"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Invoice Date"
+msgstr "Invoice Date"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Invoice issued by:"
+msgstr "Invoice issued by:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Manager:"
+msgstr "Manager:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Net Total:"
+msgstr "Net Total:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Order number:"
+msgstr "Order number:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Place, date:"
+msgstr "Place, date:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Price (€)"
+msgstr "Price (€)"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "PRO-FORMA"
+msgstr "PRO-FORMA"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Quantity"
+msgstr "Quantity"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Reference:"
+msgstr "Reference:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Refund"
+msgstr "Refund"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Supplier Invoice"
+msgstr "Supplier Invoice"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Supplier Refund"
+msgstr "Supplier Refund"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Tax"
+msgstr "Tax"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Taxes (%)"
+msgstr "Taxes (%)"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Taxes:"
+msgstr "Taxes:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Total:"
+msgstr "Total:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Unit Price"
+msgstr "Unit Price"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "VAT:"
+msgstr "VAT:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Disc. Total:"
+msgstr "Disc. Total:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Net:"
+msgstr "Net:"
+
+#. module: mentis_reports
+#: report:account.invoice.mentis:0
+msgid "Disc. (€)"
+msgstr "Disc. (€)"
+
+
+
+
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Customer Address:"
+msgstr "Customer Address:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Delivery Order:"
+msgstr "Delivery Order:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Description"
+msgstr "Description"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Issued by:"
+msgstr "Issued by:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Order:"
+msgstr "Order:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Order quantity"
+msgstr "Order quantity"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Place, date:"
+msgstr "Place, date:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Quantity"
+msgstr "Quantity"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Received by:"
+msgstr "Received by:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Scheduled Date:"
+msgstr "Scheduled Date:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Weight:"
+msgstr "Weight:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Supplier Address:"
+msgstr "Supplier Address:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Warehouse Address:"
+msgstr "Warehouse Address:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Incoming Shipment:"
+msgstr "Incoming Shipment:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis:0
+msgid "Internal Shipment:"
+msgstr "Internal Shipment:"
+
+
+
+
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Customer Address:"
+msgstr "Customer Address:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Delivery Order:"
+msgstr "Delivery Order:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Description"
+msgstr "Description"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Issued by:"
+msgstr "Issued by:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Order:"
+msgstr "Order:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Order quantity"
+msgstr "Order quantity"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Place, date:"
+msgstr "Place, date:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Quantity"
+msgstr "Quantity"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Received by:"
+msgstr "Received by:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Scheduled Date:"
+msgstr "Scheduled Date:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Weight:"
+msgstr "Weight:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Supplier Address:"
+msgstr "Supplier Address:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Warehouse Address:"
+msgstr "Warehouse Address:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Incoming Shipment:"
+msgstr "Incoming Shipment:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Internal Shipment:"
+msgstr "Internal Shipment:"
+
+#. module: mentis_reports
+#: report:stock.picking.list.mentis2:0
+msgid "Customer reference:"
+msgstr "Customer reference:"

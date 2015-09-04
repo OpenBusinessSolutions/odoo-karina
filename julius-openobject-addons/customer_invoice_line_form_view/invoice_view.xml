@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	    <!-- Invoice -->
+        <record id="view_account_invoice_form_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line']/tree" position="attributes">
+                    <attribute name="editable" eval="False" />
+                </xpath>
+                <field name="invoice_line" position="attributes">
+                    <attribute name="context">{'type': type, 'form_view_ref': 'account.view_invoice_line_form'}</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

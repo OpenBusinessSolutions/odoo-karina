@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_tax_received_report" model="ir.ui.view">
+            <field name="name">tax.received.report.form</field>
+            <field name="model">tax.received.report</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Tax received report" version="7.0">
+                	<group>
+	                    <field name="period" colspan="2"/>
+	                    <field invisible="1" name="state"/>
+					</group>
+					<footer>
+                    	<button name="create_report" string="Create" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                    <group col="3" fill="0" states="get">
+                        <separator colspan="3" string="Export done"/>
+                        <field name="name" invisible="1" width="100"/>
+                        <field name="data" nolabel="1" readonly="1" width="100" filename="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+       
+        <record id="action_tax_received_report" model="ir.actions.act_window">
+            <field name="name">Received - Export</field>
+            <field name="res_model">tax.received.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+        <menuitem action="action_tax_received_report" id="menu_tax_received_report" 
+        			parent="menu_tax_records_main" sequence="62" />
+       
+    </data>
+</openerp>

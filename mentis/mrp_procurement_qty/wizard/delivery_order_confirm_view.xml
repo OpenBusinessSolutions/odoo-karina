@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="delivery_order_confirm_wizard_view" model="ir.ui.view">
+            <field name="name">Confirm Delivery Orders</field>
+            <field name="model">delivery.order.confirm</field>
+            <field name="arch" type="xml">
+               <form string="Confirm Delivery Orders" version="7.0">
+               		<group>
+                    	<separator string="Status" colspan="4"/>
+                    	<field name="status" />
+                    	<field name="override" />
+                    </group>
+                    <footer>
+                    	<button name="confirm_delivery_orders" string="Confirm orders" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Confirm Delivery Orders"
+            res_model="delivery.order.confirm"
+            src_model="mrp.production"
+            view_mode="form"
+            target="new"
+            id="action_execute_delivery_order_confirm"/>    
+
+
+     	<menuitem action="action_execute_delivery_order_confirm" id="menu_confirm_delivery_orders" parent="mrp.menu_mrp_manufacturing" sequence="20"/>
+                        
+    </data>
+</openerp>

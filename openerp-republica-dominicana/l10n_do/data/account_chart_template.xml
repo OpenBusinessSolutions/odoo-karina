@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!--
+        Resource: account.tax.code.template
+        Account tax code templates for Dominican Republic
+        -->
+	<record id="account_chart_template_x" model="account.chart.template">
+            <field name="name">Catalogo de Cuenta Demo Empresas Privadas</field>
+            <field name="account_root_id" ref="account_account_template_standard_0"/>
+            <field name="tax_code_root_id" ref="account_tax_code_1"/>
+            <field name="bank_account_view_id" ref="account_account_template_standard_112"/>
+            <field name="property_account_receivable" ref="account_account_template_standard_11301"/>
+            <field name="property_account_payable" ref="account_account_template_standard_21101"/>
+            <field name="property_account_income" ref="account_account_template_standard_411"/>
+            <field name="property_account_expense" ref="account_account_template_standard_521"/>
+            <field name="property_account_income_categ" ref="account_account_template_standard_411"/>
+            <field name="property_account_expense_categ" ref="account_account_template_standard_521"/>
+        </record>
+        
+        <record id="account_chart_template_x1" model="account.chart.template">
+            <field name="name">Catalogo de Cuenta de las Instituciones Descentralizadas y Autonomas</field>
+            <field name="account_root_id" ref="account_account_template_dgcc_0"/>
+            <field name="tax_code_root_id" ref="account_tax_code_1"/>
+            <field name="bank_account_view_id" ref="account_account_template_dgcc_110101"/>
+            <field name="property_account_receivable" ref="account_account_template_dgcc_1104020001"/>
+            <field name="property_account_payable" ref="account_account_template_dgcc_2103020002"/>
+            <field name="property_account_income" ref="account_account_template_dgcc_4102980998"/>
+            <field name="property_account_expense" ref="account_account_template_dgcc_5105010001"/>
+            <field name="property_account_income_categ" ref="account_account_template_dgcc_4102980998"/>
+            <field name="property_account_expense_categ" ref="account_account_template_dgcc_5105010001"/>
+        </record>
+    
+    </data>
+    
+</openerp>

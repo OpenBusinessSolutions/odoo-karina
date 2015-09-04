@@ -1,0 +1,223 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="designer" content="kABI d.o.o. - www.kabi.si" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title> - Harvey Norman</title>
+		<link rel="stylesheet" type="text/css" href="http://www.harveynorman.si/p/js/lightbox/css/lightbox.css" media="screen" />
+		<script type="text/javascript" src="http://www.harveynorman.si/admin/js/googlemaps.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=sl"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.harveynorman.si/p/js/zoom/jquery.jqzoom.css?v=1.0" media="screen" />
+		<link rel="stylesheet" type="text/css" href="http://www.harveynorman.si/p/js/jqueryui/css/smoothness/jquery-ui-1.10.2.custom.min.css" media="screen" />
+		<link href="http://www.harveynorman.si/p/elementi/basic.css?v=1.44" rel="stylesheet" type="text/css" media="screen" />
+										<link href="/favicon.ico" rel="shortcut icon" />
+	
+							<link type="application/rss+xml" href="http://www.harveynorman.si/sl/rss/sl/" rel="alternate" title="Harvey Norman ~ Slovensko" />
+				<script type="text/javascript" src="/web/webclient/js"></script> 
+				<script src="lib/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+									<script type="text/javascript">
+					var instance = openerp.init(["web"]); // get a new instance
+                    instance.session.session_bind(); // bind it to the right hostname
+                    var part = new instance.web.Model('res.partner');
+                    instance.session.session_authenticate("HN-POS","admin","admin" ,false).fail(function(result){alert("Prijava neuspešna");})
+                    .done(function(result){})
+					function RegistirjaUporabnika()
+					{
+					
+					var val=new Object();
+					val.name=document.getElementById("registerlastname").value+" "+document.getElementById("registerfirstname").value; 
+					val.email=document.getElementById("registeremail").value;					
+					var select_id = document.getElementById("registerid_city");
+					//val.zip=select_id.options[select_id.selectedIndex].value;
+					val.city=select_id.options[select_id.selectedIndex].text;
+					part.call("create",[val]);
+					alert("prijava uspešna")
+					}
+				</script>
+			
+				</head>	
+	<body><div id="headerWrapper"><div id="headerWrapper1">
+	<div id="header">
+		<a href="/" class="logo" title="Harvey Norman"></a>
+		<div class="top">
+							<a href="/uporabnik/prijava" class="login" title="prijava">prijava</a>
+						<!--
+			<a href="#" class="sl" title=""></a>
+			<a href="#" class="en" title=""></a>
+			-->
+			<a href="javascript:print();" class="link" title="Natisni">Natisni</a>
+			<a href="/kazalo" class="link" title="Kazalo">Kazalo</a>
+		</div>
+		<div class="cart" id="topCart">
+			
+			<a href="/kosarica" class="cartLink" title="Košarica"><span><span>
+				<span class="name">Košarica</span>
+				<span class="count">0</span>
+				<span class="value">0,00 &euro;</span>
+			</span></span></a>
+			<a href="/uporabnik" class="profileLink" title="Moj profil"><span><span>Moj profil</span></span></a>
+				</div>
+	</div>
+</div></div>
+<div id="contentWrapper">
+	<div id="content">
+			<div id="hmeni">
+		<ul class="hmenu home">
+			<li class="menuItem home"><a href="/" title="Domov"></a></li>
+		</ul>
+		<ul class="hmenu">
+									<li class="menuItem">
+							<a href="/oddelki/pohistvo" title="Pohištvo"><span><span>Pohištvo</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/spalnice-postelje" title="Spalnice"><span><span>Spalnice</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/posteljnina-vzglavniki" title="Posteljnina in Vzglavniki"><span><span>Posteljnina in Vzglavniki</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/avdio-video" title="TV sprejemniki + Avdio"><span><span>TV sprejemniki + Avdio</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/racunalnistvo" title="Računalništvo"><span><span>Računalništvo</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/fotografija" title="Fotografija"><span><span>Fotografija</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/bela-tehnika" title="Bela tehnika"><span><span>Bela tehnika</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/mali-gospodinjski-aparati" title="Mali gospodinjski aparati"><span><span>Mali gospodinjski aparati</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/osebna-nega" title="Osebna nega"><span><span>Osebna nega</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/pohistvo/vrtno-pohistvo" title="Vrtno pohištvo"><span><span>Vrtno pohištvo</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="http://www.harveynorman.si/oddelki/bela-tehnika/grelne-naprave" title="Grelne naprave"><span><span>Grelne naprave</span></span></a>
+						</li>
+											<li class="menuItem">
+							<a href="/oddelki/tablice-in-telefonija" title="Tablice in telefonija"><span><span>Tablice in telefonija</span></span></a>
+						</li>
+							</ul>
+		<ul class="hmenu right">
+			<li class="menuItem noborder"><a href="/oddelki/akcija" title="Akcija">AKCIJA</a></li>
+			<li class="menuItem"><a href="http://www.odprodaja-eksponatov.si" target="_blank" title="Eksponati">Eksponati</a></li>
+			<li class="menuItem"><a href="http://www.harveynormanoutlet.eu" target="_blank" title="Outlet">Outlet</a></li>
+									<li class="menuItem"><a href="/katalogi" title="Katalogi">Katalogi</a></li>
+						</ul>
+	</div>
+		<form name="topSearch" id="topSearch" action="/oddelki/iskalnik/" method="get">
+			<input type="text" class="text" name="isci" value="" />
+			<select name="kategorija" class="selectCategory">
+				<option value="">vsi oddelki</option>
+				<option value="1">Pohištvo</option><option value="2">Spalnice</option><option value="15">Posteljnina in Vzglavniki</option><option value="4">TV sprejemniki + Avdio</option><option value="5">Računalništvo</option><option value="6">Fotografija</option><option value="7">Bela tehnika</option><option value="8">Mali gospodinjski aparati</option><option value="14">Osebna nega</option><option value="12">Vrtno pohištvo</option><option value="11">Grelne naprave</option><option value="13">Tablice in telefonija</option>			</select>
+			<a class="button" onclick="document.topSearch.submit();" href="#"><span><span>Išči</span></span></a> 
+		</form>
+		<div class="pageContent">
+			<div id="rightMenu">
+									<span class="specialTop">Akcija</span>
+						<div class="specialMiddle">
+															    	<div class="item">
+										<a href="/oddelki/fotografija/Ultra-zoom-fotoaparat-NIKON-L820-moder.88731.html" class="image"><img src="/f/product_images/moder-88731-28292-menu.jpg" alt="Ultra zoom fotoaparat NIKON L820, moder" title="Ultra zoom fotoaparat NIKON L820, moder" /></a>
+										<span class="desc">
+											Ultra zoom fotoaparat NIKON L820, moder<br />
+											<span>179,99 &euro;</span>
+										</span>
+									</div>
+								    								    	<div class="item">
+										<a href="/oddelki/racunalnistvo/Prenosni-racunalnik-SONY-SVF1521B1EW.91233.html" class="image"><img src="/f/product_images/Prenosni-racunalnik-SONY-SVF1521B1EW-91233-35085-menu.jpg" alt="Prenosni računalnik SONY SVF1521B1EW" title="Prenosni računalnik SONY SVF1521B1EW" /></a>
+										<span class="desc">
+											Prenosni računalnik SONY SVF1521B1EW<br />
+											<span>499,99 &euro;</span>
+										/span>
+									</div>
+								    								    	<div class="item">
+										<a href="/oddelki/racunalnistvo/51044.94267.html" class="image"><img src="/f/product_images/F1-2013-X360-94267-36006-menu.jpg" alt="F1 2013 (X360)" title="F1 2013 (X360)" /></a>
+										<span class="desc">
+											F1 2013 (X360)<br />
+											<span>59,99 &euro;</span>
+										</span>
+									</div>
+								    						</div>
+						<div class="specialBottom"></div>
+							<span class="top">E-novice</span>
+<div class="middle">
+	<span class="enoviceMsg">Želite prejemati novice o naših akcijah?</span>
+	<form id="formEnovice" name="formEnovice" method="post" action="">
+		<input type="text" name="f_enovostiMail" id="f_enovostiMail" value="vpišite vaš e-naslov" onfocus="this.value = '';" onblur="if(this.value=='') this.value='vpišite vaš e-naslov';" class="f_input"  />
+		<input name="f_prijavaodjava" type="hidden" value="1" />
+		<ul class="f_groups">
+			<li><input type="checkbox" name="selected_groups[]" id="selected_groups_8" value="8" />Računalništvo</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_9" value="9" />Pohištvo</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_10" value="10" />Spalnice</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_11" value="11" />Kuhinje</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_12" value="12" />Avdio-video</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_13" value="13" />Fotografija</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_14" value="14" />Bela tehnika</li><li><input type="checkbox" name="selected_groups[]" id="selected_groups_15" value="15" />Mali gospodinjski aparati</li>		</ul>
+				<a href="#" onclick="document.formEnovice.submit();" class="button" >Pošlji</a>
+	</form>
+</div>
+<div class="bottom"></div>				
+		<div class="fb-like-box" data-href="http://www.facebook.com/harveynormanSLO" data-width="183" data-height="258" data-show-faces="true" data-stream="false" data-border-color="#ff121a" data-header="false"></div>
+		
+		
+	</div><div id="viewUser">
+	<h1>Registracija</h1>
+	<div id="userForm">
+					<form name="userRegister" id="userRegister" class="userLogin full" action="" method="post">
+				<input type="hidden" name="user_form" value="register" />
+				<div class="row"><span class="name">Email *:</span><input type="text" name="email" id="registeremail" value="" class="f_input" /></div><script type="text/javascript">$('#registeremail').focus();</script><div class="row"><span class="name">Geslo *:</span><input type="password" name="pass" id="registerpass" value="" class="f_input" /></div><div class="row"><span class="name">Ponovi geslo *:</span><input type="password" name="pass_repeat" id="registerpass_repeat" value="" class="f_input" /></div><div class="row"><span class="name">Ime *:</span><input type="text" name="firstname" id="registerfirstname" value="" class="f_input" /></div><div class="row"><span class="name">Priimek *:</span><input type="text" name="lastname" id="registerlastname" value="" class="f_input" /></div><div class="row"><span class="name">Telefon *:</span><input type="text" name="tel" id="registertel" value="" class="f_input" /></div><div class="row"><span class="name">Naslov *:</span><input type="text" name="address" id="registeraddress" value="" class="f_input" /></div><div class="row"><span class="name">Kraj *:</span><select name="id_city" id="registerid_city" class="f_select"><option value="8341">Adlešiči 8341</option><option value="5270">Ajdovščina 5270</option><option value="6280">Ankaran/Ancarano 6280</option><option value="9253">Apače 9253</option><option value="8253">Artiče 8253</option><option value="4275">Begunje na Gorenjskem 4275</option><option value="1382">Begunje pri Cerknici 1382</option><option value="9231">Beltinci 9231</option><option value="2234">Benedikt 2234</option><option value="2345">Bistrica ob Dravi 2345</option><option value="3256">Bistrica ob Sotli 3256</option><option value="8259">Bizeljsko 8259</option><option value="1223">Blagovica 1223</option><option value="8283">Blanca 8283</option><option value="4260">Bled 4260</option><option value="4273">Blejska Dobrava 4273</option><option value="9265">Bodonci 9265</option><option value="9222">Bogojina 9222</option><option value="4263">Bohinjska Bela 4263</option><option value="4264">Bohinjska Bistrica 4264</option><option value="4265">Bohinjsko jezero 4265</option><option value="1353">Borovnica 1353</option><option value="8294">Boštanj 8294</option><option value="5230">Bovec 5230</option><option value="5295">Branik 5295</option><option value="3314">Braslovče 3314</option><option value="5223">Breginj 5223</option><option value="8280">Brestanica 8280</option><option value="2354">Bresternica 2354</option><option value="4243">Brezje 4243</option><option value="1351">Brezovica pri Ljubljani 1351</option><option value="8250">Brežice 8250</option><option value="4210">Brnik - Aerodrom 4210</option><option value="8321">Brusnice 8321</option><option value="3255">Buče 3255</option><option value="8276">Bučka  8276</option><option value="9261">Cankova 9261</option><option value="3000">Celje  3000</option><option value="3001">Celje - poštni predali 3001</option><option value="4207">Cerklje na Gorenjskem 4207</option><option value="8263">Cerklje ob Krki 8263</option><option value="1380">Cerknica 1380</option><option value="5282">Cerkno 5282</option><option value="2236">Cerkvenjak 2236</option><option value="2215">Ceršak 2215</option><option value="2326">Cirkovce 2326</option><option value="2282">Cirkulane 2282</option><option value="5273">Col 5273</option><option value="8251">Čatež ob Savi 8251</option><option value="1413">Čemšenik 1413</option><option value="5253">Čepovan 5253</option><option value="9232">Črenšovci 9232</option><option value="2393">Črna na Koroškem 2393</option><option value="6275">Črni Kal 6275</option><option value="5274">Črni Vrh nad Idrijo 5274</option><option value="5262">Črniče 5262</option><option value="8340">Črnomelj 8340</option><option value="6271">Dekani 6271</option><option value="5210">Deskle 5210</option><option value="2253">Destrnik 2253</option><option value="6215">Divača 6215</option><option value="1233">Dob 1233</option><option value="3224">Dobje pri Planini 3224</option><option value="8257">Dobova 8257</option><option value="1423">Dobovec 1423</option><option value="5263">Dobravlje 5263</option><option value="3204">Dobrna 3204</option><option value="8211">Dobrnič 8211</option><option value="1356">Dobrova 1356</option><option value="9223">Dobrovnik/Dobronak  9223</option><option value="5212">Dobrovo v Brdih 5212</option><option value="1431">Dol pri Hrastniku 1431</option><option value="1262">Dol pri Ljubljani 1262</option><option value="1273">Dole pri Litiji 1273</option><option value="1331">Dolenja vas 1331</option><option value="8350">Dolenjske Toplice 8350</option><option value="1230">Domžale 1230</option><option value="2252">Dornava 2252</option><option value="5294">Dornberk 5294</option><option value="1319">Draga 1319</option><option value="8343">Dragatuš 8343</option><option value="3222">Dramlje 3222</option><option value="2370">Dravograd 2370</option><option value="4203">Duplje 4203</option><option value="6221">Dutovlje 6221</option><option value="8361">Dvor 8361</option><option value="2343">Fala 2343</option><option value="9208">Fokovci 9208</option><option value="2313">Fram 2313</option><option value="3213">Frankolovo 3213</option><option value="1274">Gabrovka 1274</option><option value="8254">Globoko 8254</option><option value="5275">Godovič 5275</option><option value="4204">Golnik 4204</option><option value="3303">Gomilsko 3303</option><option value="4224">Gorenja vas 4224</option><option value="3263">Gorica pri Slivnici 3263</option><option value="2272">Gorišnica 2272</option><option value="9250">Gornja Radgona 9250</option><option value="3342">Gornji Grad 3342</option><option value="4282">Gozd Martuljek 4282</option><option value="6272">Gračišče 6272</option><option value="9264">Grad 9264</option><option value="8332">Gradac 8332</option><option value="1384">Grahovo 1384</option><option value="5242">Grahovo ob Bači 5242</option><option value="5251">Grgar 5251</option><option value="3302">Griže 3302</option><option value="3231">Grobelno 3231</option><option value="1290">Grosuplje 1290</option><option value="2288">Hajdina 2288</option><option value="8362">Hinje 8362</option><option value="2311">Hoče 2311</option><option value="9205">Hodoš/Hodos 9205</option><option value="1354">Horjul 1354</option><option value="1372">Hotedršica 1372</option><option value="1430">Hrastnik 1430</option><option value="6225">Hruševje 6225</option><option value="4276">Hrušica 4276</option><option value="5280">Idrija 5280</option><option value="1292">Ig 1292</option><option value="6250">Ilirska Bistrica 6250</option><option value="6251">Ilirska Bistrica-Trnovo 6251</option><option value="1295">Ivančna Gorica 1295</option><option value="2259">Ivanjkovci 2259</option><option value="1411">Izlake 1411</option><option value="6310">Izola/Isola 6310</option><option value="2222">Jakobski Dol 2222</option><option value="2221">Jarenina 2221</option><option value="6254">Jelšane 6254</option><option value="4270">Jesenice 4270</option><option value="8261">Jesenice na Dolenjskem 8261</option><option value="3273">Jurklošter 3273</option><option value="2223">Jurovski Dol 2223</option><option value="2256">Juršinci 2256</option><option value="5214">Kal nad Kanalom 5214</option><option value="3233">Kalobje 3233</option><option value="4246">Kamna Gorica 4246</option><option value="2351">Kamnica 2351</option><option value="1241">Kamnik 1241</option><option value="5213">Kanal 5213</option><option value="8258">Kapele 8258</option><option value="2362">Kapla 2362</option><option value="2325">Kidričevo 2325</option><option value="1412">Kisovec 1412</option><option value="6253">Knežak 6253</option><option value="5222">Kobarid 5222</option><option value="9227">Kobilje 9227</option><option value="1330">Kočevje 1330</option><option value="1338">Kočevska Reka 1338</option><option value="2276">Kog 2276</option><option value="5211">Kojsko 5211</option><option value="6223">Komen 6223</option><option value="1218">Komenda 1218</option><option value="6000">Koper/Capodistria  6000</option><option value="6001">Koper/Capodistria - poštni pre 6001</option><option value="8282">Koprivnica 8282</option><option value="5296">Kostanjevica na Krasu 5296</option><option value="8311">Kostanjevica na Krki 8311</option><option value="1336">Kostel 1336</option><option value="6256">Košana 6256</option><option value="2394">Kotlje 2394</option><option value="6240">Kozina 6240</option><option value="3260">Kozje 3260</option><option value="4000">Kranj  4000</option><option value="4001">Kranj - poštni predali 4001</option><option value="4280">Kranjska Gora 4280</option><option value="1281">Kresnice 1281</option><option value="4294">Križe 4294</option><option value="9206">Križevci 9206</option><option value="9242">Križevci pri Ljutomeru 9242</option><option value="1301">Krka 1301</option><option value="8296">Krmelj 8296</option><option value="4245">Kropa 4245</option><option value="8262">Krška vas 8262</option><option value="8270">Krško 8270</option><option value="9263">Kuzma 9263</option><option value="2318">Laporje 2318</option><option value="3270">Laško 3270</option><option value="1219">Laze v Tuhinju 1219</option><option value="2230">Lenart v Slovenskih goricah 2230</option><option value="9220">Lendava/Lendva 9220</option><option value="4248">Lesce 4248</option><option value="3261">Lesično 3261</option><option value="8273">Leskovec pri Krškem 8273</option><option value="2372">Libeliče 2372</option><option value="2341">Limbuš 2341</option><option value="1270">Litija 1270</option><option value="3202">Ljubečna 3202</option><option value="1000">Ljubljana  1000</option><option value="1231">Ljubljana - Črnuče 1231</option><option value="1261">Ljubljana - Dobrunje 1261</option><option value="1260">Ljubljana - Polje 1260</option><option value="1001">Ljubljana - poštni predali 1001</option><option value="1210">Ljubljana - Šentvid 1210</option><option value="1211">Ljubljana - Šmartno 1211</option><option value="3333">Ljubno ob Savinji 3333</option><option value="9240">Ljutomer 9240</option><option value="3215">Loče 3215</option><option value="5231">Log pod Mangartom 5231</option><option value="1358">Log pri Brezovici 1358</option><option value="1370">Logatec 1370</option><option value="1371">Logatec 1371</option><option value="1434">Loka pri Zidanem Mostu 1434</option><option value="3223">Loka pri Žusmu 3223</option><option value="6219">Lokev 6219</option><option value="1318">Loški Potok 1318</option><option value="2324">Lovrenc na Dravskem polju 2324</option><option value="2344">Lovrenc na Pohorju 2344</option><option value="3334">Luče 3334</option><option value="1225">Lukovica 1225</option><option value="9202">Mačkovci 9202</option><option value="2322">Majšperk 2322</option><option value="2321">Makole 2321</option><option value="9243">Mala Nedelja 9243</option><option value="2229">Malečnik 2229</option><option value="6273">Marezige 6273</option><option value="2000">Maribor  2000</option><option value="2001">Maribor - poštni predali 2001</option><option value="2206">Marjeta na Dravskem polju 2206</option><option value="2281">Markovci 2281</option><option value="9221">Martjanci 9221</option><option value="6242">Materija 6242</option><option value="4211">Mavčiče 4211</option><option value="1215">Medvode 1215</option><option value="1234">Mengeš 1234</option><option value="8330">Metlika 8330</option><option value="2392">Mežica 2392</option><option value="2204">Miklavž na Dravskem polju 2204</option><option value="2275">Miklavž pri Ormožu 2275</option><option value="5291">Miren 5291</option><option value="8233">Mirna 8233</option><option value="8216">Mirna Peč 8216</option><option value="2382">Mislinja 2382</option><option value="4281">Mojstrana 4281</option><option value="8230">Mokronog 8230</option><option value="1251">Moravče 1251</option><option value="9226">Moravske Toplice 9226</option><option value="5216">Most na Soči 5216</option><option value="1221">Motnik 1221</option><option value="3330">Mozirje 3330</option><option value="9000">Murska Sobota  9000</option><option value="9001">Murska Sobota - poštni predali 9001</option><option value="2366">Muta 2366</option><option value="4202">Naklo 4202</option><option value="3331">Nazarje 3331</option><option value="1357">Notranje Gorice 1357</option><option value="3203">Nova Cerkev 3203</option><option value="5000">Nova Gorica  5000</option><option value="5001">Nova Gorica - poštni predali 5001</option><option value="1385">Nova vas 1385</option><option value="8000">Novo mesto 8000</option><option value="8001">Novo mesto - poštni predali 8001</option><option value="6243">Obrov 6243</option><option value="9233">Odranci 9233</option><option value="2317">Oplotnica 2317</option><option value="2312">Orehova vas 2312</option><option value="2270">Ormož 2270</option><option value="1316">Ortnek 1316</option><option value="1337">Osilnica 1337</option><option value="8222">Otočec 8222</option><option value="2361">Ožbalt 2361</option><option value="2231">Pernica 2231</option><option value="2211">Pesnica pri Mariboru 2211</option><option value="9203">Petrovci 9203</option><option value="3301">Petrovče 3301</option><option value="6330">Piran/Pirano 6330</option><option value="8255">Pišece 8255</option><option value="6257">Pivka 6257</option><option value="6232">Planina 6232</option><option value="3225">Planina pri Sevnici 3225</option><option value="6276">Pobegi 6276</option><option value="8312">Podbočje 8312</option><option value="5243">Podbrdo 5243</option><option value="3254">Podčetrtek 3254</option><option value="2273">Podgorci 2273</option><option value="6216">Podgorje 6216</option><option value="2381">Podgorje pri Slovenj Gradcu 2381</option><option value="6244">Podgrad 6244</option><option value="1414">Podkum 1414</option><option value="2286">Podlehnik 2286</option><option value="5272">Podnanos 5272</option><option value="4244">Podnart 4244</option><option value="3241">Podplat 3241</option><option value="3257">Podsreda 3257</option><option value="2363">Podvelka 2363</option><option value="2208">Pohorje 2208</option><option value="2257">Polenšak 2257</option><option value="1355">Polhov Gradec 1355</option><option value="4223">Poljane nad Škofjo Loko 4223</option><option value="2319">Poljčane 2319</option><option value="1272">Polšnik 1272</option><option value="3313">Polzela 3313</option><option value="3232">Ponikva 3232</option><option value="6320">Portorož/Portorose 6320</option><option value="6230">Postojna 6230</option><option value="2331">Pragersko 2331</option><option value="3312">Prebold 3312</option><option value="4205">Preddvor 4205</option><option value="6255">Prem 6255</option><option value="1352">Preserje 1352</option><option value="6258">Prestranek 6258</option><option value="2391">Prevalje 2391</option><option value="3262">Prevorje 3262</option><option value="1276">Primskovo  1276</option><option value="3253">Pristava pri Mestinju 3253</option><option value="9207">Prosenjakovci/Partosfalva 9207</option><option value="5297">Prvačina 5297</option><option value="2250">Ptuj 2250</option><option value="2323">Ptujska Gora 2323</option><option value="9201">Puconci 9201</option><option value="2327">Rače 2327</option><option value="1433">Radeče 1433</option><option value="9252">Radenci 9252</option><option value="2360">Radlje ob Dravi 2360</option><option value="1235">Radomlje 1235</option><option value="4240">Radovljica 4240</option><option value="8274">Raka 8274</option><option value="1381">Rakek 1381</option><option value="4283">Rateče - Planica 4283</option><option value="2390">Ravne na Koroškem 2390</option><option value="9246">Razkrižje 9246</option><option value="3332">Rečica ob Savinji 3332</option><option value="5292">Renče 5292</option><option value="1310">Ribnica 1310</option><option value="2364">Ribnica na Pohorju 2364</option><option value="3272">Rimske Toplice 3272</option><option value="1314">Rob 1314</option><option value="5215">Ročinj 5215</option><option value="3250">Rogaška Slatina 3250</option><option value="9262">Rogašovci 9262</option><option value="3252">Rogatec 3252</option><option value="1373">Rovte 1373</option><option value="2342">Ruše 2342</option><option value="1282">Sava 1282</option><option value="6333">Sečovlje/Sicciole 6333</option><option value="4227">Selca 4227</option><option value="2352">Selnica ob Dravi 2352</option><option value="8333">Semič 8333</option><option value="8281">Senovo 8281</option><option value="6224">Senožeče 6224</option><option value="8290">Sevnica 8290</option><option value="6210">Sežana 6210</option><option value="2214">Sladki Vrh 2214</option><option value="5283">Slap ob Idrijci 5283</option><option value="2380">Slovenj Gradec 2380</option><option value="2310">Slovenska Bistrica 2310</option><option value="3210">Slovenske Konjice 3210</option><option value="1216">Smlednik 1216</option><option value="5232">Soča 5232</option><option value="1317">Sodražica 1317</option><option value="3335">Solčava 3335</option><option value="5250">Solkan 5250</option><option value="4229">Sorica 4229</option><option value="4225">Sovodenj 4225</option><option value="5281">Spodnja Idrija 5281</option><option value="2241">Spodnji Duplek 2241</option><option value="9245">Spodnji Ivanjci 9245</option><option value="2277">Središče ob Dravi 2277</option><option value="4267">Srednja vas v Bohinju 4267</option><option value="8256">Sromlje  8256</option><option value="5224">Srpenica 5224</option><option value="1242">Stahovica 1242</option><option value="1332">Stara Cerkev 1332</option><option value="8342">Stari trg ob Kolpi 8342</option><option value="1386">Stari trg pri Ložu 1386</option><option value="2205">Starše 2205</option><option value="2289">Stoperce 2289</option><option value="8322">Stopiče 8322</option><option value="3206">Stranice 3206</option><option value="8351">Straža 8351</option><option value="1313">Struge 1313</option><option value="8293">Studenec 8293</option><option value="8331">Suhor 8331</option><option value="2233">Sv. Ana v Slovenskih goricah 2233</option><option value="2235">Sv. Trojica v Slovenskih goric 2235</option><option value="2353">Sveti Duh na Ostrem Vrhu 2353</option><option value="9244">Sveti Jurij ob Ščavnici 9244</option><option value="3264">Sveti Štefan 3264</option><option value="2258">Sveti Tomaž 2258</option><option value="9204">Šalovci 9204</option><option value="5261">Šempas 5261</option><option value="5290">Šempeter pri Gorici 5290</option><option value="3311">Šempeter v Savinjski dolini 3311</option><option value="4208">Šenčur 4208</option><option value="2212">Šentilj v Slovenskih goricah 2212</option><option value="8297">Šentjanž 8297</option><option value="2373">Šentjanž pri Dravogradu 2373</option><option value="8310">Šentjernej 8310</option><option value="3230">Šentjur 3230</option><option value="3271">Šentrupert 3271</option><option value="8232">Šentrupert 8232</option><option value="1296">Šentvid pri Stični 1296</option><option value="8275">Škocjan 8275</option><option value="6281">Škofije 6281</option><option value="4220">Škofja Loka 4220</option><option value="3211">Škofja vas 3211</option><option value="1291">Škofljica 1291</option><option value="6274">Šmarje 6274</option><option value="1293">Šmarje - Sap 1293</option><option value="3240">Šmarje pri Jelšah 3240</option><option value="8220">Šmarješke Toplice 8220</option><option value="2315">Šmartno na Pohorju 2315</option><option value="3341">Šmartno ob Dreti 3341</option><option value="3327">Šmartno ob Paki 3327</option><option value="1275">Šmartno pri Litiji 1275</option><option value="2383">Šmartno pri Slovenj Gradcu 2383</option><option value="3201">Šmartno v Rožni dolini 3201</option><option value="3325">Šoštanj 3325</option><option value="6222">Štanjel 6222</option><option value="3220">Štore 3220</option><option value="3304">Tabor 3304</option><option value="3221">Teharje 3221</option><option value="9251">Tišina 9251</option><option value="5220">Tolmin 5220</option><option value="3326">Topolšica 3326</option><option value="2371">Trbonje 2371</option><option value="1420">Trbovlje 1420</option><option value="8231">Trebelno  8231</option><option value="8210">Trebnje 8210</option><option value="5252">Trnovo pri Gorici 5252</option><option value="2254">Trnovska vas 2254</option><option value="1222">Trojane 1222</option><option value="1236">Trzin 1236</option><option value="4290">Tržič 4290</option><option value="8295">Tržišče 8295</option><option value="1311">Turjak 1311</option><option value="9224">Turnišče 9224</option><option value="8323">Uršna sela 8323</option><option value="1252">Vače 1252</option><option value="3320">Velenje  3320</option><option value="3322">Velenje - poštni predali 3322</option><option value="8212">Velika Loka 8212</option><option value="2274">Velika Nedelja 2274</option><option value="9225">Velika Polana 9225</option><option value="1315">Velike Lašče 1315</option><option value="8213">Veliki Gaber 8213</option><option value="9241">Veržej 9241</option><option value="1312">Videm - Dobrepolje 1312</option><option value="2284">Videm pri Ptuju 2284</option><option value="8344">Vinica 8344</option><option value="5271">Vipava 5271</option><option value="4212">Visoko 4212</option><option value="1294">Višnja Gora 1294</option><option value="3205">Vitanje 3205</option><option value="2255">Vitomarci 2255</option><option value="1217">Vodice 1217</option><option value="3212">Vojnik 3212</option><option value="5293">Volčja Draga 5293</option><option value="2232">Voličina 2232</option><option value="3305">Vransko 3305</option><option value="6217">Vremski Britof 6217</option><option value="1360">Vrhnika 1360</option><option value="2365">Vuhred 2365</option><option value="2367">Vuzenica 2367</option><option value="8292">Zabukovje  8292</option><option value="1410">Zagorje ob Savi 1410</option><option value="1303">Zagradec 1303</option><option value="2283">Zavrč 2283</option><option value="8272">Zdole  8272</option><option value="4201">Zgornja Besnica 4201</option><option value="2242">Zgornja Korena 2242</option><option value="2201">Zgornja Kungota 2201</option><option value="2316">Zgornja Ložnica 2316</option><option value="2314">Zgornja Polskava 2314</option><option value="2213">Zgornja Velka 2213</option><option value="4247">Zgornje Gorje 4247</option><option value="4206">Zgornje Jezersko 4206</option><option value="2285">Zgornji Leskovec 2285</option><option value="1432">Zidani Most 1432</option><option value="3214">Zreče 3214</option><option value="4209">Žabnica 4209</option><option value="3310">Žalec 3310</option><option value="4228">Železniki 4228</option><option value="2287">Žetale 2287</option><option value="4226">Žiri 4226</option><option value="4274">Žirovnica 4274</option><option value="8360">Žužemberk 8360</option></select></div><div class="row"><span class="name">Davčni zavezanec:</span><input type="checkbox" name="is_tax" id="registeris_tax" value="1" class="" /></div><div class="row"><span class="name">Davčna številka:</span><input type="text" name="tax_number" id="registertax_number" value="" class="f_input" /></div><div class="row"><span class="name">Potrjujem <a href="/Splosni-pogoji" target="_blank">splošne pogoje poslovanja</a> *:</span><input type="checkbox" name="confirm_conditions" id="registerconfirm_conditions" value="1" class="" /></div>							</form>
+			<div class="navigation">
+				<div class="userLogin full">
+					<a href="#" onclick="return RegistirjaUporabnika()" class="next" ><span><span>Registracija</span></span></a>
+				</div>
+			</div>
+			</div>
+</div>			<div class="verified">
+				<div class="veractiva"></div>
+				<div class="vermastercard"></div>
+				<div class="vervisa"></div>
+			</div>
+		</div>
+	</div>
+</div><div id="footerWrapper">
+	<div id="footer">
+						<div class="map">
+					<a href="/kjesmo" class="image" title="Kje se nahajamo"></a>
+					<a href="/kjesmo" class="link" title="Kje se nahajamo">Kje se nahajamo</a>
+				</div>
+								<div class="info">
+					<span class="name">Naše poslovalnice</span>
+													<a href="/kjesmo/ljubljana/">Harvey Norman - Ljubljana</a><br />
+																<a href="/kjesmo/koper/">Harvey Norman - Koper</a><br />
+																<a href="/kjesmo/celje/">Harvey Norman - Celje</a><br />
+																<a href="/kjesmo/novo-mesto/">Harvey Norman - Novo mesto</a><br />
+																<a href="/kjesmo/maribor/">Harvey Norman - Maribor</a><br />
+												</div>
+						<div class="info"><span class="name">HarveyNorman</span><a href="/onas" title="O nas">O nas</a><br /><a href="/Zaposlitve_1" title="Zaposlitve">Zaposlitve</a><br /></div><div class="info"><span class="name">Informacije</span><a href="/Splosni-pogoji" title="Splošni pogoji">Splošni pogoji</a><br /><a href="/Varstvo-osebnih-podatkov" title="Varstvo osebnih podatkov">Varstvo osebnih podatkov</a><br /><a href="?cookie_settings" title="Upravljanje s piškotki">Upravljanje s piškotki</a><br /><a href="/Dostava" title="Dostava">Dostava</a><br /><a href="/40-mesecev-brez-obresti" title="40 mesecev brez obresti">40 mesecev brez obresti</a><br /></div>		<div class="buttons">
+			<a href="/Nakup-v-5-korakih" title="Nakup v 5 korakih"><span><span>Nakup v 5 korakih</span></span></a>		</div>
+		<span class="copyright">Copyright © Harvey Norman. Vse pravice pridržane.</span>
+	</div>
+</div>
+<script type="text/javascript">
+var __lc = {};
+__lc.license = 3237442;
+__lc.group = 11;
+
+(function() {
+                var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+                lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/sl_SI/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	</body>
+</html>

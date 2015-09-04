@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <delete model="ir.actions.act_window" id="stock.action_inventory_form"/>
+        
+        <record id="action_inventory_form" model="ir.actions.act_window">
+            <field name="name">Physical Inventories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.inventory</field>
+            <field name="view_id" ref="stock.view_inventory_tree"/>
+            <field name="search_view_id" ref="stock.view_inventory_filter"/>
+            <field name="context">{'inventory_production': False}</field>
+            <field name="domain">[('inventory_production','=',False)]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start an inventory. 
+              </p><p>
+                Periodical Inventories are used to count the number of products
+                available per location. You can use it once a year when you do
+                the general inventory or whenever you need it, to adapt the
+                current inventory level of a product.
+              </p>
+            </field>
+        </record>
+
+        <record id="action_inventory_production_form" model="ir.actions.act_window">
+            <field name="name">Production Inventories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.inventory</field>
+            <field name="view_id" ref="stock.view_inventory_tree"/>
+            <field name="search_view_id" ref="stock.view_inventory_filter"/>
+            <field name="context">{'inventory_production': True}</field>
+            <field name="domain">[('inventory_production','=',True)]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start an production inventory.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="action_inventory_form" id="menu_action_inventory_form" parent="stock.menu_stock_inventory_control" sequence="30"/>
+        <menuitem action="action_inventory_production_form" id="menu_action_inventory_production_form" parent="stock.menu_stock_inventory_control" sequence="31"/>
+    </data>
+</openerp>

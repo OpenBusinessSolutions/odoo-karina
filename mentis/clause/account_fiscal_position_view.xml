@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_account_position_clause_form" model="ir.ui.view">
+            <field name="name">account.fiscal.position.clause.form</field>
+            <field name="model">account.fiscal.position</field>
+	        <field name="inherit_id" ref="account.view_account_position_form"/>
+            <field name="arch" type="xml">
+				<field name="active" position="after">
+					<field name="default_clause"/>
+				</field>
+            </field>
+        </record>
+    </data>
+</openerp>

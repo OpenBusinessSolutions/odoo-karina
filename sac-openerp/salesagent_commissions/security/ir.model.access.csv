@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+group_partner_product_commission_user,partner_product_commission user,model_partner_product_commission,group_salesagent_user,1,0,0,0
+group_partner_product_commission_manager,partner_product_commission manager,model_partner_product_commission,group_salesagent_manager,1,1,1,1
+group_salesagent_common_user,salesagent_common user,model_salesagent_common,group_salesagent_user,1,1,1,1
+group_salesagent_common_manager,salesagent_common manager,model_salesagent_common,group_salesagent_manager,1,1,1,1
+group_partner_product_commission_user,partner_product_commission user,model_partner_product_commission,base.group_partner_manager,1,0,0,0

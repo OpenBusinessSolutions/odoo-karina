@@ -1,0 +1,531 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mrp_procurement_qty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-16 09:37+0000\n"
+"PO-Revision-Date: 2013-09-16 09:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_procurement_qty
+#: view:procurement.order.orderpoint.run.wizard:0
+#: view:procurement.order.run.wizard:0
+msgid "Run Scheduler"
+msgstr "Zagon načrtovalca"
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_delivery_order_chginvoice_state
+msgid "Change Invoice State"
+msgstr "Sprememba statusa izdaje računov"
+
+#. module: mrp_procurement_qty
+#: field:procurement.order.orderpoint.run.wizard,repeat_number:0
+#: field:procurement.order.run.wizard,repeat_number:0
+msgid "Repeat Number"
+msgstr "Število ponovitev"
+
+#. module: mrp_procurement_qty
+#: view:sale.order.confirm.wizard:0
+msgid "Confirm"
+msgstr "Potrdi"
+
+#. module: mrp_procurement_qty
+#: field:sale.order.confirm.wizard,date:0
+msgid "Quotation date"
+msgstr "Datum ponudbe"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Delovni nalog"
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_execute_manufacturing_orders
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_execute_manufacturing_orders
+msgid "Execute Orders"
+msgstr "Zaključek proizvodnje"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/wizard/mrp_procurement_qty.py:61
+#: code:addons/mrp_procurement_qty/wizard/mrp_procurement_qty.py:66
+#, python-format
+msgid "Cannot find bill of material for this product."
+msgstr "Cannot find bill of material for this product."
+
+#. module: mrp_procurement_qty
+#: view:sale.order.confirm.wizard:0
+msgid "Confirm Quotations - view"
+msgstr "Potrditev ponodbe - pogled"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_stock_picking
+msgid "Picking List"
+msgstr "Prevzemnica"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_delivery_order_chginvoice_state
+msgid "Change delivery order invoice state to 2binvoiced"
+msgstr "Sprememba statusa izdaje računov na dobavnici -> za fakturiranje"
+
+#. module: mrp_procurement_qty
+#: view:mrp.procurement.qty:0
+msgid "Calculate interests - view "
+msgstr "Calculate interests - view "
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_confirm_sale_orders
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_confirm_sale_orders
+#: view:sale.order.confirm.wizard:0
+msgid "Confirm Quotations"
+msgstr "Potrditev ponudbe"
+
+#. module: mrp_procurement_qty
+#: view:procurement.order.run.wizard:0
+msgid "Run Scheduler - view"
+msgstr "Zagon načrtovalca - pogled"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_procurement_order
+msgid "Procurement"
+msgstr "Oskrba"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_procurement_order_run_wizard
+msgid "Run Procurement scheduler multiple times"
+msgstr "Večkratni zagon načrtovalca oskrbe"
+
+#. module: mrp_procurement_qty
+#: view:procurement.order:0
+#: field:procurement.order,short_message:0
+msgid "Error Message"
+msgstr "Sporočilo napake"
+
+#. module: mrp_procurement_qty
+#: field:account.invoice,decade_date:0
+msgid "Decade Date"
+msgstr "Datum dekade"
+
+#. module: mrp_procurement_qty
+#: field:mrp.procurement.qty,product_qty:0
+msgid "Product Qty"
+msgstr "Količina izdelka"
+
+#. module: mrp_procurement_qty
+#: field:mrp.production,product_qty_available:0
+#: field:stock.move,qty_delivery_available:0
+msgid "Product quantity available"
+msgstr "Količina izdelkov na voljo"
+
+#. module: mrp_procurement_qty
+#: field:mrp.production,product_with_bom_id:0
+msgid "Product with BOM id"
+msgstr "ID BOM produkta"
+
+#. module: mrp_procurement_qty
+#: field:mrp.production,product_on_bom_qty_available:0
+msgid "Product on BOM quantity available"
+msgstr "Količina BOM produkta na voljo"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/stock.py:127
+#, python-format
+msgid "Error, no partner !"
+msgstr "Error, no partner !"
+
+#. module: mrp_procurement_qty
+#: view:delivery.order.chginvoice.state:0
+msgid "Change delivery order invoice state to 'to be invoiced"
+msgstr "Sprememba statusa izdaje računov na dobavnici -> za fakturiranje"
+
+#. module: mrp_procurement_qty
+#: view:delivery.order.chginvoice.state:0
+msgid "Change invoice state"
+msgstr "Sprememba statusa izdaje računov"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_mrp_procurement_qty
+msgid "Change product quantity on manufacturing orders"
+msgstr "Sprememba količine produkta na delovnem nalogu"
+
+#. module: mrp_procurement_qty
+#: view:procurement.order.run.wizard:0
+msgid "Run Scheduler multiple times"
+msgstr "Lansiranje proizvodnje"
+
+#. module: mrp_procurement_qty
+#: view:delivery.order.chginvoice.state:0
+msgid "Change delivery order invoice state to 'to be invoiced'. "
+msgstr "Sprememba statusa izdaje računov na dobavnici -> za fakturiranje"
+
+#. module: mrp_procurement_qty
+#: view:procurement.order:0
+#: field:procurement.order,supply_method:0
+msgid "Supply Method"
+msgstr "Način oskrbe"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/procurement.py:57
+#, python-format
+msgid "No BoM defined for this product !"
+msgstr "No BoM defined for this product !"
+
+#. module: mrp_procurement_qty
+#: field:account.invoice.line,product_qty_returned:0
+msgid "Quantity Returned"
+msgstr "Vrnjeno število"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/wizard/mrp_procurement_qty.py:61
+#: code:addons/mrp_procurement_qty/wizard/mrp_procurement_qty.py:66
+#, python-format
+msgid "Error!"
+msgstr "Napaka!"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/mrp_production.py:209
+#, python-format
+msgid "You are going to produce total %s quantities of \"%s\".\n"
+"But you can only produce up to total %s quantities."
+msgstr "You are going to produce total %s quantities of \"%s\".\n"
+"But you can only produce up to total %s quantities."
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_run_scheduler_multiple_times
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_run_scheduler_multiple_times
+msgid "Run Scheduler x times"
+msgstr "Lansiranje proizvodnje"
+
+#. module: mrp_procurement_qty
+#: field:mrp.production,product_with_bom_factor:0
+msgid "BOM factor"
+msgstr "BOM faktor"
+
+#. module: mrp_procurement_qty
+#: view:mrp.procurement.qty:0
+msgid "Execute orders"
+msgstr "Zaključek proizvodnje"
+
+#. module: mrp_procurement_qty
+#: field:mrp.production,product_with_bom_relation:0
+msgid "Product with BOM name"
+msgstr "Naziv BOM produkta"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Kosovnica"
+
+#. module: mrp_procurement_qty
+#: field:mrp.production,dressing:0
+msgid "Dodelava"
+msgstr "Dodelava"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_stock_move
+msgid "Stock Move"
+msgstr "Premik zaloge"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Postavka računa"
+
+#. module: mrp_procurement_qty
+#: view:delivery.order.chginvoice.state:0
+#: view:mrp.procurement.qty:0
+#: view:procurement.order.run.wizard:0
+#: view:sale.order.confirm.wizard:0
+msgid "or"
+msgstr "ali"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/mrp_production.py:181
+#, python-format
+msgid "You are going to consume total %s quantities of \"%s\".\n"
+"But you can only consume up to total %s quantities."
+msgstr "You are going to consume total %s quantities of \"%s\".\n"
+"But you can only consume up to total %s quantities."
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/mrp_production.py:181
+#: code:addons/mrp_procurement_qty/mrp_production.py:209
+#, python-format
+msgid "Warning!"
+msgstr "Opozorilo!"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_account_invoice
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: mrp_procurement_qty
+#: view:delivery.order.chginvoice.state:0
+#: view:mrp.procurement.qty:0
+#: view:procurement.order.orderpoint.run.wizard:0
+#: view:procurement.order.run.wizard:0
+#: view:sale.order.confirm.wizard:0
+#: view:sale.order.journal.wizard:0
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_sale_order_confirm_wizard
+msgid "Batch Sales Order confirmation"
+msgstr "Množično potrjevanje prodajnih nalogov"
+
+#. module: mrp_procurement_qty
+#: code:addons/mrp_procurement_qty/stock.py:128
+#, python-format
+msgid "Please put a partner on the picking list if you want to generate invoice."
+msgstr "Please put a partner on the picking list if you want to generate invoice."
+
+#. module: mrp_procurement_qty
+#: field:account.invoice,delivery_order_origin:0
+msgid "Delivery Orders"
+msgstr "Dostavni nalogi"
+
+#. module: mrp_procurement_qty
+#: field:account.invoice,address_shipping_id:0
+msgid "Shipping Address"
+msgstr "Naslov za dostavo"
+
+#. module: mrp_procurement_qty
+#: view:mrp.procurement.qty:0
+msgid "Change product quantity, start production, write scrap,.. "
+msgstr "Sprememba količine proizvodov, zagon proizvodnje, izračun odpada,.. "
+
+#. module: mrp_procurement_qty
+#: field:procurement.order.run.wizard,afternoon_scheduler:0
+msgid "Run afternoon scheduler"
+msgstr "Zagon popoldanskega lansiranja"
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_sale_orders_journal
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_sale_orders_journal
+msgid "Sales Orders Journal"
+msgstr "Pregled naročil"
+
+#. module: mrp_procurement_qty
+#: field:sale.order.journal.wizard,date:0
+msgid "Sale Order Date"
+msgstr "Datum prodajnih nalogov"
+
+#. module: mrp_procurement_qty
+#: view:sale.order.journal.wizard:0
+msgid "Print"
+msgstr "Natisni"
+
+#. module: mrp_procurement_qty
+#: view:sale.order.journal.wizard:0
+msgid "Print sales orders journal"
+msgstr "Izpis prodajnih nalogov po postavkah"
+
+#. module: mrp_procurement_qty
+#: field:sale.order.journal.wizard,sort:0
+msgid "Sort"
+msgstr "Sortiranje"
+
+#. module: mrp_procurement_qty
+#: selection:sale.order.journal.wizard,sort:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: mrp_procurement_qty
+#: selection:sale.order.journal.wizard,sort:0
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: mrp_procurement_qty
+#: view:mrp.production:0
+msgid "Bakery"
+msgstr "Pekarna"
+
+#. module: mrp_procurement_qty
+#: view:mrp.production:0
+msgid "Basket"
+msgstr "Košare"
+
+#. module: mrp_procurement_qty
+#: view:mrp.production:0
+msgid "Stock"
+msgstr "Zaloga"
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_execute_delivery_order_confirm
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_confirm_delivery_orders
+msgid "Confirm Delivery Orders"
+msgstr "Potrditev dostavnih nalogov"
+
+
+
+
+#. module: mrp_procurement_qty
+#: field:delivery.order.confirm,override:0
+#: field:mrp.procurement.qty,override:0
+#: field:procurement.order.orderpoint.run.wizard,override:0
+#: field:procurement.order.run.wizard,override:0
+#: field:sale.order.confirm.wizard,override:0
+msgid "Override running process"
+msgstr "Zaženi brez preverjanja statusa"
+
+#. module: mrp_procurement_qty
+#: help:delivery.order.confirm,override:0
+#: help:mrp.procurement.qty,override:0
+#: help:procurement.order.orderpoint.run.wizard,override:0
+#: help:procurement.order.run.wizard,override:0
+#: help:sale.order.confirm.wizard,override:0
+msgid "Run the process, even if there is another one running"
+msgstr "Zaženi proces kljub temu, da je ta morda že zagnan."
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_bakery_production
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_bakery_production
+msgid "Bakery Production"
+msgstr "Pregled proizvodnje"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,running:0
+#: field:bakery.production,running:0
+msgid "Running"
+msgstr "V teku"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,date_start:0
+#: field:bakery.production,date_start:0
+msgid "Start Date"
+msgstr "Začetni datum"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,date_end:0
+#: field:bakery.production,date_end:0
+msgid "End Date"
+msgstr "Končni datum"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,process:0
+msgid "Process"
+msgstr "Proces"
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: view:bakery.production:0
+msgid "Processes"
+msgstr "Faze"
+
+#. module: mrp_procurement_qty
+#: field:bakery.production,sale_done:0
+msgid "Sale confirmed"
+msgstr "Prodaja potrjena"
+
+#. module: mrp_procurement_qty
+#: field:bakery.production,procurement_done:0
+msgid "Procurement done"
+msgstr "Proizvodnja lansirana"
+
+#. module: mrp_procurement_qty
+#: field:bakery.production,op_procurement_done:0
+msgid "OP procurement done"
+msgstr "Proizvodnja lans. iz zaloge"
+
+#. module: mrp_procurement_qty
+#: field:bakery.production,delivery_done:0
+msgid "Delivery done"
+msgstr "Dobava opravljena"
+
+#. module: mrp_procurement_qty
+#: field:bakery.production,manufactury_done:0
+msgid "Manufactury done"
+msgstr "Delovni nal. zaključeni"
+
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_bakery_process
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_bakery_process
+msgid "Bakery Process"
+msgstr "Pregled procesov"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,user_id:0
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,duration:0
+msgid "Duration"
+msgstr "Trajanje"
+
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_run_scheduler_orderpoint_multiple_times
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_run_scheduler_orderpoint_multiple_times
+msgid "Run Orderpoint Scheduler x times"
+msgstr "Lansiranje proiz. iz zaloge"
+
+#. module: mrp_procurement_qty
+#: model:ir.model,name:mrp_procurement_qty.model_procurement_order_orderpoint_run_wizard
+#: view:procurement.order.orderpoint.run.wizard:0
+msgid "Run Orderpoint Scheduler multiple times"
+msgstr "Lansiranje proiz. iz zaloge"
+
+
+
+
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: selection:bakery.process,process:0
+msgid "Confirm sale orders"
+msgstr "Prodaja potrjena"
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: selection:bakery.process,process:0
+msgid "Procurement"
+msgstr "Proizvodnja lansirana"
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: selection:bakery.process,process:0
+msgid "Procurement with OP"
+msgstr "Proizvodnja lans. iz zaloge"
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: selection:bakery.process,process:0
+msgid "Deliver delivery orders"
+msgstr "Dobava opravljena"
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: selection:bakery.process,process:0
+msgid "Produce manufacturing orders"
+msgstr "Delovni nal. zaključeni"
+
+#. module: mrp_procurement_qty
+#: view:bakery.process:0
+#: selection:bakery.process,process:0
+#: field:bakery.production,stock_moved:0
+#: field:procurement.order.move.stock.wizard,status_move:0
+msgid "Stock moved"
+msgstr "Zaloga umaknjena"
+
+#. module: mrp_procurement_qty
+#: field:bakery.process,misc:0
+msgid "Misc."
+msgstr "Razno"
+
+#. module: mrp_procurement_qty
+#: model:ir.actions.act_window,name:mrp_procurement_qty.action_move_stock_order_points
+#: model:ir.model,name:mrp_procurement_qty.model_procurement_order_move_stock_wizard
+#: model:ir.ui.menu,name:mrp_procurement_qty.menu_move_stock_order_points
+msgid "Move stock and order points"
+msgstr "Umik zaloge in točke naroč."
+

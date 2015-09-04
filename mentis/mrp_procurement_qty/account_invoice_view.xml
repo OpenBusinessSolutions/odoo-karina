@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="invoice_form_shipping_address">
+            <field name="name">account.invoice.form.shipping.address</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="address_shipping_id" />
+                </field>
+				<field name="quantity" position="after">
+                    <field name="product_qty_returned" />
+                </field>
+				<field name="origin" position="after">
+                    <field name="delivery_order_origin" />
+                </field>
+				<field name="journal_id" position="before">
+                    <field name="decade_date" />
+                </field>
+            </field>
+        </record>
+<!--
+		<record model="ir.ui.view" id="invoice_form_product_qty_returned">
+            <field name="name">account.invoice.form.product.qty.returned</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="quantity" position="after">
+                    <field name="product_qty_returned" />
+                </field>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>

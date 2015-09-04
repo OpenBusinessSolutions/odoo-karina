@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_stock_empty_stock_config_settings" model="ir.ui.view">
+            <field name="name">stock empty stock settings</field>
+            <field name="model">stock.config.settings</field>
+            <field name="inherit_id" ref="stock.view_stock_config_settings"/>
+            <field name="arch" type="xml">
+                <form string="Configure Warehouse">
+                    <separator string="User - Processing"/>
+                    <group>
+                        <label for="id" string="User for running manufacturing processes"/>
+                        <div>
+                            <div>
+                                <field name="process_uid" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </group>
+                    <separator string="Empty Stock Location"/>
+                    <group>
+                        <label for="id" string="Target Empty Stock Location"/>
+                        <div>
+                            <div>
+                                <field name="empty_stock_location" domain="[('usage','=','internal')]" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

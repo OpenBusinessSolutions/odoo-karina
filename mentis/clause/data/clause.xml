@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record model="clause">
+          <field name="name">Default</field>
+          <field name="text"></field>
+        </record>
+    </data>
+</openerp>

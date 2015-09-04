@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="mrp_procurement_qty_wizard_view_test" model="ir.ui.view">
+            <field name="name">Execute TEST</field>
+            <field name="model">mrp.test</field>
+            <field name="arch" type="xml">
+               <form string="Calculate interests - view " version="7.0">
+               		<group>
+                    	<separator string="Stock move_ confirmed -> cancel " colspan="4" />
+                    </group>
+                    <footer>
+                    	<button name="execute" string="Execute test" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Confirm 2 Cancel"
+            res_model="mrp.test"
+            src_model="mrp.production"
+            view_mode="form"
+            target="new"
+            id="action_execute_manufacturing_orders_test"/>    
+
+
+     	<menuitem action="action_execute_manufacturing_orders_test" id="menu_execute_manufacturing_orders_test" parent="mrp.menu_mrp_manufacturing" sequence="20"/>
+                        
+    </data>
+</openerp>

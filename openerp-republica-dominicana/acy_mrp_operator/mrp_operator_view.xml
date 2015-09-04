@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <!--
+            Operator Registry
+            -->
+        <record id="view_operator_registry_tree" model="ir.ui.view">
+            <field name="name">view.operator.registry.tree</field>
+            <field name="model">mrp.operator.registry</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree colors="blue:state == 'draft';grey:state == 'cancel';red:state not in ('cancel', 'confirmed') and date &lt; current_date" string="Operator Registry">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <!--field name="operator_id"/-->
+                    <!--field name='hour_turn'/-->
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_inventory_filter" model="ir.ui.view">
+            <field name="name">mrp.operator.registry.filter</field>
+            <field name="model">mrp.operator.registry</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <group>
+                        <filter icon="terp-check" name="draft" string="Draft" domain="[('state','=','draft')]" help=""/>
+                        <filter icon="terp-camera_test" string="Confirmed" domain="[('state','=','confirmed')]" help=""/>
+                        <filter icon="terp-dialog-close" name="cancel" string="cancel" domain="[('state','=','cancel')]" help=""/>
+                        <separator orientation="vertical"/>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <!--field name="operator_id" widget="selection"/-->
+                    </group>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter string="State" icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Date" icon="terp-go-month" domain="[]" context="{'group_by':'date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="view_operator_registry_form" model="ir.ui.view">
+            <field name="name">view.operator.registry.form</field>
+            <field name="model">mrp.operator.registry</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Operator Registry">
+                    <field name="id" invisible="1"/>
+                    <field name="name"/>
+                    <field name="username"/>
+                    <field name="date"/>
+                    <!--field name='hour_turn'/-->
+                    <!--field name="operator_id" on_change="onchange_employee(operator_id)"/-->
+                 <notebook colspan="4">
+					<page string="Ordenes de Trabajo">
+                        <field colspan="4" name="workcenter_lines" widget="one2many_list" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="key" invisible="1" widget="selection"/>
+								<field name="operator_registry_id" invisible="1"/>
+								<field name="workcenter_line_id" domain="[('state','=','draft')]" on_change="workcenter_line_change(workcenter_line_id)" />
+								<field name="product_id" />
+								<field name="workcenter_id" />
+								<field name="name"/>
+								<field name="qty" invisible="0"/>
+								<!--field name="machines" /-->
+								<field name="de_product_qty" sum="Total Producto Defectuoso"/>
+								<field name="go_product_qty" sum="Total Producto Bueno"/>
+								<!--field name="real_net_weight"/-->
+								<!--field name="exp_net_weight"/-->
+								<!--field name="dif_percent" widget="progressbar"/-->
+								<!--field name="date_start" /-->
+								<!--field name="date_stop" /-->
+								<!--field name="operator_duration" sum="Total Horas"/-->
+								<field name="production_id" invisible="1"/>
+								<field name="operator_id" invisible="1"/>
+								<field name="state"/>
+								<button name="action_confirm_line" string="Process" type="object" states="draft" icon="gtk-go-forward"/>
+								<field name="products_done"/>
+								<field name="mrp_order_state"/>
+                            </tree>
+                        </field>
+					</page>
+                 </notebook>
+                 <group col="4" colspan="4">
+                    <field name="state"/>
+                    <button name="action_confirm" type="object" states="draft" string="Cerrar Hoja de Trabajo" icon="gtk-execute" help="Esta accion solo marca la hoja de trabajo como confirmada mas no las lineas de la hoja de trabajo. Debera confirmar cada linea de manera manual."/>
+                    <button name="action_cancel" type="object" states="confirmed" string="Cancel" icon="gtk-stop"/>
+                    <button name="action_cancel_draft" states="cancel" string="Set to Draft" type="object" icon="gtk-convert"/>
+				 </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="mrp_operator_registry_action" model="ir.actions.act_window">
+            <field name="name">Manufacturing Operator Registry</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.operator.registry</field>
+            <field name="view_type">form</field>
+        </record>
+        <menuitem action="mrp_operator_registry_action" id="menu_mrp_operator_registry_action" parent="mrp.menu_mrp_manufacturing" sequence="2"/>
+        
+        <!-- Workcenter linae -->
+        
+        <record id="view_mrp_production_workcenter_line_tree" model="ir.ui.view">
+            <field name="name">view.mrp.production.workcenter.line.tree</field>
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Production Work Centers">
+                    <field name="sequence"/>
+                    <field name="number" select="1"/>
+                    <field name="name"/>
+                    <field name="workcenter_id" widget="selection"/>
+                    <field name="cycle"/>
+                    <field name="hour"/>
+                </tree>
+            </field>
+        </record>
+    
+ <!--
+        <record id="view_workcenter_registry_tree" model="ir.ui.view">
+            <field name="name">view.workcenter.registry.tree</field>
+            <field name="model">mrp.workcenter.registry</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Workcenter Registry" editable="top">
+                    <field name="key" invisible="1" widget="selection"/>
+                    <field name="operator_registry_id" invisible="1"/>
+                    <field name="workcenter_line_id" domain="[('state','=','draft')]" on_change="workcenter_line_change(workcenter_line_id)" />
+                    <field name="product_id" />
+                    <field name="workcenter_id" />
+                    <field name="name"/>
+                    <field name="qty" invisible="0"/>
+                    <field name="machines" >
+                    <field name="de_product_qty" sum="Total Producto Defectuoso"/>
+                    <field name="go_product_qty" sum="Total Producto Bueno"/>
+                    <field name="real_net_weight"/>
+                    <field name="exp_net_weight"/>
+                    <field name="dif_percent" widget="progressbar"/>
+                    <field name="date_start" />
+					<field name="date_stop" />
+					<field name="operator_duration" sum="Total Horas"/>
+					<field name="production_id" invisible="1"/>
+                    <field name="operator_id" invisible="1"/>
+					<field name="state"/>
+					<button name="action_confirm_line" string="Process" type="object" states="draft" icon="gtk-go-forward"/>
+					<field name="products_done"/>
+					<field name="mrp_order_state"/>
+                </tree>
+            </field>
+        </record>
+-->
+        <record id="view_workcenter_registry_form" model="ir.ui.view">
+            <field name="name">view.workcenter.registry.form</field>
+            <field name="model">mrp.workcenter.registry</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Workcenter Registry">
+                    <field name="key" invisible="1" widget="selection"/>
+                    <field name="operator_registry_id" invisible="1"/>
+                    <field name="workcenter_line_id" domain="[('state','=','draft')]" on_change="workcenter_line_change(workcenter_line_id)" />
+                    <field name="product_id" />
+                    <field name="workcenter_id" />
+                    <field name="name"/>
+                    <field name="qty" invisible="0"/>
+                    <!--field name="machines"/-->
+                    <field name="de_product_qty"/>
+                    <field name="go_product_qty"/>
+                    <!--field name="real_net_weight"/-->
+                    <!--field name="exp_net_weight"/-->
+                    <!--field name="dif_percent" widget="progressbar"/-->
+                    <!--field name="date_start" /-->
+					<!--field name="date_stop" /-->
+					<!--field name="operator_duration" sum="Total Horas"/-->
+					<field name="products_done"/>
+                    <field name="production_id" invisible="1"/>
+                    <field name="operator_id" invisible="1"/>
+                </form>
+            </field>
+        </record>
+ 
+        <!-- Workcenter Registry Key -->
+        <record id="mrp_operator_registry_key_action" model="ir.actions.act_window">
+            <field name="name">Manufacturing Operator Registry Key</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.workcenter.registry.key</field>
+            <field name="view_type">form</field>
+        </record>
+        <menuitem action="mrp_operator_registry_key_action" id="menu_mrp_operator_registry_key_action" parent="mrp.menu_mrp_configuration" sequence="2"/>
+        
+        
+    </data>
+</openerp>

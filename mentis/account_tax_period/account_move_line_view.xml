@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_move_line_tax_form" model="ir.ui.view">
+            <field name="name">account.move.line.tax.form</field>
+            <field name="model">account.move.line</field>
+        	<field name="inherit_id" ref="account.view_move_line_form"/>
+            <field name="arch" type="xml">
+            	<field name="period_id" position="after">
+            		<field name="tax_period_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_move_line_tax_tree" model="ir.ui.view">
+            <field name="name">account.move.line.tax.tree</field>
+            <field name="model">account.move.line</field>
+        	<field name="inherit_id" ref="account.view_move_line_tree"/>
+            <field name="arch" type="xml">
+            	<field name="period_id" position="after">
+                    <field name="tax_period_id" options='{"no_open":True}' invisible="context.get('tax_period_id',False)"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_account_move_line_tax_filter" model="ir.ui.view">
+            <field name="name">Journal Items</field>
+            <field name="model">account.move.line</field>            
+        	<field name="inherit_id" ref="account.view_account_move_line_filter"/>
+            <field name="arch" type="xml">
+                <field name="period_id" position="after">
+                    <field name="tax_period_id" context="{'tax_period_id':self}" widget="selection"/>
+                </field>
+                <filter string="Period" position="after">
+                    <filter string="Tax Period" icon="terp-go-month" domain="[]" context="{'group_by':'tax_period_id'}"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>

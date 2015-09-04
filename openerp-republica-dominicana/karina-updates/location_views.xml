@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="stock_location_form_inherit">
+            <field name="name">stock.location.form.inherit</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@string='Localization']" position="after">
+                    <group string="Vehicle">
+                        <field name="is_vehicle"/>
+                        <field name="vehicle_id" attrs="{'invisible':[('is_vehicle','=',False)],
+                            'required':[('is_vehicle','=',True)]}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

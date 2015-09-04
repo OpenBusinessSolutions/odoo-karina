@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="action_partial_return" model="ir.actions.act_window">
+            <field name="name">Process Return</field>
+            <field name="res_model">stock.partial.return</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="stock_partial_return_form" model="ir.ui.view">
+            <field name="name">stock.partial.return.form</field>
+            <field name="model">stock.partial.return</field>
+            <field name="arch" type="xml">
+                <form string="Partial Return" version="7.0">
+                    <separator string="Transfer Products" name="product_separator"/>
+                    <field name="move_ids">
+                        <tree editable="top" string="Product Moves">
+                            <field name="default_code" readonly="1" />
+                            <field name="product_id" readonly="1" />
+                            <field name="quantity" readonly="1" />
+                            <field name="quantity_delivered" />
+                            <field name="quantity_returned" />
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="do_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_partial_return_line_list" model="ir.ui.view">
+            <field name="name">stock.partial.return.line.list</field>
+            <field name="model">stock.partial.return.line</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Product Returns">
+                    <field name="default_code" readonly="1" />
+                    <field name="product_id" readonly="1" />
+                    <field name="quantity" readonly="1" />
+                    <field name="quantity_delivered" />
+                    <field name="quantity_returned" />
+                </tree>
+            </field>
+        </record>
+        <record id="stock_partial_return_line_form" model="ir.ui.view">
+            <field name="name">stock.partial.return.line.form</field>
+            <field name="model">stock.partial.return.line</field>
+            <field name="arch" type="xml">
+                <form string="Stock Return Line" version="7.0">
+                    <group col="4">
+                        <field name="default_code" readonly="1" />
+                        <field name="product_id" />
+                        <field name="quantity" />
+                        <field name="quantity_delivered" />
+                        <field name="quantity_returned" />
+                    </group>
+                 </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

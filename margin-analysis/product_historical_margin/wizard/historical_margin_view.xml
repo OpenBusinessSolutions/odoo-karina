@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="view_historical_margin" model="ir.ui.view">
+      <field name="name">historical.margin.form</field>
+      <field name="model">historical.margin</field>
+      <field name="arch" type="xml">
+        <form string="Historical Margin Properties" version="7.0">
+          <group>
+            <field name="from_date" />
+            <field name="to_date"/>
+            <field name="product_ids" invisible="1"/>
+          </group>
+          <footer>
+            <button name="action_open_window" string="Compute margins" type="object" icon="gtk-execute" class="oe_highlight"/>
+            or
+            <button string="Cancel" class="oe_link" special="cancel" />
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_product_margin_view" model="ir.actions.act_window">
+      <field name="name">Margin per Product</field>
+      <field name="res_model">historical.margin</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="view_historical_margin"/>
+      <field name="target">new</field>
+    </record>
+
+
+    <menuitem icon="STOCK_INDENT" action="action_product_margin_view"
+        id="menu_action_product_margin_tree"
+        parent="account.menu_finance_reporting" />
+
+
+    <!-- Remove it for right management <act_window name="Product Historical Margins"
+                    res_model="historical.margin"
+                    src_model="product.product"
+                    view_mode="form"
+                    target="new"
+                    key2="client_action_multi"
+                    id="historical_margin_act_window"/> -->
+
+
+  </data>
+</openerp>

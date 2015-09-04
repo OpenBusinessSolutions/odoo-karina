@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="purchase_order_chgsupp_view" model="ir.ui.view">
+            <field name="name">Change supplier on Purchase Orders </field>
+            <field name="model">purchase.order.chgsupp</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+               <form string="Change supplier on Purchase Orders " version="7.0">
+               		<group>
+                    	<separator string="Are you sure you want to change supplier?" colspan="4"/>
+                    	<field name="supplier_id" colspan="2"/>                    
+                    	<separator string="" colspan="4" />
+                    </group>
+                    <footer>
+                    	<button name="change_supplier" string="Change Supplier" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window name="Change supplier on Purchase Orders "
+            context="{'search_default_draft': 1, 'search_default_approved': False}"
+            res_model="purchase.order.chgsupp"
+            src_model="purchase.order"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_purchase_order_chgsupp"/>    
+                        
+    </data>
+</openerp>

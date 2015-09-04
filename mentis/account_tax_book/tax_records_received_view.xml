@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_tax_records_received_tree" model="ir.ui.view">
+            <field name="name">tax.records.received.tree</field>
+            <field name="model">tax.records.received</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tax book fields">
+                	<field name="period_id"/>
+                	<field name="date"/>
+                	<field name="document_name"/>
+                	<field name="partner_name"/>
+                	<field name="vat"/>
+                	<field name="col_9"/>
+                	<field name="col_18"/>
+                	<field name="col_19"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_tax_records_received_search" model="ir.ui.view">
+        	<field name="name">tax.records.received.search</field>
+        	<field name="model">tax.records.received</field>
+        	<field name="type">search</field>
+        	<field name="arch" type="xml">
+        		<search string="Tax Records Received">
+        			<group string="Group By...">
+        				<filter string="Period" name="period" context="{'group_by':'period_id'}"/>
+        				<filter string="Partner" name="partner" context="{'group_by':'partner_name'}"/>
+        			</group>
+        		</search>
+        	</field>
+        </record>
+        
+        <record id="action_tax_records_received" model="ir.actions.act_window">
+            <field name="name">Received</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tax.records.received</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem action="action_tax_records_received" id="menu_tax_records_received" 
+                parent="menu_tax_records_main" sequence="60"/>
+                
+        <!-- *************** FULL RECORD SET OF * TAX RECEIVED ************* -->
+        <record id="view_tax_records_received_full_tree" model="ir.ui.view">
+            <field name="name">tax.records.received.full.tree</field>
+            <field name="model">tax.records.received</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tax book fields">
+                	<field name="period_id"/>
+                	<field name="date"/>
+                	<field name="document_name"/>
+                	<field name="partner_name"/>
+                	<field name="vat"/>
+                	<field name="col_8a"/>
+                	<field name="col_8b"/>
+                	<field name="col_9"/>
+                	<field name="col_10"/>
+                	<field name="col_11"/>
+                	<field name="col_12"/>
+                	<field name="col_13"/>
+                	<field name="col_14"/>
+                	<field name="col_15"/>
+                	<field name="col_16"/>
+                	<field name="col_17"/>
+                	<field name="col_18"/>
+                	<field name="col_19"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="action_tax_records_full_received" model="ir.actions.act_window">
+            <field name="name">Received - Full</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tax.records.received</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_tax_records_received_full_tree"/>
+        </record>
+
+        <menuitem action="action_tax_records_full_received" id="menu_tax_records_full_received"
+                parent="menu_tax_records_main" sequence="61"/>
+    </data>
+</openerp>

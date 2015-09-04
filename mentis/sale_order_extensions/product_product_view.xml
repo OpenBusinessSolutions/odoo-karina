@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	
+        <record id="product_sale_form_view" model="ir.ui.view">
+            <field name="name">product.sale.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Sales']" position="inside">
+                	<group string="Sale Prices">
+                		<field name="sale_enabled"/>
+                		<field name="sale_price"/>
+                	</group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>    
+</openerp>

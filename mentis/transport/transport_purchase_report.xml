@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report auto="False" id="report_transport_purchase" model="purchase.order"
+                name="transport.purchase" rml="transport/report/order_report.rml"
+                usage="default" string="Transport Report"/>
+		<report auto="False" id="report_customer_order" model="purchase.order"
+                name="customer.order" rml="transport/report/customer_report.rml"
+                usage="default" string="Customer Report" menu="False"/>
+    </data>
+</openerp>

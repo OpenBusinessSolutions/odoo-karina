@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record model="ir.ui.view" id="view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+				<xpath expr="//group/field[@name='customer']" position="before">
+					<field name="prospect"/>
+				</xpath>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_partner_search">
+            <field name="name">res.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <filter name="customer" position="before">
+                    <filter string="Prospect" name="prospect" domain="[('prospect', '=', 1)]" help="Prospect Partners"/>
+                </filter>
+            </field>
+        </record>
+        <!--<record id="action_partner_prospect" model="ir.actions.act_window">
+            <field name="name">Prospect</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('prospect', '=', 1)]</field>
+            <field name="context">{'default_prospect': 1, 'search_default_prospect': 1, 'default_customer': 0}</field>
+            <field name="filter" eval="True"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a prospect in your address book.
+              </p><p>
+                OpenERP helps you easily track all activities related to
+                a propertie: discussions, history of business opportunities,
+                documents, etc.
+              </p>
+            </field>
+        </record>
+
+		<menuitem action="action_partner_prospect" id="menu_partner_prospect"
+            parent="base.menu_sales" sequence="0"/>-->
+
+	</data>
+</openerp>

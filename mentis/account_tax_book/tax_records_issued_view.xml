@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    	<menuitem id="menu_tax_records_main" parent="account.menu_finance_reporting" 
+    			 sequence="50" name="Tax records"/>
+                
+        <record id="view_tax_records_issued_tree" model="ir.ui.view">
+            <field name="name">tax.records.issued.tree</field>
+            <field name="model">tax.records.issued</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tax book fields">
+                	<field name="period_id"/>
+                	<field name="date"/>
+                	<field name="document_name"/>
+                	<field name="partner_name"/>
+                	<field name="vat"/>
+                	<field name="col_7"/>
+                	<field name="col_14"/>
+                	<field name="col_15"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_tax_records_issued_search" model="ir.ui.view">
+        	<field name="name">tax.records.issued.search</field>
+        	<field name="model">tax.records.issued</field>
+        	<field name="type">search</field>
+        	<field name="arch" type="xml">
+        		<search string="Tax Records Issued">
+        			<group string="Group By...">
+        				<filter string="Period" name="period" context="{'group_by':'period_id'}"/>
+        				<filter string="Partner" name="partner" context="{'group_by':'partner_name'}"/>
+        			</group>
+        		</search>
+        	</field>
+        </record>
+        
+        <record id="action_tax_records_issued" model="ir.actions.act_window">
+            <field name="name">Issued</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tax.records.issued</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_tax_records_issued_tree"/>
+        </record>
+
+        <menuitem action="action_tax_records_issued" id="menu_tax_records_issued" 
+                parent="menu_tax_records_main" sequence="50"/>
+                
+        <!-- *************** FULL RECORD SET OF * TAX ISSUED ************* -->
+        <record id="view_tax_records_issued_full_tree" model="ir.ui.view">
+            <field name="name">tax.records.issued.full.tree</field>
+            <field name="model">tax.records.issued</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tax book fields">
+                	<field name="period_id"/>
+                	<field name="date"/>
+                	<field name="document_name"/>
+                	<field name="partner_name"/>
+                	<field name="vat"/>
+                	<field name="col_7"/>
+                	<field name="col_8"/>
+                	<field name="col_9"/>
+                	<field name="col_10a"/>
+                	<field name="col_10a1"/>
+                	<field name="col_10b"/>
+                	<field name="col_11"/>
+                	<field name="col_12"/>
+                	<field name="col_13"/>
+                	<field name="col_14"/>
+                	<field name="col_15"/>
+                	<field name="col_16"/>
+                	<field name="col_17"/>
+                	<field name="col_18"/>
+                	<field name="col_19"/>
+                	<field name="col_20"/>
+                	<field name="col_21"/>
+                	<field name="col_22"/>
+                	<field name="col_23"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="action_tax_records_full_issued" model="ir.actions.act_window">
+            <field name="name">Issued - Full</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tax.records.issued</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_tax_records_issued_full_tree"/>
+        </record>
+
+        <menuitem action="action_tax_records_full_issued" id="menu_tax_records_full_issued"
+        		parent="menu_tax_records_main" sequence="51"/>
+    </data>
+</openerp>

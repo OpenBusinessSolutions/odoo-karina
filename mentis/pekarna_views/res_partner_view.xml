@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_partner_tree_adds_invoice_type" model="ir.ui.view">
+            <field name="name">res.partner.tree.adds.invoice.type</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='email']" position="after">
+	           	    <field name="property_invoice_type"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_partner_form_business_type" model="ir.ui.view">
+            <field name="name">res.partner.form.business.type</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='website']" position="after">
+	           	    <field name="business_partner_type"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

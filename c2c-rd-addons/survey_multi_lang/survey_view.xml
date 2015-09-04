@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!-- FIXME 20140923
+        <record model="ir.ui.view" id="survey_lang_form">
+            <field name="name">survey_lang_form</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_form"/>
+            <field name="arch" type="xml">
+                <field name="response_user" position="after">
+                     <field name="lang" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_quid_form">
+            <field name="name">survey_quid_form</field>
+            <field name="model">survey.question</field>
+            <field name="inherit_id" ref="survey.survey_question_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/form[@string='Survey Question']/group/notebook/page[@string='Options']/group/group/field[@name='answer_choice_ids']" position="before">
+
+                     <field name="question_answer_int" />
+                </xpath>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>
+

@@ -1,0 +1,349 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* purchase_recalculation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-17 15:52+0000\n"
+"PO-Revision-Date: 2014-05-17 15:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_recalculation
+#: view:account.product.cost.recalculation:0
+#: view:account.product.cost.set:0
+#: view:stock.picking.update:0
+msgid "Cancel"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_recalculation.py:57
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:401
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:470
+#, python-format
+msgid "Cannot find suitable dates for recalculation."
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:stock.picking.update:0
+msgid "Confirm"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:518
+#, python-format
+msgid "Cost Move(s)"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:product.period.cost,price_unit:0
+msgid "Cost for period"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:458
+#, python-format
+msgid "Cost price for selected period does not exist! \n"
+""
+msgstr ""
+
+#. module: purchase_recalculation
+#: selection:account.product.cost.set,type:0
+msgid "Create cost moves per period/account"
+msgstr ""
+
+#. module: purchase_recalculation
+#: selection:account.product.cost.set,type:0
+msgid "Create cost moves per period/product"
+msgstr ""
+
+#. module: purchase_recalculation
+#: selection:account.product.cost.set,type:0
+msgid "Create cost moves per period/product category"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update,date_delivered:0
+msgid "Date delivered"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_stock_picking_out
+#, python-format
+msgid "Delivery Orders"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/account_invoice.py:91
+#: code:addons/purchase_recalculation/product_product.py:199
+#: code:addons/purchase_recalculation/wizard/account_product_cost_recalculation.py:57
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:401
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:470
+#, python-format
+msgid "Error!"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_stock_picking_in
+#, python-format
+msgid "Incoming Shipments"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_account_invoice
+#, python-format
+msgid "Invoice"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/account_invoice.py:91
+#, python-format
+msgid "Invoiced quantity is different than received quantity.\n"
+""
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_account_move_line
+#, python-format
+msgid "Journal Items"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update.line,move_id:0
+msgid "Move"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update.line,price_unit_new:0
+msgid "New Price Unit"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update.line,quantity_new:0
+msgid "New Quantity"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:account.product.cost.recalculation,period_id:0
+#: field:account.product.cost.set,period_id:0
+#: field:product.period.cost,period_id:0
+msgid "Period"
+msgstr ""
+
+#. module: purchase_recalculation
+#: help:account.product.cost.recalculation,period_id:0
+msgid "Period for which recalculation will be done."
+msgstr ""
+
+#. module: purchase_recalculation
+#: help:account.product.cost.set,period_id:0
+msgid "Period to set cost values for."
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update,picking_id:0
+msgid "Picking"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_stock_picking
+#, python-format
+msgid "Picking List"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update.line,price_unit:0
+msgid "Price Unit"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: field:account.product.cost.recalculation,product_id:0
+#: model:ir.model,name:purchase_recalculation.model_product_product
+#: field:product.period.cost,product_id:0
+#: field:stock.picking.update.line,product_id:0
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_product_period_cost
+#, python-format
+msgid "Product Cost By Period"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update,move_ids:0
+msgid "Product Lines"
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:stock.picking.update.line:0
+msgid "Product Returns"
+msgstr ""
+
+#. module: purchase_recalculation
+#: help:account.product.cost.recalculation,product_id:0
+msgid "Product for which recalculation will be done. If not set recalculation will be done for all products with cost method set 'Average Price'"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update.line,quantity:0
+msgid "Quantity"
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:account.product.cost.recalculation:0
+msgid "Recalculate Costs"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: view:account.product.cost.recalculation:0
+#: model:ir.actions.act_window,name:purchase_recalculation.action_recalculate_product_cost
+#: model:ir.model,name:purchase_recalculation.model_account_product_cost_recalculation
+#: model:ir.ui.menu,name:purchase_recalculation.menu_recalculate_product_cost
+#, python-format
+msgid "Recalculate Product Costs"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:462
+#, python-format
+msgid "Recalculation Error!"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_account_product_cost_set
+#, python-format
+msgid "Set Product Costs"
+msgstr ""
+
+#. module: purchase_recalculation
+#: selection:account.product.cost.set,type:0
+msgid "Set cost value on existing account move lines"
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:account.product.cost.set:0
+msgid "Set/Create Costs"
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:account.product.cost.set:0
+#: model:ir.actions.act_window,name:purchase_recalculation.action_set_product_cost
+#: model:ir.ui.menu,name:purchase_recalculation.menu_set_product_cost
+msgid "Set/Create Product Costs"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/product_product.py:199
+#, python-format
+msgid "Specify valuation accounts for product: %s."
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:484
+#, python-format
+msgid "Stock Expense Move - "
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:378
+#, python-format
+msgid "Stock Expense Move Line"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: field:account.move.line,stock_move_id:0
+#: model:ir.model,name:purchase_recalculation.model_stock_move
+#, python-format
+msgid "Stock Move"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:372
+#, python-format
+msgid "Stock Output Credit Move Line"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:367
+#, python-format
+msgid "Stock Output Debit Move Line"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:addons/purchase_recalculation/wizard/account_product_cost_set.py:356
+#, python-format
+msgid "Stock Valuation Move Line"
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:stock.picking.update:0
+msgid "Transfer Products"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:account.product.cost.set,type:0
+msgid "Type"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_stock_picking_update
+#, python-format
+msgid "Update Picking Values Processing Wizard"
+msgstr ""
+
+#. module: purchase_recalculation
+#: model:ir.actions.act_window,name:purchase_recalculation.action_picking_update
+#: view:stock.picking.in:0
+#: view:stock.picking.out:0
+#: view:stock.picking.update:0
+msgid "Update Values"
+msgstr ""
+
+#. module: purchase_recalculation
+#: model:ir.model,name:purchase_recalculation.model_stock_update_values
+msgid "Update Values Processing Wizard"
+msgstr ""
+
+#. module: purchase_recalculation
+#: field:stock.picking.update.line,wizard_id:0
+msgid "Wizard"
+msgstr ""
+
+#. module: purchase_recalculation
+#: view:account.product.cost.recalculation:0
+#: view:account.product.cost.set:0
+#: view:stock.picking.update:0
+msgid "or"
+msgstr ""
+
+#. module: purchase_recalculation
+#: code:_description:0
+#: model:ir.model,name:purchase_recalculation.model_stock_picking_update_line
+#, python-format
+msgid "stock.picking.update.line"
+msgstr ""
+
+#. module: purchase_recalculation
+#: model:ir.model,name:purchase_recalculation.model_stock_update_values_line
+msgid "stock.update.values.line"
+msgstr ""
+

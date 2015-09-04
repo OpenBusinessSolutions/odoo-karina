@@ -1,0 +1,479 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* salesagent_commissions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-25 16:05+0000\n"
+"PO-Revision-Date: 2014-02-12 12:58+0100\n"
+"Last-Translator: Jairo Llopis <yajo.sk8@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,payment_commission_date:0
+msgid "Payment Commission Date"
+msgstr "Fecha de pago de la comisión"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,commission:0
+msgid "Provv. Total"
+msgstr "Comisión total"
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#. module: salesagent_commissions
+#: view:wzd.percentage_calcolate:0
+msgid "Calculate"
+msgstr "Calcular"
+
+#. module: salesagent_commissions
+#: help:account.invoice.line,no_commission:0
+msgid "Indicates if the commission __ NOT__ must be calculated for this time!"
+msgstr "Indica si la comisión __NO__ debe calcularse esta vez."
+
+#. module: salesagent_commissions
+#: model:ir.ui.menu,name:salesagent_commissions.menu_partner_salesagent
+msgid "Salesagents"
+msgstr "Agente de ventas"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+msgid "Invoice Not paid"
+msgstr "Factura no pagada"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,paid_commission_percentage_value:0
+msgid "Paid Commission Percentage"
+msgstr "Porcentaje de comisión pagado"
+
+#. module: salesagent_commissions
+#: field:account.invoice,salesagent_id:0
+#: field:account.invoice.line,salesagent_id:0
+#: field:account.move.line,salesagent_id:0
+#: model:ir.actions.act_window,name:salesagent_commissions.action_partner_form_salesagent
+#: view:res.partner:0 field:res.partner,salesagent:0
+#: field:res.partner,salesagent_for_customer_id:0
+msgid "Salesagent"
+msgstr "Agente de ventas"
+
+#. module: salesagent_commissions
+#: model:ir.actions.act_window,name:salesagent_commissions.act_wzd_percentage_calcolate_product
+#: model:ir.actions.act_window,name:salesagent_commissions.act_wzd_percentage_calcolate_sale
+#: view:wzd.percentage_calcolate:0
+msgid "Calculate percentage"
+msgstr "Calcular porcentaje"
+
+#. module: salesagent_commissions
+#: field:account.invoice,commission:0
+#: field:partner.product_commission,commission:0
+msgid "Commission"
+msgstr "Comisión"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_wzd_invoice_payment_cancellation
+msgid "wzd.invoice_payment_cancellation"
+msgstr "wzd.invoice_payment_cancellation"
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Rapid Product Filling"
+msgstr "Inserción rápida de productos"
+
+#. module: salesagent_commissions
+#: model:ir.actions.act_window,name:salesagent_commissions.act_wzd_payment_cancellation_view
+#: view:wzd.invoice_payment_cancellation:0 view:wzd.payment_cancellation:0
+msgid "Commission Payment Cancellation"
+msgstr "Cancelación del pago de la comisión"
+
+#. module: salesagent_commissions
+#: view:wzd.commissions_payment:0 view:wzd.invoice_commissions_payment:0
+msgid "Payment date"
+msgstr "Fecha de pago"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+msgid "Group by Invoice"
+msgstr "Agrupar por factura"
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Commissions for product"
+msgstr "Comisiones por producto"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,commission_percentage:0
+msgid "Comm. Percentage"
+msgstr "Porcentaje de comisión"
+
+#. module: salesagent_commissions
+#: model:ir.actions.act_window,name:salesagent_commissions.act_wzd_commissions_payment_view
+#: view:wzd.commissions_payment:0 view:wzd.invoice_commissions_payment:0
+msgid "Commissions Payment"
+msgstr "Pago de comisiones"
+
+#. module: salesagent_commissions
+#: field:wzd.percentage_calcolate,percentage:0
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,no_commission:0
+#: field:product.product,no_commission:0
+msgid "No Commission"
+msgstr "Sin comisión"
+
+#. module: salesagent_commissions
+#: view:res.partner:0 field:res.partner,customer_for_salesagent_ids:0
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_product_category
+msgid "Product Category"
+msgstr "Categoría del producto"
+
+#. module: salesagent_commissions
+#: field:product.product,standard_commission_product:0
+msgid "Standard Commission"
+msgstr "Comisión estándar"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,reconciled:0
+msgid "Reconciled"
+msgstr "Factura pagada"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,date_invoice:0
+msgid "Invoice Date"
+msgstr "Fecha de factura"
+
+#. module: salesagent_commissions
+#: model:ir.ui.menu,name:salesagent_commissions.menu_wzd_percentage_calcolate
+msgid "Calculate percentage on fix price"
+msgstr "Calcular porcentaje sobre el precio fijo"
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Internal Notes"
+msgstr "Notas internas"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_wzd_invoice_commissions_payment
+msgid "wzd.invoice_commissions_payment"
+msgstr "wzd.invoice_commissions_payment"
+
+#. module: salesagent_commissions
+#: view:account.invoice:0
+msgid "Paid Commissions"
+msgstr "Comisiones pagadas"
+
+#. module: salesagent_commissions
+#: view:account.invoice:0
+msgid "Commmissions"
+msgstr "Comisiones"
+
+#. module: salesagent_commissions
+#: view:wzd.percentage_calcolate:0
+msgid "Percentage Commission"
+msgstr "Porcentaje de comisión"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+msgid "commissions"
+msgstr "Comisiones"
+
+#. module: salesagent_commissions
+#: field:wzd.commissions_payment,payment_date:0
+#: field:wzd.invoice_commissions_payment,payment_date:0
+msgid "Payment Date"
+msgstr "Fecha de pago"
+
+#. module: salesagent_commissions
+#: view:wzd.commissions_payment:0 view:wzd.invoice_commissions_payment:0
+msgid "Pay"
+msgstr "Pagar"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_account_move_line
+msgid "Journal Items"
+msgstr "Artículos del diario"
+
+#. module: salesagent_commissions
+#: view:account.invoice:0
+#: model:ir.actions.act_window,name:salesagent_commissions.action_invoice_salesagent_total
+#: model:ir.ui.menu,name:salesagent_commissions.menu_invoice_for_salesagent
+msgid "Invoice for Salesagent"
+msgstr "Factura por agente de ventas"
+
+#. module: salesagent_commissions
+#: view:wzd.commissions_payment:0
+#: field:wzd.commissions_payment,payment_commission_note:0
+#: view:wzd.invoice_commissions_payment:0
+#: field:wzd.invoice_commissions_payment,payment_commission_note:0
+msgid "Notes"
+msgstr "Notas"
+
+#. module: salesagent_commissions
+#: field:account.invoice,paid_commission:0
+#: field:account.invoice.line,paid_commission_value:0
+msgid "Paid Commission"
+msgstr "Comisión pagada"
+
+#. module: salesagent_commissions
+#: help:account.invoice,paid_commission:0
+msgid "If True, Indicates all commission, for this invoice, have been paid"
+msgstr ""
+"Si es verdadero, indica que todas las comisiones de esta factura ya se han "
+"pagado"
+
+#. module: salesagent_commissions
+#: view:account.invoice:0 field:account.invoice,amount_untaxed_commission:0
+msgid "Amount Untaxed Commission"
+msgstr "Base imponible de la comisión"
+
+#. module: salesagent_commissions
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:79
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:111
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:146
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:176
+#: code:addons/salesagent_commissions/wizard/wizard.py:79
+#: code:addons/salesagent_commissions/wizard/wizard.py:111
+#: code:addons/salesagent_commissions/wizard/wizard.py:146
+#: code:addons/salesagent_commissions/wizard/wizard.py:176
+#, python-format
+msgid "Select at least one line!"
+msgstr "¡Seleccione al menos una línea!"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_wzd_payment_cancellation
+msgid "wzd.payment_cancellation"
+msgstr "wzd.payment_cancellation"
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Details"
+msgstr "Detalles"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_wzd_commissions_payment
+msgid "wzd.commissions_payment"
+msgstr "wzd.commissions_payment"
+
+#. module: salesagent_commissions
+#: model:ir.actions.act_window,name:salesagent_commissions.act_wzrd_invoice_commissions_payment_view
+msgid "Invoice Commissions Payment"
+msgstr "Pago de comisiones de la factura"
+
+#. module: salesagent_commissions
+#: model:ir.ui.menu,name:salesagent_commissions.menu_commissions_address_book
+msgid "Address Book"
+msgstr "Libreta de direcciones"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_salesagent_common
+msgid "Generic Utilities"
+msgstr "Utilidades genéricas"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_wzd_percentage_calcolate
+msgid "wzd.percentage_calcolate"
+msgstr "wzd.percentage_calcolate"
+
+#. module: salesagent_commissions
+#: model:ir.ui.menu,name:salesagent_commissions.menu_commissions_summary
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: salesagent_commissions
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:79
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:111
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:146
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:176
+#: code:addons/salesagent_commissions/wizard/wizard.py:79
+#: code:addons/salesagent_commissions/wizard/wizard.py:111
+#: code:addons/salesagent_commissions/wizard/wizard.py:146
+#: code:addons/salesagent_commissions/wizard/wizard.py:176
+#, python-format
+msgid "Invalid Operation!"
+msgstr "Operación no válida"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0 field:account.invoice.line,paid_commission:0
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: salesagent_commissions
+#: field:res.partner,product_provvigioni_ids:0
+msgid "Commission for products"
+msgstr "Comision por producto"
+
+#. module: salesagent_commissions
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:43
+#: code:addons/salesagent_commissions/wizard/wizard.py:43
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: salesagent_commissions
+#: help:product.product,standard_commission_product:0
+msgid ""
+"All the products with this value set on True will be insert in the "
+"salesagent product list when you click on \"Rapid Product Filling\""
+msgstr ""
+"Todos los productos con este campo establecido en verdadero serán insertados "
+"en la lista de productos del agente de ventas cuando pulses \"Inserción "
+"rápida de productos\""
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Salesagent Details"
+msgstr "Detalles del agente de ventas"
+
+#. module: salesagent_commissions
+#: view:wzd.invoice_payment_cancellation:0 view:wzd.payment_cancellation:0
+msgid "Cancellation"
+msgstr "Anulación"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+msgid "Not paid"
+msgstr "No pagado"
+
+#. module: salesagent_commissions
+#: model:res.groups,name:salesagent_commissions.group_salesagent_manager
+msgid "Salesagent/Manager"
+msgstr "Agente de ventas / Responsable"
+
+#. module: salesagent_commissions
+#: field:account.invoice,paid_date:0
+msgid "Commission Payment Date"
+msgstr "Fecha de pago de la comisión"
+
+#. module: salesagent_commissions
+#: field:wzd.invoice_payment_cancellation,note_cancellation:0
+#: field:wzd.payment_cancellation,note_cancellation:0
+msgid "Delete Notes"
+msgstr "Eliminar notas"
+
+#. module: salesagent_commissions
+#: model:ir.ui.menu,name:salesagent_commissions.menu_commissions_tools
+msgid "Tools"
+msgstr "Herramientas"
+
+#. module: salesagent_commissions
+#: model:res.groups,name:salesagent_commissions.group_salesagent_user
+msgid "Salesagent/User"
+msgstr "Agente de ventas / Usuario"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+#: model:ir.actions.act_window,name:salesagent_commissions.action_invoice_provvigioni
+#: model:ir.ui.menu,name:salesagent_commissions.menu_commissions
+#: view:res.partner:0
+msgid "Commissions"
+msgstr "Comisiones"
+
+#. module: salesagent_commissions
+#: view:wzd.percentage_calcolate:0
+#: field:wzd.percentage_calcolate,fix_commission:0
+msgid "Fix Salesagent Commission"
+msgstr "Corregir comisión del agente de ventas"
+
+#. module: salesagent_commissions
+#: view:wzd.percentage_calcolate:0
+#: field:wzd.percentage_calcolate,product_price:0
+msgid "Product Price"
+msgstr "Precio del producto"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_product_product
+#: field:partner.product_commission,name:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: salesagent_commissions
+#: model:ir.actions.act_window,name:salesagent_commissions.act_invoice_wzd_payment_cancellation_view
+msgid "Invoice Commission Payment Cancellation"
+msgstr "Anulación del pago de la comisión de la factura"
+
+#. module: salesagent_commissions
+#: code:addons/salesagent_commissions/salesagent_commissions/wizard/wizard.py:43
+#: code:addons/salesagent_commissions/wizard/wizard.py:43
+#, python-format
+msgid "Insert valid values!"
+msgstr "¡Inserte valores válidos!"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,commission_presence:0
+msgid "Commission Presence"
+msgstr "Comisión presente"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+#: model:ir.model,name:salesagent_commissions.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_res_partner
+#: field:partner.product_commission,partner_id:0
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: salesagent_commissions
+#: model:ir.model,name:salesagent_commissions.model_partner_product_commission
+msgid "Relation for Partner, products and commissions"
+msgstr "Relación para empresas, productos y comisiones"
+
+#. module: salesagent_commissions
+#: view:wzd.commissions_payment:0 view:wzd.invoice_commissions_payment:0
+#: view:wzd.invoice_payment_cancellation:0 view:wzd.payment_cancellation:0
+#: view:wzd.percentage_calcolate:0
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: salesagent_commissions
+#: field:product.category,commission:0 field:product.product,commission:0
+#: field:res.partner,commission:0
+msgid "Commission %"
+msgstr "Porcentaje de comisión"
+
+#. module: salesagent_commissions
+#: view:res.partner:0
+msgid "Salesagent Partners"
+msgstr "Agentes de ventas"
+
+#. module: salesagent_commissions
+#: field:account.invoice.line,payment_commission_note:0
+msgid "Payment Commission Note"
+msgstr "Nota de pago de la comisión"
+
+#. module: salesagent_commissions
+#: view:account.invoice.line:0
+msgid "Invoice Paid"
+msgstr "Factura pagada"
+
+#. module: salesagent_commissions
+#: view:account.invoice:0
+msgid "Amount Total"
+msgstr "Importe total"
+
+#. module: salesagent_commissions
+#: model:ir.ui.menu,name:salesagent_commissions.menu_invoice_provvigioni
+msgid "Commission for invoices"
+msgstr "Comisión por facturas"

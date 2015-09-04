@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+  <data noupdate="1">
+    <record model="xml.template" id="xml_template_sepa_pain_001_001_02_austrian_002" forcecreate="True">
+      <field name="name">pain_001_001_02_austrian_002</field>
+      <field name="schema">http://www.stuzza.at/schemata/ISO.pain.001.001.02.austrian.002.xsd</field>
+      <field name="content" type="xml">
+<Document>
+  <pain.001.001.02>
+    <GrpHdr>
+      <MsgId text-eval="time1"/>
+      <CreDtTm text-eval="time2"/>
+      <NbOfTxs text-eval="sum(len(l) for date,l in sepa_payments(order,company).iteritems())"/>
+      <CtrlSum text-eval="order.total"/>
+      <Grpg text-eval="'MIXD'"/>
+      <InitgPty>
+        <Id>
+          <OrgId>
+            <BkPtyId text-eval="order.mode.bank_id.iban.replace(' ','').upper()[0:35]"/>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf var="date" seq-eval="sepa_payments(order,company)">
+      <PmtInfId text-eval="date.replace('-', '')"/>
+      <PmtMtd text-eval="'TRF'"/>
+      <PmtTpInf>
+        <SvcLvl>
+          <Cd text-eval="'SEPA'"/>
+        </SvcLvl>
+      </PmtTpInf>
+      <ReqdExctnDt text-eval="date"/>
+      <Dbtr>
+        <Nm text-eval="company.name[0:70]"/>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN text-eval="order.mode.bank_id.iban.replace(' ','').upper()"/>
+        </Id>
+        <Ccy text-eval="company.currency_id.name.upper()"/>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BIC text-eval="order.mode.bank_id.bank.bic.replace(' ','').upper()"/>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf var="line" seq-eval="p_sepa_payments(order,company)[date]">
+        <PmtId>
+          <EndToEndId text-eval="line.customer_data[0:35]"/>
+        </PmtId>
+        <Amt>
+          <InstdAmt attr-name="Ccy" attr-eval="company.currency_id.name.upper()" text-eval="line.amount"/>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC text-eval="line.p_bank.bank.bic.replace(' ','').upper()"/>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm text-eval="line.partner_id.name[0:70]"/>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN text-eval="line.p_bank.iban.replace(' ','').upper()"/>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd text-eval="line.references[0:140]"/>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </pain.001.001.02>
+</Document>
+      </field>
+    </record>
+  </data>
+</openerp>
+

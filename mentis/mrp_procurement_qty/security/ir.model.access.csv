@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_procurement_order_journal,access_procurement_order_journal,model_procurement_order_journal,,True,True,True,True
+access_bakery_process_admin,access_bakery_process_admin,model_bakery_process,base.group_erp_manager,True,True,True,False
+access_bakery_process_user,access_bakery_process_user,model_bakery_process,mrp.group_mrp_user,True,True,True,False
+access_bakery_production_admin,access_bakery_production_admin,model_bakery_production,base.group_erp_manager,True,True,True,False
+access_bakery_production_user,access_bakery_production_user,model_bakery_production,mrp.group_mrp_user,True,True,True,False

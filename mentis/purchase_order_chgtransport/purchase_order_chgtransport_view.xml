@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="purchase_order_chgtransport_view" model="ir.ui.view">
+            <field name="name">Select transport on Purchase Orders </field>
+            <field name="model">purchase.order.chgtransport</field>
+            <field name="arch" type="xml">
+               <form string="Select transport on Purchase Orders " version="7.0">
+               		<group>
+                    	<field name="transport_id" colspan="1"/>                    
+                    	<separator string="" colspan="4" />
+                    </group>
+                    <footer>
+                    	<button name="change_transport" string="Select transport" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Select transport on Purchase Orders "
+        	domain="[('state','=','draft')]"
+            res_model="purchase.order.chgtransport"
+            src_model="purchase.order"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_purchase_order_chgtransport"/>    
+                        
+    </data>
+</openerp>

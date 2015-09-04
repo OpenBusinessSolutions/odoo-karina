@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- PARTNER'S BASKET -->
+        <record id="view_partner_form_basket" model="ir.ui.view">
+            <field name="name">res.partner.form.basket</field>
+            <field name="model">res.partner</field>
+	        <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+				<field name="email" position="after">
+					<field name="basket_number" />
+					<field name="vehicle" />
+				</field>
+            </field>
+        </record>
+        
+         <!-- Product production type-->
+        
+        <record id="m_web_product_view" model="ir.ui.view">
+            <field name="name">m.web.product.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <div name="options" position="inside">
+                    <field name="dressing_ok"/>
+                    <label for="dressing_ok"/>
+                </div>
+            </field>
+        </record>
+        
+ 	</data>
+</openerp> 

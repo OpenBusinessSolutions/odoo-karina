@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_account_tax_book_fields,access_account_tax_book_fields,model_account_tax_book_fields,,True,True,True,False
+access_tax_records_received,access_tax_records_received,model_tax_records_received,,True,True,True,False
+access_tax_records_issued,access_tax_records_issued,model_tax_records_issued,,True,True,True,False

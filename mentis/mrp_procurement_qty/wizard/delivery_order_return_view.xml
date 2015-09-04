@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="delivery_order_return_wizard_view" model="ir.ui.view">
+            <field name="name">Dobavnica - vračilo</field>
+            <field name="model">delivery.order.return.wizard</field>
+            <field name="arch" type="xml">
+               <form string="Delivery Order Returns - view" version="7.0">
+               		<group>
+                    	<separator string="Natisni Dostavni nalog (dobavnico) z vračili" colspan="4" />
+                    	<field name="copy_num"/>
+                    	<field name="customer_copy_num"/>
+                    	<!--<field name="sort"/>-->
+                    </group>
+                    <footer>
+                    	<button name="execute" string="Natisni" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Prekliči" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Dobavnica - vračilo"
+            res_model="delivery.order.return.wizard"
+            src_model="stock.picking.out"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_delivery_order_return"/>    
+		<!--
+     	<menuitem action="action_sale_orders_journal" id="menu_sale_orders_journal" parent="base.menu_sales" sequence="10"/>
+		-->
+    </data>
+</openerp>

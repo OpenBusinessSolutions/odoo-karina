@@ -1,0 +1,310 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* intrastat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-19 09:20+0000\n"
+"PO-Revision-Date: 2012-10-19 09:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: intrastat
+#: sql_constraint:purchase.order:0
+msgid "Order Reference must be unique per Company!"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,intrastat_name:0
+msgid "Intrastat name"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,country_destination:0
+#: field:intrastat,country_destination_code:0
+msgid "Country destination"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_intrastat_transaction_type
+msgid "Intrastat transaction types"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Description of goods"
+msgstr ""
+
+#. module: intrastat
+#: sql_constraint:res.country:0
+msgid "The name of the country must be unique !"
+msgstr ""
+
+#. module: intrastat
+#: sql_constraint:res.country:0
+msgid "The code of the country must be unique !"
+msgstr ""
+
+#. module: intrastat
+#: constraint:product.template:0
+msgid "Error: The default UOM and the purchase UOM must be in the same category."
+msgstr ""
+
+#. module: intrastat
+#: constraint:stock.move:0
+msgid "You must assign a production lot for this product"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Id."
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Origin country"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_stock_picking
+msgid "Picking List"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Reporting period:"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Destination country"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.actions.act_window,name:intrastat.action_intrastat_transaction_type_tree
+#: model:ir.ui.menu,name:intrastat.menu_intrastat_transaction_type
+msgid "Intrastat Transaction Type"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "March"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat.code,description:0
+msgid "Description"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "May"
+msgstr ""
+
+#. module: intrastat
+#: constraint:stock.move:0
+msgid "You can not move products from or to a location of the type view."
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "June"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Intrastat –"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "January"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "July"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Quantity"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "August"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "February"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "October"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.actions.report.xml,name:intrastat.report_intrastat_rml
+#: model:ir.model,name:intrastat.model_intrastat
+msgid "Intrastat report"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_res_country
+msgid "Country"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "List of revenue"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,value:0
+#: report:report.intrastat.rml:0
+msgid "Value"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: intrastat
+#: report:report.intrastat.rml:0
+msgid "Code of goods"
+msgstr ""
+
+#. module: intrastat
+#: view:intrastat:0
+msgid "Intrastat Data"
+msgstr ""
+
+#. module: intrastat
+#: sql_constraint:stock.picking:0
+msgid "Reference must be unique per Company!"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.actions.act_window,name:intrastat.action_intrastat_tree_all
+#: model:ir.ui.menu,name:intrastat.menu_report_intrastat_all
+msgid "Intrastat"
+msgstr ""
+
+#. module: intrastat
+#: view:intrastat:0
+msgid "Value > 500"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,supply_units:0
+msgid "Supply Units"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "November"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,intrastat_id:0
+#: view:intrastat.code:0
+#: model:ir.model,name:intrastat.model_intrastat_code
+msgid "Intrastat code"
+msgstr ""
+
+#. module: intrastat
+#: view:intrastat.transaction.type:0
+msgid "Intrastat transaction type"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,transaction_type_id:0
+#: report:report.intrastat.rml:0
+msgid "Transaction type"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,weight:0
+#: report:report.intrastat.rml:0
+msgid "Weight"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "April"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "September"
+msgstr ""
+
+#. module: intrastat
+#: selection:intrastat,month:0
+msgid "December"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: intrastat
+#: model:ir.model,name:intrastat.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,country_origin:0
+#: field:intrastat,country_origin_code:0
+msgid "Country of origin"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,month:0
+msgid "Month"
+msgstr ""
+
+#. module: intrastat
+#: constraint:stock.move:0
+msgid "You try to assign a lot which is not from the same product"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,year:0
+msgid "Year"
+msgstr ""
+
+#. module: intrastat
+#: view:intrastat:0
+msgid "This Month"
+msgstr ""
+
+#. module: intrastat
+#: field:intrastat,date:0
+msgid "Date done"
+msgstr ""
+
+#. module: intrastat
+#: view:intrastat.code:0
+#: field:intrastat.code,name:0
+#: model:ir.actions.act_window,name:intrastat.action_intrastat_code_tree
+#: model:ir.ui.menu,name:intrastat.menu_intrastat_code
+msgid "Intrastat Code"
+msgstr ""
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_create_tax_certificate" model="ir.ui.view">
+            <field name="name">Create tax certificate</field>
+            <field name="model">create.tax.certificate</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Create tax certificate">
+                	<separator string="Select a period" colspan="4"/>
+                	<group>
+                		<field name="fiscalyear_id" options="{'no_create': True}"/>
+                	</group>
+	                <newline/>
+	                <notebook>
+		                <page string="Filters">
+		                	<group colspan="4" col="4">
+			                	<separator string="Filters" colspan="4"/>
+			                	<group colspan="2" col="2">
+			                		<field name="filter"/>
+			                	</group>
+				                <group colspan="2" col="2">
+				                </group>
+			                </group>
+		                    <newline/>
+		                	<group attrs="{'invisible':[('filter', 'not in', ['date','both'])]}">
+			                	<separator string="Filters on dates" colspan="4"/>
+			                	<field name="date_begin" attrs="{'required':[('filter', 'in', ['date','both'])]}"/>
+			                	<field name="date_end" attrs="{'required':[('filter', 'in', ['date','both'])]}"/>
+		                	</group>
+		                    <newline/>
+		                	<group attrs="{'invisible':[('filter', 'not in', ['period', 'both'])]}">
+			                	<separator string="Filters on periods" colspan="4"/>
+			                	<field name="period_ids" nolabel="1" options="{'no_create': True}"
+                                    domain="[('fiscalyear_id', '=', fiscalyear_id)]"/>
+		                	</group>
+		                </page>
+		                <page string="Partners">
+			                <separator string="Partners" colspan="4"/>
+		                	<field name="partner_ids" nolabel="1"/>
+		                </page>
+	                </notebook>
+                    <footer>
+                        <button name="create_certificate" string="Create tax certificate"
+                            type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <act_window
+    		id="act_view_view_create_tax_certificate" 
+    		name="Create certificate" 
+    		res_model="create.tax.certificate" 
+    		src_model="res.partner"
+    		target="new"
+            multi="1"
+    		view_mode="form"/>
+
+    </data>
+</openerp>

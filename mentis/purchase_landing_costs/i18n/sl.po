@@ -1,0 +1,258 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* purchase_landing_costs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 10:55+0000\n"
+"PO-Revision-Date: 2012-10-15 10:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_landing_costs
+#: sql_constraint:purchase.order:0
+msgid "Order Reference must be unique per Company!"
+msgstr "Referenca naročila mora biti unikatna za podjetje!"
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,move_line_id:0
+msgid "Picking Line"
+msgstr "Postavka prevzema"
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_purchase_order_line
+#: field:purchase.landing.cost.position,purchase_order_line_id:0
+msgid "Purchase Order Line"
+msgstr "Postavka naročila dobavitelju"
+
+#. module: purchase_landing_costs
+#: field:stock.picking,landing_costs_base_amount:0
+msgid "Picking Amount For Per Value Calculation"
+msgstr "Znesek prevzema za izračun po količini"
+
+#. module: purchase_landing_costs
+#: selection:purchase.landing.cost.position,distribution_type:0
+msgid "Per Quantity"
+msgstr "Po količini"
+
+#. module: purchase_landing_costs
+#: sql_constraint:stock.picking:0
+msgid "Reference must be unique per Company!"
+msgstr "Referenca mora biti unikatna za podjetje!"
+
+#. module: purchase_landing_costs
+#: help:purchase.landing.cost.position,partner_id:0
+msgid "The supplier of this cost component ."
+msgstr "Dobavitelj/izvajalec posrednega stroška."
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,product_id:0
+msgid "Landing Cost Name"
+msgstr "Ime posrednega stroška"
+
+#. module: purchase_landing_costs
+#: field:stock.move,price_unit_without_costs:0
+msgid "Purchase Price Without Landing Costs"
+msgstr "Nabavna cena brez posrednih stroškov"
+
+#. module: purchase_landing_costs
+#: field:purchase.order,landing_costs_per_unit:0
+#: field:purchase.order.line,landing_costs_per_unit:0
+#: field:stock.move,landing_costs_per_unit:0
+#: field:stock.picking,landing_costs_per_unit:0
+msgid "Landing Costs Amount Per Unit For Average Price"
+msgstr "Znesek posrednih stroškov po količini"
+
+#. module: purchase_landing_costs
+#: field:product.template,landing_cost:0
+msgid "Landing Cost"
+msgstr "Posredni strošek"
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_stock_picking
+msgid "Picking List"
+msgstr "Prevzem"
+
+#. module: purchase_landing_costs
+#: field:product.template,landing_cost_calculate:0
+msgid "Calculate Landing Costs"
+msgstr "Izračun posrednih stroškov"
+
+#. module: purchase_landing_costs
+#: help:purchase.landing.cost.position,currency_amount:0
+msgid "The amount expressed in an optional other currency."
+msgstr "Znesek izražen v drugi valuti"
+
+#. module: purchase_landing_costs
+#: field:stock.move,landing_costs_base_amount:0
+msgid "Stock Move For Per Value Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: constraint:stock.move:0
+msgid "You try to assign a lot which is not from the same product"
+msgstr "Hoteli ste določini serijo, ki ne obstaja za ta izdelek"
+
+#. module: purchase_landing_costs
+#: constraint:stock.move:0
+msgid "You can not move products from or to a location of the type view."
+msgstr "Izdelkov ni mogoče premakniti na/iz starševske lokacije"
+
+#. module: purchase_landing_costs
+#: view:product.product:0
+#: view:purchase.landing.cost.position:0
+#: view:purchase.order:0
+#: field:purchase.order,landing_costs_line_ids:0
+#: view:purchase.order.line:0
+#: field:purchase.order.line,landing_costs_line_ids:0
+#: field:stock.move,landing_costs_line_ids:0
+#: view:stock.picking:0
+#: field:stock.picking,landing_costs_line_ids:0
+msgid "Landing Costs"
+msgstr "Posredni stroški"
+
+#. module: purchase_landing_costs
+#: help:product.template,landing_cost:0
+msgid "Used if this product is landing cost"
+msgstr "Označeno, če je ta izdelek/storitev posredni strošek"
+
+#. module: purchase_landing_costs
+#: help:purchase.landing.cost.position,currency_id:0
+msgid "Optional other currency."
+msgstr "Druga valuta"
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_stock_partial_picking
+msgid "Partial Picking Processing Wizard"
+msgstr "Čarovnik za delni prevzem"
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,picking_id:0
+msgid "Picking"
+msgstr "Prevzem"
+
+#. module: purchase_landing_costs
+#: help:product.template,landing_cost_calculate:0
+msgid "Check this if you want to use landing cost calculation for average price for this product"
+msgstr "Označite, če želite dodati posredne stroške nabavni ceki tega izdelka"
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_purchase_landing_cost_position
+msgid "purchase.landing.cost.position"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: field:purchase.order.line,landing_costs_base_amount:0
+msgid "Order Line Amount For Per Value Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: field:stock.picking,landing_costs_base_quantity:0
+msgid "Picking Quantity For Per Unit Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: field:purchase.order,landing_costs_per_value:0
+#: field:purchase.order.line,landing_costs_per_value:0
+#: field:stock.move,landing_costs_per_value:0
+#: field:stock.picking,landing_costs_per_value:0
+msgid "Landing Costs Amount Per Value For Average Price"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: constraint:stock.move:0
+msgid "You must assign a production lot for this product"
+msgstr "Določiti morate serijo izdelka"
+
+#. module: purchase_landing_costs
+#: constraint:product.template:0
+msgid "Error: The default UOM and the purchase UOM must be in the same category."
+msgstr "Napaka: Privzeta in nabavna enota mere morata biti v isti kategoriji."
+
+#. module: purchase_landing_costs
+#: view:stock.picking:0
+msgid "Notes"
+msgstr "Opombe"
+
+#. module: purchase_landing_costs
+#: selection:purchase.landing.cost.position,distribution_type:0
+msgid "Per Value"
+msgstr "Po vrednosti"
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,currency_id:0
+msgid "Secondary Currency"
+msgstr "Druga valuta"
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_purchase_order
+#: field:purchase.landing.cost.position,purchase_order_id:0
+msgid "Purchase Order"
+msgstr "Naročilo dobavitelju"
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_product_template
+msgid "Product Template"
+msgstr "Podloga izdelka"
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,currency_amount:0
+msgid "Amount Currency"
+msgstr "Znesek v drugi valuti"
+
+#. module: purchase_landing_costs
+#: field:purchase.order.line,landing_costs_base_quantity:0
+msgid "Order Line Quantity For Per Unit Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: help:purchase.landing.cost.position,distribution_type:0
+msgid "Defines if the amount is to be calculated for each quantity or an absolute value"
+msgstr "Izberite ali bo posredni strošek razdeljen po vrednosti ali po količini"
+
+#. module: purchase_landing_costs
+#: field:purchase.order,landing_costs_base_amount:0
+msgid "Order Amount For Per Value Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: model:ir.model,name:purchase_landing_costs.model_stock_move
+msgid "Stock Move"
+msgstr "Premik zaloge"
+
+#. module: purchase_landing_costs
+#: field:purchase.order,landing_costs_base_quantity:0
+msgid "Order Quantity For Per Unit Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,amount:0
+msgid "Amount"
+msgstr "Znesek"
+
+#. module: purchase_landing_costs
+#: field:stock.move,landing_costs_base_quantity:0
+msgid "Stock Move Quantity For Per Unit Calculation"
+msgstr ""
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,partner_id:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: purchase_landing_costs
+#: help:purchase.landing.cost.position,amount:0
+msgid "Landing cost for stock valuation. It will be added to the price of the supplier price."
+msgstr "Posredni strošek za vrednotenje zaloge. Strošek bo dodan nabavni vrednosti."
+
+#. module: purchase_landing_costs
+#: field:purchase.landing.cost.position,distribution_type:0
+msgid "Amount Type"
+msgstr "Vrsta zneska"
+

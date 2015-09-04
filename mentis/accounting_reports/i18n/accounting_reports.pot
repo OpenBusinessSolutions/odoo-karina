@@ -1,0 +1,317 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* accounting_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-07 13:11+0000\n"
+"PO-Revision-Date: 2014-05-07 13:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,filter:0
+#: selection:account.report.general.ledger.mentis,filter:0
+msgid "No Filters"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,account_code:0
+msgid "Account code"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,account_type:0
+msgid "Account type"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+#: field:overdue.financial.report,period:0
+msgid "Period"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+msgid "Group By..."
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.ui.menu,name:accounting_reports.menu_general_ledger_mentis
+msgid "Mentis-Glavna knjiga"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+#: field:overdue.financial.report,account_type:0
+#: field:overdue.financial.report,partner_type:0
+msgid "Partner type"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.account,debit_open:0
+#: field:overdue.financial.report,debit:0
+msgid "Debit"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+msgid "Financial Report"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,reference:0
+msgid "Ref"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.actions.act_window,name:accounting_reports.action_account_general_ledger_menu_mentis
+msgid "General Ledger"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.model,name:accounting_reports.model_account_report_general_ledger_mentis
+msgid "General Ledger Report Mentis"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+msgid "Customers"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,partner:0
+msgid "Partner name"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.report.general.ledger.mentis,sortby:0
+msgid "Journal & Partner"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,company_id:0
+#: field:account.report.general.ledger.mentis,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.report.general.ledger.mentis,amount_currency:0
+msgid "With Currency"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,date_maturity:0
+msgid "Date Maturity"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.actions.act_window,name:accounting_reports.action_account_balance_menu_mentis
+msgid "Trial Balance Opening II"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,filter:0
+#: selection:account.report.general.ledger.mentis,filter:0
+#: selection:account.report.general.ledger.mentis,sortby:0
+#: field:overdue.financial.report,date:0
+msgid "Date"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,chart_account_id:0
+#: field:account.report.general.ledger.mentis,chart_account_id:0
+msgid "Chart of Account"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,journal_ids:0
+#: field:account.report.general.ledger.mentis,journal_ids:0
+msgid "Journals"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,target_move:0
+#: field:account.report.general.ledger.mentis,target_move:0
+msgid "Target Moves"
+msgstr ""
+
+#. module: accounting_reports
+#: help:account.balance.report.mentis,chart_account_id:0
+#: help:account.report.general.ledger.mentis,chart_account_id:0
+msgid "Select Charts of Accounts"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,date_to:0
+#: field:account.report.general.ledger.mentis,date_to:0
+msgid "End Date"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,account_ids:0
+#: field:account.report.general.ledger.mentis,account_ids:0
+#: model:ir.model,name:accounting_reports.model_account_account
+#: view:overdue.financial.report:0
+msgid "Account"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,period_from:0
+#: field:account.report.general.ledger.mentis,period_from:0
+msgid "Start Period"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,name:0
+msgid "Name"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,target_move:0
+#: selection:account.report.general.ledger.mentis,target_move:0
+msgid "All Posted Entries"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+msgid "Suppliers"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,display_account:0
+msgid "With balance is not equal to 0"
+msgstr ""
+
+#. module: accounting_reports
+#: help:account.balance.report.mentis,fiscalyear_id:0
+#: help:account.report.general.ledger.mentis,fiscalyear_id:0
+msgid "Keep empty for all open fiscal year"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.model,name:accounting_reports.model_account_balance_report_mentis
+msgid "Trial Balance Report with Opening"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,period_to:0
+#: field:account.report.general.ledger.mentis,period_to:0
+msgid "End Period"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.account,credit_open:0
+#: field:overdue.financial.report,credit:0
+msgid "Credit"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,fiscalyear_id:0
+#: field:account.report.general.ledger.mentis,fiscalyear_id:0
+msgid "Fiscal Year"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,display_account:0
+#: field:account.report.general.ledger.mentis,display_account:0
+msgid "Display Accounts"
+msgstr ""
+
+#. module: accounting_reports
+#: view:overdue.financial.report:0
+msgid "Partner"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,display_account:0
+#: selection:account.report.general.ledger.mentis,display_account:0
+msgid "With movements"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,display_account:0
+msgid "All"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,reconcile:0
+msgid "Reconcile"
+msgstr ""
+
+#. module: accounting_reports
+#: help:account.report.general.ledger.mentis,initial_balance:0
+msgid "If you selected to filter by date or period, this field allow you to add a row to display the amount of debit/credit/balance that precedes the filter you've set."
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.report.general.ledger.mentis,sortby:0
+msgid "Sort by"
+msgstr ""
+
+#. module: accounting_reports
+#: help:account.report.general.ledger.mentis,amount_currency:0
+msgid "It adds the currency column on report if the currency differs from the company currency."
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.report.general.ledger.mentis,initial_balance:0
+msgid "Include Initial Balances"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.ui.menu,name:accounting_reports.menu_general_Balance_report_mentis
+msgid "Mentis-Bruto bilanca"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.model,name:accounting_reports.model_overdue_financial_report
+msgid "Overdue payment and financial report"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,filter:0
+#: selection:account.report.general.ledger.mentis,filter:0
+msgid "Periods"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.report.general.ledger.mentis,landscape:0
+msgid "Landscape Mode"
+msgstr ""
+
+#. module: accounting_reports
+#: model:ir.actions.act_window,name:accounting_reports.action_overdue_financial_report
+#: model:ir.ui.menu,name:accounting_reports.menu_overdue_financial_report
+msgid "Financial report"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,date_from:0
+#: field:account.report.general.ledger.mentis,date_from:0
+msgid "Start Date"
+msgstr ""
+
+#. module: accounting_reports
+#: field:account.balance.report.mentis,filter:0
+#: field:account.report.general.ledger.mentis,filter:0
+msgid "Filter by"
+msgstr ""
+
+#. module: accounting_reports
+#: field:overdue.financial.report,journal_entry:0
+msgid "Journal"
+msgstr ""
+
+#. module: accounting_reports
+#: selection:account.balance.report.mentis,target_move:0
+#: selection:account.report.general.ledger.mentis,target_move:0
+msgid "All Entries"
+msgstr ""
+

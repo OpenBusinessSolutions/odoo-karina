@@ -1,0 +1,23 @@
+<openerp>
+    <data>
+    <record id="view_order_sorted_form" model="ir.ui.view">
+        <field name="name">purchase.order.sorted.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+          <data>
+            <xpath expr="/form/sheet/notebook/page[@string='Purchase Order']" position="after">
+                <page string="Sorted Lines">
+                    <field  name="order_line_sorted" readonly="1" nolabel="1"/>
+                </page>
+            </xpath>
+            <field name='payment_term_id' position="after">
+                    <field  name="incoterm" />
+            </field>
+          </data>
+        </field>
+    </record>
+
+    </data>
+</openerp>
+        

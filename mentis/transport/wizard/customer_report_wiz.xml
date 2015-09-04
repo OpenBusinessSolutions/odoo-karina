@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+        <record id="view_purchase_customer" model="ir.ui.view">
+              <field name="name">Delivery Order</field>
+              <field name="model">purchase.customer.wizard</field>
+              <field name="arch" type="xml">
+                <form string="Delivery order wizard" version="7.0">
+                	<group>
+                		<separator string="Print Delivery Order for selected Purchase Orders" colspan="4"/>
+                	</group>
+                    <footer>
+                        <button name="print_report" string="Print"  type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+              </field>
+        </record>
+
+        <act_window id="action_purchase_customer"
+            key2="client_print_multi"
+            name="Delivery Order"
+            res_model="purchase.customer.wizard"
+            src_model="purchase.order"
+            view_mode="form" target="new" view_type="form" />
+
+</data>
+</openerp>

@@ -1,0 +1,132 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* m_web_api
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-05 09:22+0000\n"
+"PO-Revision-Date: 2014-02-05 09:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: m_web_api
+#: field:mrp.production,product_cat:0
+msgid "Category"
+msgstr "Category"
+
+#. module: m_web_api
+#: field:mrp.production,status_testo:0
+msgid "Status_testo"
+msgstr "Status_testo"
+
+#. module: m_web_api
+#: field:mrp.production,scrap_phantom:0
+msgid "Scrap_phantom"
+msgstr "Scrap_phantom"
+
+#. module: m_web_api
+#: model:ir.model,name:m_web_api.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Manufacturing Order"
+
+#. module: m_web_api
+#: field:mrp.production,scrap:0
+msgid "Scrap"
+msgstr "Scrap"
+
+#. module: m_web_api
+#: field:res.partner,vehicle:0
+msgid "Vozilo"
+msgstr "Vozilo"
+
+#. module: m_web_api
+#: field:stock.move,basket_number:0
+msgid "Basket number"
+msgstr "Basket number"
+
+#. module: m_web_api
+#: field:mrp.production,status_izdelki:0
+msgid "Status_izdelki"
+msgstr "Status_izdelki"
+
+#. module: m_web_api
+#: field:stock.move,tags:0
+msgid "Tags"
+msgstr "Tags"
+
+#. module: m_web_api
+#: selection:res.partner,vehicle:0
+msgid "Vozilo 4"
+msgstr "Vozilo 4"
+
+#. module: m_web_api
+#: selection:res.partner,vehicle:0
+msgid "Vozilo 1"
+msgstr "Vozilo 1"
+
+#. module: m_web_api
+#: selection:res.partner,vehicle:0
+msgid "Vozilo 3"
+msgstr "Vozilo 3"
+
+#. module: m_web_api
+#: selection:res.partner,vehicle:0
+msgid "Vozilo 2"
+msgstr "Vozilo 2"
+
+#. module: m_web_api
+#: model:ir.model,name:m_web_api.model_product_template
+msgid "Product Template"
+msgstr "Product Template"
+
+#. module: m_web_api
+#: field:res.partner,basket_number:0
+msgid "Številka košare"
+msgstr "Številka košare"
+
+#. module: m_web_api
+#: field:mrp.production,produced_phantom:0
+msgid "Produced_phantom"
+msgstr "Produced_phantom"
+
+#. module: m_web_api
+#: model:ir.model,name:m_web_api.model_stock_move
+msgid "Stock Move"
+msgstr "Stock Move"
+
+#. module: m_web_api
+#: field:product.template,dressing_ok:0
+msgid "Dodelava"
+msgstr "Dodelava"
+
+#. module: m_web_api
+#: field:stock.move,basket_status:0
+msgid "Basket status"
+msgstr "Basket status"
+
+#. module: m_web_api
+#: field:mrp.production,produced:0
+msgid "Produced"
+msgstr "Produced"
+
+#. module: m_web_api
+#: field:mrp.production,produced_stock:0
+msgid "Produced_stock"
+msgstr "Produced_stock"
+
+#. module: m_web_api
+#: field:stock.move,basket_deliverd:0
+msgid "Basket deliverd"
+msgstr "Basket deliverd"
+
+#. module: m_web_api
+#: model:ir.model,name:m_web_api.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+

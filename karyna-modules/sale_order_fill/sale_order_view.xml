@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       <record model="ir.ui.view" id="sale_order_view_fill_products">
+            <field name="name">sale.order.view.fill.products</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']" position="before">
+                    <button name="fill_sale_order" string="Fill Products"
+                        type="object" states="draft,progress" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="/form/notebook/page/field/tree/field[@name='product_uom_qty']" position="after">
+                    <field string="Sacks Quantity" name="sacks_quantity" sum="Total"/>
+                    <field name="product_qty_available"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

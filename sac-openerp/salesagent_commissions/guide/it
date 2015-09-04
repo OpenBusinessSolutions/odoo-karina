@@ -1,0 +1,24 @@
+Salesagent Commissions
+
+Il modulo  è pensato per calcolare in maniera dinamica le provvigioni 
+per gli agenti facenti parte del corpo aziendale.
+
+========================================================================
+Come vengono calcolate le provvigioni?
+========================================================================
+
+Il modulo esegue il calcolo della percentuale nel seguente ordine:
+	- Cerca la provvigione sul cliente legata al prodotto
+	- Cerca la provvigione generica sul cliente
+	- Cerca la provvigione sull'agente legata al prodotto
+	- Cerca la provvigione generica sul prodotto
+	- Cerca la provvigione generica sull'agente
+
+Come si nota è possibile costruire in maniera dinamica il calcolo.
+
+========================================================================
+Come funziona il modulo?
+========================================================================
+
+All'interno dell'anagrafica cliente è possibile selezionare l'agente
+collegato. Esso verrà richiamato automaticamente in fase di fatturazione

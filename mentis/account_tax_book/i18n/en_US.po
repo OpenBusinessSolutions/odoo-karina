@@ -1,0 +1,341 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* account_tax_book
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-18 10:20+0000\n"
+"PO-Revision-Date: 2014-03-18 10:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_tax_book
+#: model:ir.ui.menu,name:account_tax_book.menu_tax_records_main
+msgid "Tax records"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.model,name:account_tax_book.model_tax_received_report
+msgid "Create Report"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.received.report:0
+msgid "Create"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.received.report,name:0
+msgid "Filename"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.records.issued:0
+#: view:tax.records.received:0
+msgid "Group By..."
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.model,name:account_tax_book.model_tax_records_issued
+msgid "Tax records of issued documents"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.received.report,period:0
+#: view:tax.records.issued:0
+#: field:tax.records.issued,period_id:0
+#: view:tax.records.received:0
+#: field:tax.records.received,period_id:0
+msgid "Period"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_10b:0
+msgid "C_10b"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,vat:0
+#: field:tax.records.received,vat:0
+msgid "Vat"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_10a:0
+msgid "C_10a"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,partner_name:0
+#: field:tax.records.received,partner_name:0
+msgid "Partner name"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_20:0
+msgid "C_20"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_21:0
+msgid "C_21"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_22:0
+msgid "C_22"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_23:0
+msgid "C_23"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.received.report,state:0
+msgid "unknown"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.model,name:account_tax_book.model_tax_records_received
+msgid "Tax records of received documents"
+msgstr ""
+
+#. module: account_tax_book
+#: field:account.tax.book.fields,position:0
+msgid "Column"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.actions.act_window,name:account_tax_book.action_tax_records_full_received
+#: model:ir.ui.menu,name:account_tax_book.menu_tax_records_full_received
+msgid "Received - Full"
+msgstr ""
+
+#. module: account_tax_book
+#: selection:tax.received.report,state:0
+msgid "choose"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_7:0
+msgid "C_7"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_9:0
+#: field:tax.records.received,col_9:0
+msgid "C_9"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_8:0
+msgid "C_8"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.received.report:0
+msgid "Tax received report"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,document_name:0
+#: field:tax.records.received,document_name:0
+msgid "Document name"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.actions.act_window,name:account_tax_book.action_account_tax_book_fields
+#: model:ir.ui.menu,name:account_tax_book.menu_account_tax_book_fields
+msgid "Tax Book Fields"
+msgstr ""
+
+#. module: account_tax_book
+#: field:account.tax.code,tax_book_issued_colums_id:0
+msgid "Tax records issued columns"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.received.report,end_date:0
+msgid "End Date"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.records.issued:0
+msgid "Tax Records Issued"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.actions.act_window,name:account_tax_book.action_tax_records_received
+#: model:ir.ui.menu,name:account_tax_book.menu_tax_records_received
+msgid "Received"
+msgstr ""
+
+#. module: account_tax_book
+#: selection:tax.received.report,state:0
+msgid "get"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.received,col_8b:0
+msgid "C_8b"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.received,col_8a:0
+msgid "C_8a"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.actions.act_window,name:account_tax_book.action_tax_records_full_issued
+#: model:ir.ui.menu,name:account_tax_book.menu_tax_records_full_issued
+msgid "Issued - Full"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.actions.act_window,name:account_tax_book.action_tax_received_report
+#: model:ir.ui.menu,name:account_tax_book.menu_tax_received_report
+msgid "Received - Export"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,date:0
+#: field:tax.records.received,date:0
+msgid "Date"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.model,name:account_tax_book.model_account_tax_code
+msgid "Tax Code"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.records.issued:0
+#: view:tax.records.received:0
+msgid "Partner"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.received.report:0
+msgid "Export done"
+msgstr ""
+
+#. module: account_tax_book
+#: field:account.tax.code,tax_book_received_colums_id:0
+msgid "Tax records received columns"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_19:0
+#: field:tax.records.received,col_19:0
+msgid "C_19"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_18:0
+#: field:tax.records.received,col_18:0
+msgid "C_18"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_15:0
+#: field:tax.records.received,col_15:0
+msgid "C_15"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_14:0
+#: field:tax.records.received,col_14:0
+msgid "C_14"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_17:0
+#: field:tax.records.received,col_17:0
+msgid "C_17"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_16:0
+#: field:tax.records.received,col_16:0
+msgid "C_16"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_11:0
+#: field:tax.records.received,col_11:0
+msgid "C_11"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.received,col_10:0
+msgid "C_10"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_13:0
+#: field:tax.records.received,col_13:0
+msgid "C_13"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_12:0
+#: field:tax.records.received,col_12:0
+msgid "C_12"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.records.received:0
+msgid "Tax Records Received"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.received.report,data:0
+msgid "File"
+msgstr ""
+
+#. module: account_tax_book
+#: model:ir.actions.act_window,name:account_tax_book.action_tax_records_issued
+#: model:ir.ui.menu,name:account_tax_book.menu_tax_records_issued
+msgid "Issued"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.received.report:0
+msgid "Cancel"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.records.issued,col_10a1:0
+msgid "C_10a1"
+msgstr ""
+
+#. module: account_tax_book
+#: field:tax.received.report,start_date:0
+msgid "Start Date"
+msgstr ""
+
+#. module: account_tax_book
+#: field:account.tax.book.fields,name:0
+msgid "Field description"
+msgstr ""
+
+#. module: account_tax_book
+#: view:tax.received.report:0
+msgid "or"
+msgstr ""
+
+#. module: account_tax_book
+#: view:account.tax.book.fields:0
+#: model:ir.model,name:account_tax_book.model_account_tax_book_fields
+#: view:tax.records.issued:0
+#: view:tax.records.received:0
+msgid "Tax book fields"
+msgstr ""
+

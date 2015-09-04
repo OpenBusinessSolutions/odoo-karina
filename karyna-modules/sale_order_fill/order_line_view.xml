@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Inheriting from the sale.order.line form view -->
+        <record model="ir.ui.view" id="order_line_agent_form_inherit">
+            <field name="name">order.line.agent.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <!--xpath expr="//field[@name='product_uom_qty']" position="replace">
+                    <field context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'shop':parent.shop_id, 'uom':product_uom}" name="product_uom_qty" readonly="0" on_change="product_id_change(parent.pricelist_id,product_id,product_uom_qty,product_uom,name,parent.partner_id, False, False, parent.date_order, False, parent.fiscal_position, True, context)"/>
+                </xpath-->
+                <xpath expr="//field[@name='price_unit']" position="after">
+                    <field name="product_qty_available"/>
+                    <field string="Sacks Quantity" name="sacks_quantity" readonly="0"
+                        on_change="onchange_sacks_quantity(product_packaging, sacks_quantity, context)"/>
+                    <field name="suggested_quantity"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_partner_form_inherit">
+            <field name="name">res.partner.salesagent</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="after">
+                    <field name="salesagent"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="stock_move_form_inherit">
+            <field name="name">stock.move.form.inherit</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_uos']" position="after">
+                    <field string="Qty on hand" name="product_qty_available"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

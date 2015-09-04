@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_move_reference_tree" model="ir.ui.view">
+            <field name="name">account.move.reference.tree</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_tree"/>
+            <field name="arch" type="xml">
+                <field name="ref" position="replace">
+                	<field name="invoice_reference"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_move_reference_form" model="ir.ui.view">
+            <field name="name">account.move.reference.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <field name="ref" position="after">
+                	<field name="invoice_reference"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

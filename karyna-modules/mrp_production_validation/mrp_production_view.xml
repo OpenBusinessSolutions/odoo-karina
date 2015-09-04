@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <!--record model="ir.ui.view" id="inherit_production_form">
+        <field name="name">inherit.production.form</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_qty']" position="replace">
+                <field name="product_qty" class="oe_inline" on_change="onchange_product_qty(product_qty, product_id, bom_id, context)"/>
+            </xpath>
+        </field>
+    </record-->
+
+</data>
+</openerp>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="view_invoice_line_tree_from_product" model="ir.ui.view">
+      <field name="name">account.invoice.line.from.product.tree</field>
+      <field name="model">account.invoice.line</field>
+      <field name="priority">20</field>
+      <field name="arch" type="xml">
+        <tree string="Invoice Line" create="false">
+          <field name="invoice_type"/>
+          <field name="partner_id"/>
+          <field name="invoice_user_id"/>
+          <field name="invoice_id"/>
+          <field name="invoice_date"/>
+          <field name="name" invisible="1"/>
+          <field name="product_id"/>
+          <field name="account_id" invisible="1"/>
+          <field name="quantity"/>
+          <field name="uos_id"/>
+          <field name="price_unit" invisible="1"/>
+          <field name="discount" invisible="1"/>
+          <field name="price_subtotal" invisible="1"/>
+          <field name="subtotal_cost_price" invisible="1"/>
+          <field name="company_id" invisible="1"/>
+          <field name="subtotal_company" sum="Total Net Sales "/>
+          <field name="subtotal_cost_price_company" sum="Total Cost"/>
+          <field name="margin_absolute" sum="Total Absolute Margin"/>
+          <field name="margin_relative" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_invoice_line_form_from_product" model="ir.ui.view">
+      <field name="name">account.invoice.line.from.product.form</field>
+      <field name="model">account.invoice.line</field>
+      <field name="arch" type="xml">
+        <form string="Invoice Line" create="false">
+          <field name="invoice_type"/>
+          <field name="partner_id"/>
+          <field name="invoice_user_id"/>
+          <field name="invoice_id"/>
+          <field name="invoice_date"/>
+          <field name="name" invisible="1"/>
+          <field name="product_id"/>
+          <field name="account_id" invisible="1"/>
+          <field name="quantity"/>
+          <field name="uos_id"/>
+          <field name="price_unit" invisible="1"/>
+          <field name="discount" invisible="1"/>
+          <field name="price_subtotal" invisible="1"/>
+          <field name="subtotal_cost_price" invisible="1"/>
+          <field name="company_id" invisible="1"/>
+          <field name="subtotal_company" sum="Total Net Sales "/>
+          <field name="subtotal_cost_price_company" sum="Total Cost"/>
+          <field name="margin_absolute" sum="Total Absolute Margin"/>
+          <field name="margin_relative" />
+        </form>
+      </field>
+    </record>
+
+    <record id="view_account_invoice_line_filter" model="ir.ui.view">
+      <field name="name">account.invoice.line.select</field>
+      <field name="model">account.invoice.line</field>
+      <field name="arch" type="xml">
+        <search string="Search Invoice Line">
+            <field name="product_id"/>
+            <field name="invoice_type"/>
+            <field name="partner_id"/>
+            <field name="invoice_user_id"/>
+            <field name="invoice_date"/>
+            <field name="account_id"/>
+            <field name="company_id"/>
+            <filter icon="terp-go-year" string="Year" 
+                name="year"
+                domain="[('invoice_date','&lt;=', time.strftime('%%Y-%%m-%%d')),('invoice_date','&gt;=',time.strftime('%%Y-01-01'))]"
+                help="year"/>
+            <separator orientation="vertical"/>
+            <filter icon="terp-go-month" string="Month"
+                name="month"
+                domain="[('invoice_date','&lt;=',(context_today()+relativedelta(day=31)).strftime('%%Y-%%m-%%d')),('invoice_date','&gt;=',(context_today()-relativedelta(day=1)).strftime('%%Y-%%m-%%d'))]"
+                help="current month"/>
+            <filter icon="terp-go-month" string="Month-1"
+                domain="[('invoice_date','&lt;=', (context_today() - relativedelta(day=31, months=1)).strftime('%%Y-%%m-%%d')),('invoice_date','&gt;=',(context_today() - relativedelta(day=1,months=1)).strftime('%%Y-%%m-%%d'))]"
+                help="last month"/>
+            <separator orientation="vertical"/>
+          <newline/>
+          <group expand="1" string="Group By...">
+            <filter string="Partner" icon="terp-partner" domain="[]" context="{'group_by':'partner_id'}"/>
+            <filter string="Salesman" name='user' icon="terp-personal" context="{'group_by':'invoice_user_id'}"/>
+            <separator orientation="vertical"/>
+            <filter string="Account" icon="terp-folder-orange" domain="[]" context="{'group_by':'account_id'}"/>
+            <filter string="Invoice" icon="terp-folder-orange" domain="[]" context="{'group_by':'invoice_id'}"/>
+            <separator orientation="vertical"/>
+            <filter string="Invoice Type" icon="terp-stock_effects-object-colorize" domain="[]"  context="{'group_by':'invoice_type'}"/>
+            <filter name="product" string="Product" icon="terp-accessories-archiver" context="{'group_by':'product_id'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+
+    <record id="action_product_margin_details_view" model="ir.actions.act_window">
+      <field name="name">Margin Details</field>
+      <field name="res_model">account.invoice.line</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree</field>
+      <field name="domain">[('invoice_state','in',['open', 'paid']),('invoice_type','in',['out_refund','out_invoice'])]</field>
+      <field name="context">{'search_default_product':1,'search_default_year':1}</field>
+      <field name="view_id" ref="view_invoice_line_tree_from_product"/>
+    </record>
+
+    <menuitem icon="STOCK_INDENT" action="action_product_margin_details_view"
+        id="menu_action_product_margin_details_tree"
+        parent="account.menu_finance_reporting" />
+
+  </data>
+</openerp>

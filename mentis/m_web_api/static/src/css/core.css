@@ -1,0 +1,155 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.Open {
+	height: 100%;
+	width: 100%;	
+	
+}
+.Closed {
+	overflow:hidden;
+    height: 0px;
+	width:  0px;
+  }
+#tlogin {
+	border: 20px solid #663300;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+    margin-bottom:auto;
+	background-color:#FFCB7E;
+	font-weight:bold;
+	width: 625px;
+	height: 300px;
+	font-size:xx-large;	
+}  
+#blogin {
+	border: 2px outset #000000;
+	margin-right: 45px;
+	font-weight:bold;
+	font-family: sans-serif;
+	font-size:xx-large;
+	width: 200px;
+	float:right !important;
+	}
+/* višina osnovne vrstice*/	
+.ui-jqgrid tr.jqgrow td {
+	height: 65px !important;
+	vertical-align:middle !important;
+}
+/* višina group vrstice*/		
+.ui-jqgrid tr.jqgroup td {
+	height: 80px !important;
+	vertical-align:middle !important;
+}
+/* višina headerja*/
+.ui-jqgrid-sortable {
+	height: 50px !important;
+	vertical-align:middle !important;
+}
+/* višina fonta*/
+.ui-jqgrid .ui-jqgrid-view  {
+	font-size:25px !important;
+	font-weight:bold !important;
+	}
+		
+.run{
+	height:55px;
+	background-color:#663300;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family: sans-serif;
+	text-align: center;
+	font-size:40px;
+	/*visibility: hidden;*/
+}
+.runTable {
+	width: :100%;
+	background-color:#990000;
+	
+}
+
+.runclick{
+	
+	background-color:#990000;
+	
+}
+.run1{
+	height:30px;
+	width: :100%;
+	/*background-color:#008000;*/
+	background-color:#FFCB7E;
+	font-family: sans-serif;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:25px;		
+	
+	
+}
+
+#s1 {
+	font-size: xx-large;
+	width: 358px;
+}
+.t1 {
+	font-size: xx-large;
+	width: 355px;
+}
+.t2 {
+	font-size: xx-large;
+	width: 358px;
+}
+.t3 {
+	font-size: xx-large;
+	width: 352px;
+}
+
+/* BUTTON STYLES */
+.ui-button
+{
+   font-size: 27px !important;
+}
+
+.ui-button-gray
+{
+   color: #999B99 !important;
+}
+.ui-button-red
+{
+   	color: #E64545 !important;
+}
+.ui-button-orange
+{
+   color: #f7b64a !important;
+}
+
+/* DIALOG STYLES */
+.ui-label-prop
+{
+	font-size: 35px;
+	clear:left;
+}
+
+.ui-label-prop-30
+{
+	font-size: 30px;
+}
+
+.ui-input-prop
+{
+	font-size: 38px !important;
+	width: 100px !important;
+}
+
+.ui-fieldset-prop
+{
+	border-color: #FFD280 !important;
+	text-align:right;
+	padding-right:50px";
+}

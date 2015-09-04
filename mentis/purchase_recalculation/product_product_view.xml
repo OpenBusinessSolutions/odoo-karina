@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_product_cost_inherit" model="ir.ui.view">
+            <field name="name">product.normal.cost.form.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="purchase.view_product_supplier_inherit"/>
+            <field name="arch" type="xml">
+                <separator string="Suppliers" position="before">
+                    <separator string="Cost Per Period"/>
+                    <field name="period_cost_ids">
+                        <tree editable="bottom">
+                            <field name="period_id"/>
+                            <field name="price_unit"/>
+                        </tree>
+                    </field>
+                </separator>
+            </field>
+        </record>
+
+    </data>
+</openerp>

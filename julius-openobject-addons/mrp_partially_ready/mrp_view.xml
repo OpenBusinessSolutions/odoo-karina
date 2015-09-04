@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="mrp_production_form_view" model="ir.ui.view">
+            <field name="name">mrp.production.form</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <button name="action_cancel" string="Cancel Production" position="attributes">
+                    <attribute name="states">partially_ready,confirmed</attribute>
+                </button>
+                <label for="product_uos_qty" position="before">
+                    <field name="product_qty_ready" states='confirmed,partially_ready'/>
+                    <field name="production_id"/>
+                </label>
+                <button name="force_production" position="after">
+                    <button name="%(action_mrp_production_start_partially)d" string="Start partially"
+                        states="ready"
+                        type="action" class="oe_highlight"/>
+                    <button name="partial_to_production" string="Start production"
+                        states="partially_ready"
+                        type="object" class="oe_highlight"/>
+                </button>
+            </field>
+        </record>
+
+        <record id="mrp_production_tree_view" model="ir.ui.view">
+            <field name="name">mrp.production.tree</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="product_qty" position="after">
+                    <field name="product_qty_ready" states='confirmed,partially_ready'/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

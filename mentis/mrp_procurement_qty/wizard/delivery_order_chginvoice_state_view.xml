@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="delivery_order_chginvoice_state_view" model="ir.ui.view">
+            <field name="name">Change delivery order invoice state to 2binvoiced</field>
+            <field name="model">delivery.order.chginvoice.state</field>
+            <field name="arch" type="xml">
+               <form string="Change delivery order invoice state to 'to be invoiced'. " version="7.0">
+               		<group>
+               			<separator string="Change delivery order invoice state to 'to be invoiced" colspan="4" />
+                    </group>
+                    <footer>
+                    	<button name="change_2binvoiced" string="Change invoice state" type="object" class="oe_highlight"/>
+                    	or
+                    	<button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+		
+        <act_window name="Change Invoice State"
+        	domain="[('state','=','draft')]"
+            res_model="delivery.order.chginvoice.state"
+            src_model="stock.picking.out"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_delivery_order_chginvoice_state"/>
+            
+        <act_window name="Change Invoice State IN"
+        	domain="[('state','=','draft')]"
+            res_model="delivery.order.chginvoice.state"
+            src_model="stock.picking.in"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_delivery_order_chginvoice_state"/>   
+                        
+    </data>
+</openerp>

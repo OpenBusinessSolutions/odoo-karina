@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+		<!-- ====================================================== -->
+		<!-- 					MENÙ	PROVVIGIONI 				-->
+		<!-- ====================================================== -->
+		<menuitem id="menu_commissions" name="Commissions" groups="group_salesagent_user"/>
+			<menuitem parent="menu_commissions" id="menu_commissions_summary" name="Summary"/>
+			<menuitem parent="menu_commissions" id="menu_commissions_address_book" name="Address Book"/>
+			<menuitem parent="menu_commissions" id="menu_commissions_tools" name="Tools"/>
+
+	</data>
+</openerp>

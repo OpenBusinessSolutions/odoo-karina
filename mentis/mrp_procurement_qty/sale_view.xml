@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    	<!-- SALE ORDER - REF. TO DELIVERY ORDER -->
+    	<record id="view_order_form_delivery_ref" model="ir.ui.view">
+            <field name="name">sale.order.form.delivery.ref</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Other Information']" position="after">
+                	<page string="Delivery Orders">
+                		<field name="picking_ids"/>
+                	</page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+    
+    <data>
+    	<!-- SALE ORDER LINE - DEFAULT CODE TO S.LINE -->
+    	<record id="view_order_form_default_code" model="ir.ui.view">
+            <field name="name">sale.order.form.default_code</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='product_id']" position="before">
+                	<field name="default_code"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

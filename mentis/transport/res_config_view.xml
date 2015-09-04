@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_sales_config_transport" model="ir.ui.view">
+            <field name="name">sale settings transport</field>
+            <field name="model">sale.config.settings</field>
+            <field name="inherit_id" ref="sale.view_sales_config"/>
+            <field name="arch" type="xml">
+            	<group name="Sale" position="before">
+            		<group>
+            			<label for="id" string="Default Supplier"/>
+            			<div>
+            				<div>
+            					<field name="default_supplier_id" domain="[('supplier','=','TRUE')]" class="oe_inline"/>
+            				</div>
+            			</div>
+            		</group>
+            	</group>
+            </field>
+        </record>
+    </data>
+</openerp>

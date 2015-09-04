@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+
+		<!-- ======================================================	-->
+		<!--  					PRODUCT.CATEGORY FORM				-->
+		<!-- ======================================================	-->
+		<record id="view_product_category_salesagent_commission" model="ir.ui.view">
+			<field name="name">product.category.form.salesagent_commission</field>
+			<field name="model">product.category</field>
+			<field name="inherit_id" ref="product.product_category_form_view"/>
+			<field name="arch" type="xml">
+				<field name="type" position="after">
+					<field name="commission" />
+				</field>
+			</field>
+		</record>
+		
+		<!-- ======================================================	-->
+		<!--  					PRODUCT.PRODUCT FORM				-->
+		<!-- ======================================================	-->
+		<record id="view_product_product_salesagent_commission" model="ir.ui.view">
+			<field name="name">product.product.form.salesagent_commission</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id" ref="product.product_normal_form_view"/>
+			<field name="arch" type="xml">
+				<field name="product_manager" position="after">
+					<field name="commission" />
+					<field name="no_commission" />
+					<field name="standard_commission_product" />
+				</field>
+			</field>
+		</record>
+
+	</data>
+</openerp>

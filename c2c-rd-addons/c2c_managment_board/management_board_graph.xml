@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <record id="board_manager_form" model="ir.ui.view">
+      <field name="name">board.manager.form</field>
+      <field name="model">board.board</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Manager Board">
+          <board style="1-1">
+            <column>
+              <action name="%(action_report_sale_order_board_tree)d" string="Sales Orders" />
+              <action name="%(action_report_invoice_board_tree)d" string="Invoices" />
+            </column>
+            <column>
+              <action name="%(action_report_purchase_order_board_tree)d" string="Purchase Orders" />
+              <action name="%(action_report_finance_board_tree)d" string="Finance" />
+            </column>
+          </board>
+        </form>
+      </field>
+    </record>
+    <record id="open_board_manager" model="ir.actions.act_window">
+      <field name="name">Manager Dashboard</field>
+      <field name="res_model">board.board</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="board_manager_form"/>
+    </record>
+    <menuitem
+      action="open_board_manager"
+      icon="terp-graph"
+      id="menu_board_manager"
+      parent="account.menu_finance_accounting"
+      sequence="1"/>
+  </data>
+</openerp>

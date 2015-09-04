@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+		<!-- ======================================================	-->
+		<!-- 					LIST COMMISSION DETAILS				-->
+		<!-- ====================================================== -->
+		<record id="list_commission_details_id" model="ir.actions.report.xml">
+			<field name="name">Riepilogo</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.invoice.line</field>
+			<field name="report_name">list_commission_details</field>
+			<field name="report_type">aeroo</field>
+			<field name="tml_source">file</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"></field>
+			<field name="parser_loc">salesagent_commissions_reports/parser.py</field>
+			<field name="report_rml">salesagent_commissions_reports/odt/list_commission_details.odt</field>
+			<field name="parser_state">loc</field>
+		</record>
+
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.invoice.line']" name="models"/>
+			<field name="name">Riepilogo</field>
+			<field eval="'ir.actions.report.xml,'+str(list_commission_details_id)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>
+
+		<!-- ======================================================	-->
+		<!-- 					LIST COMMISSION INVOICE				-->
+		<!-- ====================================================== -->
+		<record id="list_commission_invoice_id" model="ir.actions.report.xml">
+			<field name="name">Riepilogo</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.invoice</field>
+			<field name="report_name">list_commission_invoice</field>
+			<field name="report_type">aeroo</field>
+			<field name="tml_source">file</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"></field>
+			<field name="parser_loc">salesagent_commissions_reports/parser.py</field>
+			<field name="report_rml">salesagent_commissions_reports/odt/list_commission_invoice.odt</field>
+			<field name="parser_state">loc</field>
+		</record>
+
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.invoice']" name="models"/>
+			<field name="name">Riepilogo</field>
+			<field eval="'ir.actions.report.xml,'+str(list_commission_invoice_id)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>
+
+		<!-- ======================================================	-->
+		<!-- 				LIST COMMISSION INVOICE EXCEL			-->
+		<!-- ====================================================== -->
+		<record id="list_comm_invoice_excel_id" model="ir.actions.report.xml">
+			<field name="name">Riepilogo Excel</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.invoice</field>
+			<field name="report_name">list_commission_invoice_excel</field>
+			<field name="report_type">aeroo</field>
+			<field name="tml_source">file</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo.report_mimetypes_ods_ods')"></field>
+			<field name="parser_loc">salesagent_commissions_reports/parser.py</field>
+			<field name="report_rml">salesagent_commissions_reports/odt/list_commission_invoice.ods</field>
+			<field name="parser_state">loc</field>
+		</record>
+
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.invoice']" name="models"/>
+			<field name="name">Riepilogo Excel</field>
+			<field eval="'ir.actions.report.xml,'+str(list_comm_invoice_excel_id)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>
+        
+    </data>
+</openerp>
+
